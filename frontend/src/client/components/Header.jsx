@@ -11,7 +11,7 @@ const Header = () => {
           <input type="search" name="" id="" />
         </search>
         <nav>
-          <ul className="options flex gap-[2.7rem] text-[1.5rem]">
+          <ul className="options flex gap-[2.8rem] text-[1.6rem]">
             <li className="capitalize cursor-pointer">cart</li>
             <li className="capitalize cursor-pointer">whishlist</li>
             <li className="capitalize cursor-pointer">profile</li>
@@ -23,7 +23,7 @@ const Header = () => {
         <ul className="flex text-[1.3rem] w-[90%] mx-auto  text-white">
           {categories.map(function (category) {
             return (
-              <li className="uppercase py-[.6rem] px-4 cursor-pointer hover:bg-sky-700">
+              <li className="uppercase text-[1.5rem] py-[.55rem] px-4 cursor-pointer hover:bg-sky-700">
                 {category.name}
               </li>
             );
