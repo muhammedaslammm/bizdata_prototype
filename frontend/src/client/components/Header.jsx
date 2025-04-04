@@ -2,8 +2,8 @@ import categories from "../../data/categories";
 
 const Header = () => {
   return (
-    <div>
-      <header className="bg-white flex justify-between items-center w-[90%] mx-auto py-[.8rem]">
+    <div className="bg-white">
+      <header className=" flex justify-between items-center w-[90%] mx-auto py-[.8rem]">
         <div className="logo text-gray-800 font-medium text-[2.3rem] capitalize">
           prototype
         </div>
