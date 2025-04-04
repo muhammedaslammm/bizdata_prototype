@@ -6,8 +6,7 @@ function App() {
   return (
     <div className="application">
       <Header />
-      <Outlet />
-      
+      <Outlet />      
     </div>
   );
 }
