@@ -4,7 +4,7 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="application">
+    <div className="application bg-gray-100">
       <Header />
       <Outlet />      
     </div>
