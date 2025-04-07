@@ -7,8 +7,8 @@ const projectors = [
         offer_price: 23150,
         category: 'projector',
         description: "An extraordinary visual experience awaits you | Excellent Picture Quality U001 Revel in the brilliance of 20000 lumens, native 1080P resolution , auto-focus and seamless support for 4K HDR and HLG content. With HDMI ARC, WiFi-6, BT, 1GB RAM, 8GB ROM Quad Core CPU, TOPTRO Elite Pro is a blend of cutting-edge features designed to elevate your viewing experience to new heights. Auto Focus | Auto Keystone | Zoom | Intelligence OA | 4K Upscale Through HDMI Enjoy the ease of auto focus, auto keystone, obstacle avoidance, auto fit. Additionally, fine-tune your viewing experience with digital adjustments for both horizontal + vertical offsets. The TOPTRO Elite Pro projector redefines convenience, bringing you a seamless & hassle-free cinematic experience 20000 Lumens | Up To 300 inch Big Screen | HDR 10 / HLG Support U001 With professional optics and advanced AI, the TOPTRO Elite pro redefines fully automatic projection. It boasts auto-focus, auto-keystone correction, auto-obstacle detection, auto-height adjustments, and x-y axis offset for a flawless and effortless viewing experience 5G Wi-Fi 6 | HDMI ARC | Bluetooth | 1800 ANSI Lumens With the TOPTRO Elite Pro, the boundaries between entertainment, connectivity, and innovation blur, offering you a diverse array of possibilities. Immerse yourself in a world where advanced features seamlessly blend, creating an all-in-one solution that transforms your viewing experience 4K & 60 FPS Support through HDMI | HDR 10/HLG Support HDMI Low Latency: Enhanced HDMI port supports 4K 60Hz input, compatible with Fire TV Stick/Blue ray/Roku Stick and other devices. Also level up your gaming experience. Excellent Sound Quality | True 4K colors |Contrast 20000:1 Supports TV Stick | Mastering the Art of Luxury Cinema U001 Unveiling a new era in projection technology with the TOPTRO Elite Pro: a masterpiece where innovation meets the magic of pure luxury cinema. Experience unparalleled perfection & sophistication, seamlessly integrated with advance AI functions to elevate your viewing to unprecedented heights.",
-        specifications: {
-            general: {
+        specifications: [
+            {
                 head: 'general',
                 details: [
                     { label: 'sales package', value: '1 x Projector, Remote Controller, Power Cable, User Manual, Screws' },
@@ -19,7 +19,7 @@ const projectors = [
                     { label: 'maximum brightness', value: '20000 lm' }
                 ],
             },
-            display: {
+            {
                 head: 'display and audio feature',
                 details: [
                     { label: '3D Support', value: 'yes' },
@@ -28,7 +28,7 @@ const projectors = [
                     }
                 ]
             },
-            warranty: {
+            {
                 head: 'warranty',
                 details: [
                     { label: 'warranty sammary', value: '1 year domestic' },
@@ -36,7 +36,7 @@ const projectors = [
                     { label: 'covered in warranty', value: 'manufacting defects' }
                 ]
             }
-        }
+        ]
 
     },
     {
