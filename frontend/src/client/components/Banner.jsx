@@ -11,8 +11,8 @@ const Banner = () => {
                     if (link.active) {
                         return (
                             <div className='flex flex-col grow-[1] items-center py-[1.5rem] border-b border-gray-200 last:border-0'>
-                                <div className="image w-[8rem] h-[8rem]"><img src={link.image} alt="" className='w-full h-full' /></div>
-                                <p className='text-[1.4rem] font-medium capitalize'>{link.title}</p>
+                                <div className="image w-[9.5rem] h-[9.5rem]"><img src={link.image} alt="" className='w-full h-full' /></div>
+                                <p className='text-[1.3rem] font-medium capitalize'>{link.title}</p>
                             </div>
                         )
                     }
