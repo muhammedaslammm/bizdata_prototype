@@ -5,9 +5,7 @@ const Footer = () => {
     <footer className="bg-slate-300 text-black py-12">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 w-[90%] mx-auto text-[15px]">
         <div>
-          <h3 className="text-shadow-white font-bold text-xl mb-5">
-            About
-          </h3>
+          <h3 className="text-shadow-white font-bold text-xl mb-5">About</h3>
           <ul className="space-y-2 pl-1 text-xl">
             <li>About Us</li>
             <li>Contact Us</li>
@@ -52,9 +50,7 @@ const Footer = () => {
         </div>
 
         <div>
-          <h3 className="text-shadow-white font-bold text-xl mb-5">
-            Mail Us
-          </h3>
+          <h3 className="text-shadow-white font-bold text-xl mb-5">Mail Us</h3>
           <ul className="space-y-2 pl-1 text-xl">
             <li className="flex items-center gap-2">
               <Mail size={20} /> info@gmail.com
