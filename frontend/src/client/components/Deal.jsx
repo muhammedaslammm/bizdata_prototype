@@ -10,5 +10,4 @@ const Deal = ({ products, title }) => {
         </div>
     ) : <></>
 }
-
 export default Deal;
