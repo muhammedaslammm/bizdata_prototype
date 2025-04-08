@@ -4,14 +4,14 @@ const Header = () => {
   return (
     <header className="bg-white">
       <header className=" flex justify-between items-center w-[90%] mx-auto py-[.8rem]">
-        <div className="logo text-gray-800 font-medium text-[2.4rem] capitalize">
+        <div className="logo text-neutral-800 font-semibold text-[2.4rem] uppercase">
           prototype
         </div>
         <search>
           <input type="search" name="" id="" />
         </search>
         <nav>
-          <ul className="options flex gap-[2.8rem] text-[1.7rem]">
+          <ul className="options flex gap-[2.8rem] text-[1.65rem] font-medium text-neutral-800">
             <li className="capitalize cursor-pointer">cart</li>
             <li className="capitalize cursor-pointer">whishlist</li>
             <li className="capitalize cursor-pointer">profile</li>
@@ -19,11 +19,11 @@ const Header = () => {
           </ul>
         </nav>
       </header>
-      <nav className="bg-sky-600">
+      <nav className="bg-neutral-700">
         <ul className="flex text-[1.3rem] w-[90%] mx-auto  text-white">
           {categories.map(function (category) {
             return (
-              <li className="uppercase text-[1.6rem] py-[.57rem] px-4 cursor-pointer hover:bg-sky-700">
+              <li className="uppercase text-[1.55rem] py-[.58rem] px-4 cursor-pointer hover:bg-sky-700">
                 {category.name}
               </li>
             );
