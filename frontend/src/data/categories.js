@@ -1,7 +1,7 @@
 const categories = [
   {
     name: "appliances",
-    sub_categories: [
+    child_categories: [
       {
         name: "tv & dth",
         child_categories: [
