@@ -6,9 +6,9 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <div className="application bg-neutral-200">
-      <Header />
-      <Outlet />
-      <Footer />
+      <Header /> {/*header UI */}
+      <Outlet /> {/*this part changes based on the route defined.*/}
+      <Footer /> {/*footer UI */}
     </div>
   );
 }

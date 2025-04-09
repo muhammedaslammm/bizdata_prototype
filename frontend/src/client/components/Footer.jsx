@@ -1,5 +1,3 @@
-import { Mail, Facebook, Instagram } from "lucide-react";
-
 const Footer = () => {
   return (
     <footer className="bg-neutral-300 text-black py-[6rem] mt-[10rem]">
@@ -26,7 +24,9 @@ const Footer = () => {
         </div>
 
         <div>
-          <h3 className="text-shadow-white font-medium text-[1.5rem] mb-5">Help</h3>
+          <h3 className="text-shadow-white font-medium text-[1.5rem] mb-5">
+            Help
+          </h3>
           <ul className="space-y-2 pl-1 text-[1.5rem] text-neutral-700">
             <li>Payment</li>
             <li>Shipping</li>
@@ -52,15 +52,9 @@ const Footer = () => {
         <div>
           <h3 className="text-shadow-white font-bold text-xl mb-5">Mail Us</h3>
           <ul className="space-y-2 pl-1 text-xl">
-            <li className="flex items-center gap-2">
-              info@gmail.com
-            </li>
-            <li className="flex items-center gap-2">
-              @facebook.com
-            </li>
-            <li className="flex items-center gap-2">
-              @instagram.com
-            </li>
+            <li className="flex items-center gap-2">info@gmail.com</li>
+            <li className="flex items-center gap-2">@facebook.com</li>
+            <li className="flex items-center gap-2">@instagram.com</li>
           </ul>
         </div>
 

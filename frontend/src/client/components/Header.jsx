@@ -21,6 +21,7 @@ const Header = () => {
       </header>
       <nav className="bg-neutral-700">
         <ul className="flex text-[1.3rem] w-[90%] mx-auto text-white">
+          {/*category is looped using an array method, map()*/}
           {categories.map(function (category) {
             return (
               <div className="relative group">
