@@ -1,10 +1,10 @@
 const categories = [
   {
     name: "appliances",
-    child_categories: [
+    sub_categories: [
       {
         name: "tv & dth",
-        child_categories: [
+        sub_categories: [
           { name: "television" },
           { name: "full HD" },
           { name: "HD ready" },
@@ -13,7 +13,7 @@ const categories = [
       },
       {
         name: "shop tv by screen",
-        child_categories: [
+        sub_categories: [
           { name: "below 32 inch" },
           { name: "32 inch" },
           { name: "39 inch" },
@@ -21,19 +21,64 @@ const categories = [
       },
       {
         name: "large home appliances",
-        child_categories: [
-          { name: "air conditioners" },
-          { name: "window acs" },
+        sub_categories: [{ name: "air conditioners" }, { name: "window acs" }],
+      },
+    ],
+  },
+  {
+    name: "laptops",
+    sub_categories: [
+      {
+        name: "shop by types",
+        sub_categories: [
+          { name: "gaming laptops" },
+          { name: "ultrabooks" },
+          { name: "notebooks" },
+        ],
+      },
+      {
+        name: "shop by brand",
+        sub_categories: [
+          { name: "hp" },
+          { name: "dell" },
+          { name: "lenovo" },
+          { name: "asus" },
+          { name: "acer" },
+          { name: "toshiba" },
+          { name: "msi" },
+        ],
+      },
+      {
+        name: "shop by processors",
+        sub_categories: [
+          { name: "intel core i3" },
+          { name: "intel core i5" },
+          { name: "intel core i7" },
+          { name: "amd ryzen 5" },
+          { name: "amd ryzen 7" },
+        ],
+      },
+    ],
+  },
+  {
+    name: "electronics",
+    sub_categories: [
+      {
+        name: "display & media",
+        sub_categories: [
+          { name: "projectors" },
+          { name: "televisions" },
+          { name: "monitors" },
         ],
       },
     ],
   },
   {
     name: "mobiles",
-    child_categories: [
+    sub_categories: [
       {
         name: "smartphones & tablets",
-        child_categories: [
+        sub_categories: [
           { name: "i kall" },
           { name: "mi" },
           { name: "realme" },
@@ -44,7 +89,7 @@ const categories = [
       },
       {
         name: "feature phones",
-        child_categories: [
+        sub_categories: [
           { name: "micromax" },
           { name: "i kall" },
           { name: "nokia" },

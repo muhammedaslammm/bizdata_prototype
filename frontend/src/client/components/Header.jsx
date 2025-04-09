@@ -1,5 +1,5 @@
 import categories from "../../data/categories";
-
+import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <header className="bg-neutral-50">
@@ -24,22 +24,26 @@ const Header = () => {
           {categories.map(function (category) {
             return (
               <div className="relative group">
-                <li className="uppercase text-[1.55rem] py-[.58rem] px-4 cursor-pointer hover:bg-sky-700">
+                <div className="uppercase text-[1.55rem] py-[.58rem] px-4 cursor-pointer hover:bg-sky-700">
                   {category.name}
-                </li>
-                {category.child_categories ? (
-                  <div className="bg-neutral-50 w-[70rem] h-[30rem] absolute p-[2rem]  group-hover:block">
-                    {category.child_categories.map((category) => (
-                      <div className="mb-[1rem]">
-                        <p className="text-black text-[1.5rem] capitalize font-medium">
-                          {category.name}
-                        </p>
-                        {category.child_categories ? (
-                          <ul>
-                            {category.child_categories.map((category) => (
-                              <li className="text-gray-700 capitalize">
-                                {category.name}
-                              </li>
+                </div>
+                {category.sub_categories ? (
+                  <div className="absolute flex flex-col flex-wrap bg-white w-[70rem] h-[30rem] py-4 px-6 opacity-0 pointer-events-none translate-y-[1.5rem] group-hover:opacity-100 group-hover:translate-y-0 duration-200 ease-out group-hover:pointer-events-auto">
+                    {category.sub_categories.map((subcategory) => (
+                      <div className="text-[1.4rem] mb-[1rem]">
+                        <div className="text-black font-medium capitalize cursor-pointer">
+                          {subcategory.name}
+                        </div>
+                        {subcategory.sub_categories ? (
+                          <ul className="flex flex-col">
+                            {subcategory.sub_categories.map((subcategories) => (
+                              <Link
+                                className="text-gray-500 hover:text-gray-800 capitalize cursor-pointer"
+                                to={`/products/${subcategories.name}`}
+                                onClick={() => window.alert("hey")}
+                              >
+                                {subcategories.name}
+                              </Link>
                             ))}
                           </ul>
                         ) : (
