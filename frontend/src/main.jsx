@@ -9,6 +9,9 @@ import {
 import Home from "./client/pages/Home.jsx";
 import Wishlist from "./client/pages/Wishlist.jsx";
 import Productpage from "./client/pages/productpage.jsx";
+import Cart from "./client/pages/Cart.jsx";
+import Profile from "./client/pages/Profile.jsx";
+import Userdata from "./data/userdata.js";
 
 // router is created, which handles various routes.
 const router = createBrowserRouter([
@@ -24,6 +27,8 @@ const router = createBrowserRouter([
       { path: "home", element: <Home /> },
       { path: "wishlist", element: <Wishlist /> },
       { path: "product/:productid", element: <Productpage /> },
+      { path: "cart", element: <Cart /> },
+      { path: "profile", element: <Profile /> },
     ],
   },
 ]);

@@ -4,17 +4,27 @@ const Header = () => {
   return (
     <header className="bg-neutral-50">
       <header className=" flex justify-between items-center w-[90%] mx-auto py-[.8rem]">
-        <div className="logo text-neutral-800 font-semibold text-[2.4rem] uppercase">
-          prototype
-        </div>
+        <Link to={`/home`}>
+          {" "}
+          <div className="logo text-neutral-800 font-semibold text-[2.4rem] uppercase">
+            prototype
+          </div>
+        </Link>
         <search>
           <input type="search" name="" id="" />
         </search>
         <nav>
           <ul className="options flex gap-[2.8rem] text-[1.65rem] font-medium text-neutral-800">
-            <li className="capitalize cursor-pointer">cart</li>
-            <li className="capitalize cursor-pointer">whishlist</li>
-            <li className="capitalize cursor-pointer">profile</li>
+            <Link to={`/cart`} className="capitalize cursor-pointer">
+              cart
+            </Link>
+            <Link to={`/wishlist`} className="capitalize cursor-pointer">
+              wishlist
+            </Link>
+            <Link to={`/profile`} className="capitalize cursor-pointer">
+              profile
+            </Link>
+            
             <li className="capitalize cursor-pointer">sign up</li>
           </ul>
         </nav>

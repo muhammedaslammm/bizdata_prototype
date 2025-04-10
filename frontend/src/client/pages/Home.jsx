@@ -4,6 +4,7 @@ import projectors from "../../data/projectors";
 import laptops from "../../data/laptops";
 import { useEffect, useState } from "react";
 
+
 const Home = () => {
   const [dealProjectors, setDealProjectors] = useState([]);
   const [dealLaptops, setDealLaptops] = useState([]);
