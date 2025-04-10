@@ -16,11 +16,14 @@ const router = createBrowserRouter([
     path: "/",
     element: <App />, //cliend side frontend
     children: [
-      { index: true, element: <Navigate to="home" /> } /*specifies default route when
+      {
+        index: true,
+        element: <Navigate to="home" />,
+      } /*specifies default route when
       no specific route is defined*/,
       { path: "home", element: <Home /> },
       { path: "wishlist", element: <Wishlist /> },
-      { path: "product", element: <Productpage /> },
+      { path: "product/:productid", element: <Productpage /> },
     ],
   },
 ]);

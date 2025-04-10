@@ -1,25 +1,39 @@
 import { Heart } from "lucide-react";
 import projectors from "../../data/projectors";
+import laptops from "../../data/laptops";
+import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 const Productpage = () => {
-  const projector = projectors[0];
+  const [product, setProduct] = useState(null);
+  const products = [...projectors, ...laptops];
+  const urlpath = useParams();
+  console.log("projector: ", urlpath);
 
-  return (
+  useEffect(() => {
+    const matchingProduct = products.find(function (product) {
+      return product.id === Number(urlpath.productid);
+    });
+
+    setProduct(matchingProduct);
+  }, []);
+
+  return product ? (
     <div className="w-[90%] mx-auto py-12 text-slate-800 space-y-16">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
         {/* Image Section - Sticky */}
         <div className="sticky top-24 h-fit bg-white shadow-md p-4 rounded-xl">
           <img
-            src={projector.image}
-            alt={projector.name}
+            src={product.image}
+            alt={product.name}
             className="w-full h-auto object-contain rounded-lg"
           />
         </div>
 
         {/* Product Details */}
         <div className="space-y-6">
-          <h1 className="text-3xl font-bold">{projector.title}</h1>
-          <p className="text-xl text-slate-600">{projector.name}</p>
+          <h1 className="text-3xl font-bold">{product.title}</h1>
+          <p className="text-xl text-slate-600">{product.name}</p>
 
           {/* Rating */}
           <div className="mt-4 text-yellow-700 font-semibold text-[15px]">
@@ -29,10 +43,10 @@ const Productpage = () => {
           {/* Price */}
           <div className="flex gap-4 items-baseline">
             <p className="text-[25px] text-blue-600 font-semibold">
-              ₹{projector.offer_price}
+              ₹{product.offer_price}
             </p>
             <p className="text-[15px] line-through text-slate-400">
-              ₹{projector.price}
+              ₹{product.price}
             </p>
           </div>
 
@@ -43,7 +57,7 @@ const Productpage = () => {
               Description
             </h2>
             <p className="text-[13px] leading-relaxed text-slate-700">
-              {projector.description}
+              {product.description}
             </p>
           </div>
 
@@ -60,7 +74,7 @@ const Productpage = () => {
       </div>
 
       {/* Specifications */}
-      <div className="space-y-10">
+      {/* <div className="space-y-10">
         {Object.values(projector.specifications).map((section, idx) => (
           <div key={idx}>
             <h2 className="text-xl font-semibold border-b border-slate-300 pb-2 mb-4 capitalize">
@@ -80,8 +94,10 @@ const Productpage = () => {
             </div>
           </div>
         ))}
-      </div>
+      </div> */}
     </div>
+  ) : (
+    <></>
   );
 };
 
