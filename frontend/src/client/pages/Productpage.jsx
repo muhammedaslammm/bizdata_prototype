@@ -26,7 +26,7 @@ const Productpage = () => {
           <img
             src={product.image}
             alt={product.name}
-            className="w-full h-auto object-contain rounded-lg"
+            className="w-[400px] h-[300px] object-contain rounded-lg mx-auto"
           />
         </div>
 
@@ -53,7 +53,6 @@ const Productpage = () => {
           {/* Description Section */}
           <div className="space-y-2">
             <h2 className="text-[15px] font-semibold text-slate-700">
-              {" "}
               Description
             </h2>
             <p className="text-[13px] leading-relaxed text-slate-700">
@@ -74,8 +73,8 @@ const Productpage = () => {
       </div>
 
       {/* Specifications */}
-      {/* <div className="space-y-10">
-        {Object.values(projector.specifications).map((section, idx) => (
+      <div className="space-y-10">
+        {Object.values(product.specifications).map((section, idx) => (
           <div key={idx}>
             <h2 className="text-xl font-semibold border-b border-slate-300 pb-2 mb-4 capitalize">
               {section.head}
@@ -83,7 +82,7 @@ const Productpage = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {section.details.map((item, index) => (
                 <div key={index} className="flex flex-col">
-                  <span className="text-slate-600 font-medium capitalize">
+                  <span className="text-slate-600 font-medium capitalize text-[16px]">
                     {item.label}
                   </span>
                   <span className="text-slate-800 text-[15px]">
@@ -94,7 +93,7 @@ const Productpage = () => {
             </div>
           </div>
         ))}
-      </div> */}
+      </div>
     </div>
   ) : (
     <></>
