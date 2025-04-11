@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./client/App.jsx";
+import { WishlistProvider } from "./client/context/WishlistContext.jsx"; // path may vary
 import {
   createBrowserRouter,
   RouterProvider,
@@ -8,7 +9,7 @@ import {
 } from "react-router-dom";
 import Home from "./client/pages/Home.jsx";
 import Wishlist from "./client/pages/Wishlist.jsx";
-import Productpage from "./client/pages/productpage.jsx";
+import Productpage from "./client/pages/Productpage.jsx";
 import Cart from "./client/pages/Cart.jsx";
 import Profile from "./client/pages/Profile.jsx";
 import Userdata from "./data/userdata.js";
@@ -17,13 +18,12 @@ import Userdata from "./data/userdata.js";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />, //cliend side frontend
+    element: <App />,
     children: [
       {
         index: true,
         element: <Navigate to="home" />,
-      } /*specifies default route when
-      no specific route is defined*/,
+      },
       { path: "home", element: <Home /> },
       { path: "wishlist", element: <Wishlist /> },
       { path: "product/:productid", element: <Productpage /> },
@@ -33,9 +33,12 @@ const router = createBrowserRouter([
   },
 ]);
 
-const root = ReactDOM.createRoot(
-  document.getElementById("root")
-); /*root element is accessed from the DOM and created as the root*/
+const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(<RouterProvider router={router} />); /*'RouterProvider' provides the
-defined routing configuration to the application*/
+root.render(
+  <React.StrictMode>
+    <WishlistProvider>
+      <RouterProvider router={router} />
+    </WishlistProvider>
+  </React.StrictMode>
+);

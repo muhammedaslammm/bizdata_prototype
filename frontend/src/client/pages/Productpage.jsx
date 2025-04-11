@@ -1,14 +1,23 @@
 import { Heart } from "lucide-react";
 import projectors from "../../data/projectors";
 import laptops from "../../data/laptops";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { useWishlist } from "../context/WishlistContext";
 
 const Productpage = () => {
+  // const { addToWishlist } = useWishlist(); // use the context
   const [product, setProduct] = useState(null);
   const products = [...projectors, ...laptops];
   const urlpath = useParams();
-  console.log("projector: ", urlpath);
+  const navigate = useNavigate();
+  const { addToWishList } = useWishlist();
+
+  const addProductToWishlist = (product) => {
+    const response = addToWishList(product);
+    if (response.success) navigate("/wishlist");
+    else window.alert(response.message);
+  };
 
   useEffect(() => {
     const matchingProduct = products.find(function (product) {
@@ -65,7 +74,10 @@ const Productpage = () => {
             <button className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-lg transition">
               Add to Cart
             </button>
-            <button className="px-6 py-3 border border-blue-600 text-blue-600 hover:bg-blue-50 rounded-xl text-lg flex items-center gap-2 transition">
+            <button
+              className="px-6 py-3 border border-blue-600 text-blue-600 hover:bg-blue-50 rounded-xl text-lg flex items-center gap-2 transition"
+              onClick={() => addProductToWishlist(product)}
+            >
               <Heart size={20} /> Wishlist
             </button>
           </div>
