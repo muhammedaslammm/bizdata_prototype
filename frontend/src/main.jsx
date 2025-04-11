@@ -8,7 +8,7 @@ import {
 } from "react-router-dom";
 import Home from "./client/pages/Home.jsx";
 import Wishlist from "./client/pages/Wishlist.jsx";
-import Productpage from "./client/pages/productpage.jsx";
+import Productpage from "./client/pages/Productpage.jsx";
 import Cart from "./client/pages/Cart.jsx";
 import Profile from "./client/pages/Profile.jsx";
 import Userdata from "./data/userdata.js";
