@@ -24,7 +24,7 @@ const Header = () => {
             <Link to={`/profile`} className="capitalize cursor-pointer">
               profile
             </Link>
-            
+
             <li className="capitalize cursor-pointer">sign up</li>
           </ul>
         </nav>
@@ -40,22 +40,23 @@ const Header = () => {
                 </div>
                 {category.sub_categories ? (
                   <div className="absolute flex flex-col flex-wrap bg-white w-[70rem] h-[30rem] py-4 px-6 opacity-0 pointer-events-none translate-y-[1.5rem] group-hover:opacity-100 group-hover:translate-y-0 duration-200 ease-out group-hover:pointer-events-auto">
-                    {category.sub_categories.map((subcategory) => (
+                    {category.sub_categories.map((sub_category) => (
                       <div className="text-[1.4rem] mb-[1rem]">
                         <div className="text-black font-medium capitalize cursor-pointer">
-                          {subcategory.name}
+                          {sub_category.name}
                         </div>
-                        {subcategory.sub_categories ? (
+                        {sub_category.sub_categories ? (
                           <ul className="flex flex-col">
-                            {subcategory.sub_categories.map((subcategories) => (
-                              <Link
-                                className="text-gray-500 hover:text-gray-800 capitalize cursor-pointer"
-                                to={`/products/${subcategories.name}`}
-                                onClick={() => window.alert("hey")}
-                              >
-                                {subcategories.name}
-                              </Link>
-                            ))}
+                            {sub_category.sub_categories.map(
+                              (sub_category_2) => (
+                                <Link
+                                  className="text-gray-500 hover:text-gray-800 capitalize cursor-pointer"
+                                  to={`/${category.slug}/${sub_category.slug}/${sub_category_2.slug}`}
+                                >
+                                  {sub_category_2.name}
+                                </Link>
+                              )
+                            )}
                           </ul>
                         ) : (
                           <></>

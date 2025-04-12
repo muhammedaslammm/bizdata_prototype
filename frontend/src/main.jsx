@@ -13,6 +13,7 @@ import Productpage from "./client/pages/Productpage.jsx";
 import Cart from "./client/pages/Cart.jsx";
 import Profile from "./client/pages/Profile.jsx";
 import Userdata from "./data/userdata.js";
+import ProductList from "./client/pages/ProductList.jsx";
 
 // router is created, which handles various routes.
 const router = createBrowserRouter([
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       { path: "home", element: <Home /> },
       { path: "wishlist", element: <Wishlist /> },
       { path: "product/:productid", element: <Productpage /> },
+      {
+        path: "/:category/:sub_category/:sub_category_2",
+        element: <ProductList />,
+      },
       { path: "cart", element: <Cart /> },
       { path: "profile", element: <Profile /> },
     ],

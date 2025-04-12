@@ -5,7 +5,12 @@ const laptops = [
       "Ultimus Elite Intel Core i5 10th Gen 1035G4 - (8 GB/512 GB SSD/Windows 11 Home) NU14U3INF56BN-SG Thin and Light Laptop  (14.1 Inch, Space Grey, 1.3 Kg)",
     image:
       "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/i/u/j/nu14u3inf56bn-sg-thin-and-light-laptop-ultimus-original-imagrtan4ttd2kgg.jpeg?q=70",
-    category: "laptop",
+    category: [
+      { name: "Electronics", slug: "electronics" },
+      { name: "Display & Media", slug: "display-media" },
+      { name: "Laptop", slug: "laptop" },
+      { name: "Gaming", slug: "gaming" },
+    ],
     price: 45000,
     offer_price: 21900,
     description:
@@ -81,7 +86,12 @@ const laptops = [
       "Lenovo IdeaPad Slim 3 Intel Core i5 11th Gen - (8 GB/512 GB SSD/Windows 11 Home) 15ITL6 Thin and Light Laptop (15.6 Inch, Arctic Grey, 1.65 kg)",
     image:
       "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/o/p/z/inspiron-3520-thin-and-light-laptop-dell-original-imah4hffukxdgzzu.jpeg?q=70",
-    category: "laptop",
+    category: [
+      { name: "Electronics", slug: "electronics" },
+      { name: "Display & Media", slug: "display-media" },
+      { name: "Laptop", slug: "laptop" },
+      { name: "Budget", slug: "budget" },
+    ],
     price: 55000,
     offer_price: 39990,
     description:
@@ -151,7 +161,12 @@ const laptops = [
       "ASUS VivoBook 15 AMD Ryzen 5 5500U - (16 GB/512 GB SSD/Windows 11 Home) Thin and Light Laptop (15.6 Inch, Transparent Silver, 1.7 Kg)",
     image:
       "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/5/u/p/-original-imagzzff4zrqn3hk.jpeg?q=70",
-    category: "laptop",
+    category: [
+      { name: "Electronics", slug: "electronics" },
+      { name: "Display & Media", slug: "display-media" },
+      { name: "Laptop", slug: "laptop" },
+      { name: "Gaming", slug: "gaming" },
+    ],
     price: 60000,
     offer_price: 43990,
     description:
@@ -224,7 +239,12 @@ const laptops = [
       "Lenovo IdeaPad Slim 3 Intel Core i3 11th Gen - (8 GB/512 GB SSD/Windows 11 Home) 15ITL6 Thin and Light Laptop (15.6 Inch, Arctic Grey, 1.65 Kg)",
     image:
       "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/u/c/7/-original-imah9gv6zjdbhcs2.jpeg?q=70",
-    category: "laptop",
+    category: [
+      { name: "Electronics", slug: "electronics" },
+      { name: "Display & Media", slug: "display-media" },
+      { name: "Laptop", slug: "laptop" },
+      { name: "Gaming", slug: "gaming" },
+    ],
     price: 52000,
     offer_price: 29990,
     description:
@@ -297,7 +317,12 @@ const laptops = [
       "HP 15s Intel Core i5 12th Gen - (16 GB/512 GB SSD/Windows 11 Home) 15s-fq5111TU Thin and Light Laptop (15.6 Inch, Natural Silver, 1.69 Kg)",
     image:
       "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/3/g/m/-original-imah3xrqttkdbss4.jpeg?q=70",
-    category: "laptop",
+    category: [
+      { name: "Electronics", slug: "electronics" },
+      { name: "Display & Media", slug: "display-media" },
+      { name: "Laptop", slug: "laptop" },
+      { name: "Gaming", slug: "gaming" },
+    ],
     price: 64000,
     offer_price: 48990,
     description:
@@ -370,7 +395,12 @@ const laptops = [
       "ASUS Vivobook 15 AMD Ryzen 5 5500U - (8 GB/512 GB SSD/Windows 11 Home) X1500QA-EJ741WS Thin and Light Laptop (15.6 Inch, Transparent Silver, 1.8 Kg)",
     image:
       "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/z/v/u/-original-imagynwxbpas3sxh.jpeg?q=70",
-    category: "laptop",
+    category: [
+      { name: "Electronics", slug: "electronics" },
+      { name: "Display & Media", slug: "display-media" },
+      { name: "Laptop", slug: "laptop" },
+      { name: "Budget", slug: "budget" },
+    ],
     price: 58000,
     offer_price: 40990,
     description:
@@ -443,7 +473,12 @@ const laptops = [
       "Dell Inspiron 14 Intel Core i5 12th Gen - (16 GB/512 GB SSD/Windows 11 Home) Inspiron 5420 Thin and Light Laptop (14 Inch, Platinum Silver, 1.44 Kg)",
     image:
       "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/w/f/o/-original-imah9ek3awurgxep.jpeg?q=70",
-    category: "laptop",
+    category: [
+      { name: "Electronics", slug: "electronics" },
+      { name: "Display & Media", slug: "display-media" },
+      { name: "Laptop", slug: "laptop" },
+      { name: "Gaming", slug: "gaming" },
+    ],
     price: 72000,
     offer_price: 56990,
     description:
@@ -513,7 +548,12 @@ const laptops = [
       "Acer Aspire 7 AMD Ryzen 5 Hexa Core 5500U - (16 GB/512 GB SSD/Windows 11 Home/4 GB Graphics) A715-42G Gaming Laptop (15.6 Inch, Charcoal Black, 2.15 Kg)",
     image:
       "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/j/2/d/-original-imah9kwaqfm2jz6j.jpeg?q=70",
-    category: "laptop",
+    category: [
+      { name: "Electronics", slug: "electronics" },
+      { name: "Display & Media", slug: "display-media" },
+      { name: "Laptop", slug: "laptop" },
+      { name: "Gaming", slug: "gaming" },
+    ],
     price: 69000,
     offer_price: 50990,
     description:
@@ -590,7 +630,12 @@ const laptops = [
       "Samsung Galaxy Book2 Intel Core i5 12th Gen - (8 GB/512 GB SSD/Windows 11 Home) NP750 Thin and Light Laptop (15.6 Inch, Silver, 1.55 Kg)",
     image:
       "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/y/z/f/-original-imagzvhcfz7btvkh.jpeg?q=70",
-    category: "laptop",
+    category: [
+      { name: "Electronics", slug: "electronics" },
+      { name: "Display & Media", slug: "display-media" },
+      { name: "Laptop", slug: "laptop" },
+      { name: "Budget", slug: "budget" },
+    ],
     price: 65000,
     offer_price: 49990,
     description:
@@ -663,7 +708,12 @@ const laptops = [
       "ASUS VivoBook S15 Intel Core i5 11th Gen - (8 GB/512 GB SSD/Windows 11 Home) S513EA-BQ522WS Thin and Light Laptop (15.6 Inch, Indie Black, 1.80 Kg)",
     image:
       "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/y/y/r/latitude-3420-business-laptop-dell-original-imagnzaqfkcyn2vp.jpeg?q=70",
-    category: "laptop",
+    category: [
+      { name: "Electronics", slug: "electronics" },
+      { name: "Display & Media", slug: "display-media" },
+      { name: "Laptop", slug: "laptop" },
+      { name: "Gaming", slug: "gaming" },
+    ],
     price: 65000,
     offer_price: 48990,
     description:
@@ -736,7 +786,12 @@ const laptops = [
       "HP 15s Ryzen 3 Dual Core 5300U - (8 GB/512 GB SSD/Windows 11 Home) 15s-eq2182AU Thin and Light Laptop (15.6 Inch, Natural Silver, 1.69 Kg)",
     image:
       "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/j/4/l/latitude-3540-thin-and-light-laptop-dell-original-imah9m55ngeyzgsk.jpeg?q=70",
-    category: "laptop",
+    category: [
+      { name: "Electronics", slug: "electronics" },
+      { name: "Display & Media", slug: "display-media" },
+      { name: "Laptop", slug: "laptop" },
+      { name: "Gaming", slug: "gaming" },
+    ],
     price: 50000,
     offer_price: 39990,
     description:
@@ -812,7 +867,12 @@ const laptops = [
       "Lenovo IdeaPad Flex 5 Intel Core i5 12th Gen - (16 GB/512 GB SSD/Windows 11 Home) 14ALC7 2 in 1 Laptop (14 Inch, Storm Grey, 1.55 Kg)",
     image:
       "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/n/j/k/-original-imah9gv5esjgqnag.jpeg?q=70",
-    category: "laptop",
+    category: [
+      { name: "Electronics", slug: "electronics" },
+      { name: "Display & Media", slug: "display-media" },
+      { name: "Laptop", slug: "laptop" },
+      { name: "Gaming", slug: "gaming" },
+    ],
     price: 82000,
     offer_price: 63990,
     description:
