@@ -14,7 +14,7 @@ const getCategories = (segments) => {
         );
       else return null;
     }
-    return { head: "Categories", data: categories };
+    return { head: "Categories", label: "category", data: categories };
   };
   return respetive_category(segments, categories);
 };

@@ -1,8 +1,12 @@
-const ProductlistSidebar = ({ sidebar_content }) => {
-  console.log("sidebar_content:", sidebar_content);
+import { useRef, useState } from "react";
 
+const ProductlistSidebar = ({
+  sidebar_content,
+  manageFilter,
+  selectedLabels,
+}) => {
   return (
-    <div className="w-[20%] bg-white p-6 rounded-[.4rem]">
+    <div className="w-[20%]  shadow-[0_0_.5rem_rgb(220,220,220)] bg-white p-6 rounded-[.4rem]">
       {sidebar_content.map((content) => {
         if (content.data) {
           return (
@@ -12,9 +16,19 @@ const ProductlistSidebar = ({ sidebar_content }) => {
               </h3>
               <ul className="flex flex-col">
                 {content.data.map((d) => (
-                  <div className="flex gap-4 items-center">
-                    <input type="checkbox" name="" id="" />
-                    <li className="text-[1.5rem] text-gray-500 font-medium py-[.3rem] cursor-pointer">
+                  <div
+                    className="flex gap-4 items-center cursor-pointer"
+                    onClick={() => manageFilter(content.label, d.name, d.slug)}
+                  >
+                    <input
+                      type="checkbox"
+                      checked={selectedLabels.includes(d.name)}
+                    />
+                    <li
+                      className={`text-[1.5rem] text-gray-500 font-medium  py-[.3rem] ${
+                        selectedLabels.includes(d.name) ? "text-gray-950" : ""
+                      }`}
+                    >
                       {d.name}
                     </li>
                   </div>

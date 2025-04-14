@@ -1,6 +1,14 @@
 import ProductCard from "./ProductCard";
+import ProductsGridTool from "./ProductsGridTool";
 
-const ProductlistBody = ({ slug, products, image }) => {
+const ProductlistBody = ({
+  slug,
+  products,
+  image,
+  countmsg,
+  handleSorting,
+  sort,
+}) => {
   return (
     <div className="w-[80%]">
       <h1
@@ -9,6 +17,11 @@ const ProductlistBody = ({ slug, products, image }) => {
       >
         {slug}
       </h1>
+      <ProductsGridTool
+        countmsg={countmsg}
+        handleSorting={handleSorting}
+        sort={sort}
+      />
       {products.length ? (
         <div className="grid grid-cols-4 gap-4 my-8">
           {products.map((product) => (

@@ -7,7 +7,12 @@ const projectors = [
       "https://rukminim2.flixcart.com/image/612/612/xif0q/projector/a/f/b/smart-android-13-1-8g-5g-wifi-bt-15k-lm-4k-8k-180-degree-original-imahauzhsdq4rhgv.jpeg?q=70",
     price: 49000,
     offer_price: 23150,
-    category: [],
+    category: [
+      { name: "Electronics", slug: "electronics" },
+      { name: "Display & Media", slug: "display-media" },
+      { name: "Projector", slug: "projector" },
+      { name: "LCD", slug: "lcd" },
+    ],
     description:
       "An extraordinary visual experience awaits you | Excellent Picture Quality U001 Revel in the brilliance of 20000 lumens, native 1080P resolution , auto-focus and seamless support for 4K HDR and HLG content. With HDMI ARC, WiFi-6, BT, 1GB RAM, 8GB ROM Quad Core CPU, TOPTRO Elite Pro is a blend of cutting-edge features designed to elevate your viewing experience to new heights. Auto Focus | Auto Keystone | Zoom | Intelligence OA | 4K Upscale Through HDMI Enjoy the ease of auto focus, auto keystone, obstacle avoidance, auto fit. Additionally, fine-tune your viewing experience with digital adjustments for both horizontal + vertical offsets. The TOPTRO Elite Pro projector redefines convenience, bringing you a seamless & hassle-free cinematic experience 20000 Lumens | Up To 300 inch Big Screen | HDR 10 / HLG Support U001 With professional optics and advanced AI, the TOPTRO Elite pro redefines fully automatic projection.nctions to elevate your viewing to unprecedented heights.",
     specifications: [
@@ -67,7 +72,12 @@ const projectors = [
       "https://rukminim2.flixcart.com/image/612/612/xif0q/projector/y/y/e/4k-2k-lcd-led-180-degree-rotation-android-11-wifi-6-bt-5-0-auto-original-imah5f6bdzzm3fhz.jpeg?q=70",
     price: 59000,
     offer_price: 42999,
-    category: [],
+    category: [
+      { name: "Electronics", slug: "electronics" },
+      { name: "Display & Media", slug: "display-media" },
+      { name: "Projector", slug: "projector" },
+      { name: "LCD", slug: "lcd" },
+    ],
     description:
       "Elevate your home entertainment or presentation experience with the Epson EH-TW750. Featuring Full HD 1080p resolution, 3LCD technology for vivid color accuracy, and 3400 lumens of brightness, this projector delivers stunning visuals in any lighting condition. Seamlessly connect via HDMI, USB, and wireless Miracast. Built-in speakers ensure great audio without extra hardware. Ideal for both home cinema setups and professional environments, it's a perfect blend of performance and convenience. Easy setup and Keystone Correction makes it user-friendly, while Epson’s renowned reliability ensures long-lasting performance.",
     specifications: {
@@ -115,7 +125,12 @@ const projectors = [
       "https://rukminim2.flixcart.com/image/612/612/xif0q/projector/x/a/e/zeb-pixaplay-63-zeb-mlp-7-13-05-zeb-pixaplay-63-zeb-mlp-7-led-original-imah8r9fgjfs27jh.jpeg?q=70",
     price: 149990,
     offer_price: 124999,
-    category: [],
+    category: [
+      { name: "Electronics", slug: "electronics" },
+      { name: "Display & Media", slug: "display-media" },
+      { name: "Projector", slug: "projector" },
+      { name: "DLP", slug: "dlp" },
+    ],
     description:
       "Designed for gamers and home cinema lovers alike, the BenQ TK700STi delivers 4K HDR visuals with ultra-low 16ms input lag at 4K/60Hz. With Android TV built-in, streaming your favorite content is just a click away. Short throw projection allows a 100-inch screen from just 2 meters. The projector includes dual HDMI 2.0b ports with eARC support, 3000 ANSI lumens brightness, and BenQ's CinematicColor technology for vibrant, immersive visuals. Perfect for tight spaces and big entertainment.",
     specifications: {
@@ -166,7 +181,12 @@ const projectors = [
       "https://rukminim2.flixcart.com/image/612/612/xif0q/projector/s/x/v/zeb-pixaplay-25-17-zeb-pixaplay-25-full-hd-zebronics-original-imah5f67nyepnnwv.jpeg?q=70",
     price: 85000,
     offer_price: 59999,
-    category: [],
+    category: [
+      { name: "Electronics", slug: "electronics" },
+      { name: "Display & Media", slug: "display-media" },
+      { name: "Projector", slug: "projector" },
+      { name: "LED", slug: "led" },
+    ],
     description:
       "The ViewSonic M2e redefines portability with its compact design and smart features. Featuring Full HD resolution, Harman Kardon speakers, and USB-C one-cable streaming, it’s ideal for work and entertainment on the go. Smart auto-focus and keystone correction make setup effortless. With Wi-Fi and Bluetooth connectivity, plus support for screen mirroring, the M2e is perfect for both movies and presentations in small spaces.",
     specifications: {
@@ -218,7 +238,12 @@ const projectors = [
       "https://rukminim2.flixcart.com/image/612/612/l3khsi80/projector/z/h/4/-original-imagenqrzfcgwqk7.jpeg?q=70",
     price: 92000,
     offer_price: 67999,
-    category: [],
+    category: [
+      { name: "Electronics", slug: "electronics" },
+      { name: "Display & Media", slug: "display-media" },
+      { name: "Projector", slug: "projector" },
+      { name: "LCD", slug: "lcd" },
+    ],
     description:
       "Bring home a cinematic experience with the Epson EH-TW750 projector. With 3LCD technology, Full HD 1080p resolution, and a brightness of 3400 lumens, this projector ensures vibrant and sharp images even in bright rooms. It comes with Miracast for wireless screen mirroring, HDMI support, built-in WiFi, and a high contrast ratio for richer blacks and more detail. Ideal for both home entertainment and presentations.",
     specifications: {
@@ -274,7 +299,12 @@ const projectors = [
       "https://rukminim2.flixcart.com/image/612/612/xif0q/projector/g/k/e/smart-android-13-1-8g-5g-wifi-bt-15k-lm-4k-8k-180-degree-original-imahargxygrrwmry.jpeg?q=70",
     price: 99990,
     offer_price: 79990,
-    category: [],
+    category: [
+      { name: "Electronics", slug: "electronics" },
+      { name: "Display & Media", slug: "display-media" },
+      { name: "Projector", slug: "projector" },
+      { name: "LED", slug: "led" },
+    ],
     description:
       "XGIMI Halo+ is a powerful, portable smart projector featuring Android TV 10.0, 900 ANSI Lumens, and Harman Kardon speakers for crystal clear sound. With true 1080p Full HD resolution, 4K decoding, and auto focus + keystone correction, it's perfect for on-the-go entertainment. It includes a built-in battery, supports Google Assistant, Chromecast, and has an intuitive design ideal for both indoor and outdoor use.",
     specifications: {
@@ -328,7 +358,12 @@ const projectors = [
       "https://rukminim2.flixcart.com/image/612/612/xif0q/projector/c/o/f/4k-8k-native-full-hd-2-16gb-4d-keystone-e-focus-android-11-bt-original-imahajrsyzzzpx8g.jpeg?q=70",
     price: 215000,
     offer_price: 179999,
-    category: [],
+    category: [
+      { name: "Electronics", slug: "electronics" },
+      { name: "Display & Media", slug: "display-media" },
+      { name: "Projector", slug: "projector" },
+      { name: "Gaming", slug: "gaming" },
+    ],
     description:
       "Engineered for serious gamers, the BenQ TK700STi delivers stunning 4K visuals with ultra-low input lag (16ms at 4K/60Hz). With HDR support, 3000 lumens brightness, and Android TV integration, it's ideal for movies and high-performance gaming. The short-throw design enables large-screen projection in smaller rooms without compromising quality.",
     specifications: {
@@ -376,7 +411,12 @@ const projectors = [
       "https://rukminim2.flixcart.com/image/612/612/kx50gi80/projector/r/9/p/zeb-pixa-play-12-5-6-dobly-audio-led-projector-zebronics-original-imag9z3yujqmzqt4.jpeg?q=70",
     price: 95000,
     offer_price: 74999,
-    category: [],
+    category: [
+      { name: "Electronics", slug: "electronics" },
+      { name: "Display & Media", slug: "display-media" },
+      { name: "Projector", slug: "projector" },
+      { name: "Gaming", slug: "gaming" },
+    ],
     description:
       "The ViewSonic M2e delivers portability with premium features like Full HD resolution, 1000 ANSI lumens, Harman Kardon speakers, and easy connectivity via USB-C and Wi-Fi. It features auto-focus and auto keystone for quick setup. Compact and lightweight, it’s perfect for home entertainment or business travel.",
     specifications: {
@@ -428,7 +468,12 @@ const projectors = [
       "https://rukminim2.flixcart.com/image/612/612/xif0q/projector/2/q/3/mk2-pro-eco-friendly-advanced-1g-8g-screen-mirroring-wifi-native-original-imahaefmq6gjf7tg.jpeg?q=70",
     price: 11000,
     offer_price: 7999,
-    category: [],
+    category: [
+      { name: "Electronics", slug: "electronics" },
+      { name: "Display & Media", slug: "display-media" },
+      { name: "Projector", slug: "projector" },
+      { name: "Gaming", slug: "gaming" },
+    ],
     description:
       "ZEBRONICS Zeb-PIXAPLAY 19 is a budget-friendly smart LED projector with Full HD support, built-in speaker, HDMI, and USB connectivity. Perfect for small rooms and casual movie watching. Compact size and easy plug-and-play functionality make it beginner-friendly.",
     specifications: {
@@ -476,7 +521,12 @@ const projectors = [
       "https://rukminim2.flixcart.com/image/612/612/xif0q/projector/d/r/r/mk-pro-360-degree-screen-rotation-native-full-hd-1080p-original-imahaupjuh3zt8hq.jpeg?q=70",
     price: 82000,
     offer_price: 70999,
-    category: [],
+    category: [
+      { name: "Electronics", slug: "electronics" },
+      { name: "Display & Media", slug: "display-media" },
+      { name: "Projector", slug: "projector" },
+      { name: "DLP", slug: "dlp" },
+    ],
     description:
       "Epson EH-TW750 offers a vivid viewing experience with 3400 lumens brightness and Full HD resolution using 3LCD technology. With wireless screen mirroring and dual HDMI, it's great for both business and home entertainment setups.",
     specifications: {
@@ -524,7 +574,12 @@ const projectors = [
       "https://rukminim2.flixcart.com/image/612/612/xif0q/projector/o/c/9/-original-imah8a9uj7vpuvbv.jpeg?q=70",
     price: 119000,
     offer_price: 99990,
-    category: [],
+    category: [
+      { name: "Electronics", slug: "electronics" },
+      { name: "Display & Media", slug: "display-media" },
+      { name: "Projector", slug: "projector" },
+      { name: "DLP", slug: "dlp" },
+    ],
     description:
       "XGIMI Halo+ offers a premium portable cinema experience with FHD resolution, 900 ANSI lumens, built-in Harman Kardon speakers, Android TV 10.0, and seamless auto focus and keystone correction for effortless setup.",
     specifications: {
@@ -575,7 +630,12 @@ const projectors = [
       "https://rukminim2.flixcart.com/image/612/612/xif0q/projector/k/f/0/zeb-pixaplay-22-green-16-zeb-pixaplay-22-green-led-zebronics-original-imagpqgasyrg2gzv.jpeg?q=70",
     price: 25000,
     offer_price: 17999,
-    category: [],
+    category: [
+      { name: "Electronics", slug: "electronics" },
+      { name: "Display & Media", slug: "display-media" },
+      { name: "Projector", slug: "projector" },
+      { name: "Outdoor", slug: "outdoor" },
+    ],
     description:
       "The YABER V10 is a budget-friendly projector with WiFi, Bluetooth, Full HD native resolution, 4-point keystone correction, and support for 4K inputs. Great for home theaters and casual use.",
     specifications: {
@@ -623,7 +683,12 @@ const projectors = [
       "https://rukminim2.flixcart.com/image/612/612/xif0q/projector/g/l/e/unique-design-android-13-full-hd-big-2k-4k-2-16gb-wifi-bt-original-imahatzdyv6bkkhj.jpeg?q=70",
     price: 350000,
     offer_price: 289999,
-    category: [],
+    category: [
+      { name: "Electronics", slug: "electronics" },
+      { name: "Display & Media", slug: "display-media" },
+      { name: "Projector", slug: "projector" },
+      { name: "Laser", slug: "laser" },
+    ],
     description:
       "The LG HU810PW brings true 4K cinematic experience with 2700 ANSI lumens brightness, dual laser light source, HDR10 support, WebOS smart platform, and multiple HDMI/ARC inputs. Ideal for high-end home theaters.",
     specifications: {
@@ -671,7 +736,12 @@ const projectors = [
       "https://rukminim2.flixcart.com/image/612/612/xif0q/projector/2/q/3/mk2-pro-eco-friendly-advanced-1g-8g-screen-mirroring-wifi-native-original-imahaefmq6gjf7tg.jpeg?q=70",
     price: 12999,
     offer_price: 9999,
-    category: [],
+    category: [
+      { name: "Electronics", slug: "electronics" },
+      { name: "Display & Media", slug: "display-media" },
+      { name: "Projector", slug: "projector" },
+      { name: "Outdoor", slug: "outdoor" },
+    ],
     description:
       "A compact Android-based projector for everyday users, the Egate i9 Pro-Max offers 720p native resolution with 1080p support, inbuilt Android OS, 4D Keystone, and WiFi connectivity, making it a value-for-money option for students or home entertainment.",
     specifications: {
@@ -719,7 +789,12 @@ const projectors = [
       "https://rukminim2.flixcart.com/image/612/612/xif0q/projector/a/f/b/smart-android-13-1-8g-5g-wifi-bt-15k-lm-4k-8k-180-degree-original-imahauzhsdq4rhgv.jpeg?q=70",
     price: 11000,
     offer_price: 7999,
-    category: [],
+    category: [
+      { name: "Electronics", slug: "electronics" },
+      { name: "Display & Media", slug: "display-media" },
+      { name: "Projector", slug: "projector" },
+      { name: "Laser", slug: "laser" },
+    ],
     description:
       "ZEBRONICS Zeb-PIXAPLAY 19 is a budget-friendly smart LED projector with Full HD support, built-in speaker, HDMI, and USB connectivity. Perfect for small rooms and casual movie watching. Compact size and easy plug-and-play functionality make it beginner-friendly.",
     specifications: {
@@ -767,7 +842,12 @@ const projectors = [
       "https://rukminim2.flixcart.com/image/612/612/xif0q/projector/x/a/e/zeb-pixaplay-63-zeb-mlp-7-13-05-zeb-pixaplay-63-zeb-mlp-7-led-original-imah8r9fgjfs27jh.jpeg?q=70",
     price: 99990,
     offer_price: 79990,
-    category: [],
+    category: [
+      { name: "Electronics", slug: "electronics" },
+      { name: "Display & Media", slug: "display-media" },
+      { name: "Projector", slug: "projector" },
+      { name: "DLP", slug: "dlp" },
+    ],
     description:
       "XGIMI Halo+ is a powerful, portable smart projector featuring Android TV 10.0, 900 ANSI Lumens, and Harman Kardon speakers for crystal clear sound. With true 1080p Full HD resolution, 4K decoding, and auto focus + keystone correction, it's perfect for on-the-go entertainment. It includes a built-in battery, supports Google Assistant, Chromecast, and has an intuitive design ideal for both indoor and outdoor use.",
     specifications: {
@@ -821,7 +901,12 @@ const projectors = [
       "https://rukminim2.flixcart.com/image/612/612/xif0q/projector/s/x/v/zeb-pixaplay-25-17-zeb-pixaplay-25-full-hd-zebronics-original-imah5f67nyepnnwv.jpeg?q=70",
     price: 85000,
     offer_price: 59999,
-    category: [],
+    category: [
+      { name: "Electronics", slug: "electronics" },
+      { name: "Display & Media", slug: "display-media" },
+      { name: "Projector", slug: "projector" },
+      { name: "Gaming", slug: "gaming" },
+    ],
     description:
       "The ViewSonic M2e redefines portability with its compact design and smart features. Featuring Full HD resolution, Harman Kardon speakers, and USB-C one-cable streaming, it’s ideal for work and entertainment on the go. Smart auto-focus and keystone correction make setup effortless. With Wi-Fi and Bluetooth connectivity, plus support for screen mirroring, the M2e is perfect for both movies and presentations in small spaces.",
     specifications: {
@@ -873,7 +958,12 @@ const projectors = [
       "https://rukminim2.flixcart.com/image/612/612/xif0q/projector/c/o/f/4k-8k-native-full-hd-2-16gb-4d-keystone-e-focus-android-11-bt-original-imahajrsyzzzpx8g.jpeg?q=70",
     price: 59000,
     offer_price: 42999,
-    category: [],
+    category: [
+      { name: "Electronics", slug: "electronics" },
+      { name: "Display & Media", slug: "display-media" },
+      { name: "Projector", slug: "projector" },
+      { name: "Outdoor", slug: "outdoor" },
+    ],
     description:
       "Elevate your home entertainment or presentation experience with the Epson EH-TW750. Featuring Full HD 1080p resolution, 3LCD technology for vivid color accuracy, and 3400 lumens of brightness, this projector delivers stunning visuals in any lighting condition. Seamlessly connect via HDMI, USB, and wireless Miracast. Built-in speakers ensure great audio without extra hardware. Ideal for both home cinema setups and professional environments, it's a perfect blend of performance and convenience. Easy setup and Keystone Correction makes it user-friendly, while Epson’s renowned reliability ensures long-lasting performance.",
     specifications: {
@@ -921,7 +1011,12 @@ const projectors = [
       "https://rukminim2.flixcart.com/image/612/612/kpvivm80/projector/h/i/m/zeb-lp4000-zeb-lp4000-zebronics-original-imag4ycmpcqn4ush.jpeg?q=70",
     price: 92000,
     offer_price: 67999,
-    category: [],
+    category: [
+      { name: "Electronics", slug: "electronics" },
+      { name: "Display & Media", slug: "display-media" },
+      { name: "Projector", slug: "projector" },
+      { name: "LED", slug: "led" },
+    ],
     description:
       "Bring home a cinematic experience with the Epson EH-TW750 projector. With 3LCD technology, Full HD 1080p resolution, and a brightness of 3400 lumens, this projector ensures vibrant and sharp images even in bright rooms. It comes with Miracast for wireless screen mirroring, HDMI support, built-in WiFi, and a high contrast ratio for richer blacks and more detail. Ideal for both home entertainment and presentations.",
     specifications: {
@@ -977,7 +1072,12 @@ const projectors = [
       "https://rukminim2.flixcart.com/image/612/612/xif0q/projector/d/r/r/mk-pro-360-degree-screen-rotation-native-full-hd-1080p-original-imahaupjuh3zt8hq.jpeg?q=70",
     price: 215000,
     offer_price: 179999,
-    category: [],
+    category: [
+      { name: "Electronics", slug: "electronics" },
+      { name: "Display & Media", slug: "display-media" },
+      { name: "Projector", slug: "projector" },
+      { name: "LED", slug: "led" },
+    ],
     description:
       "Engineered for serious gamers, the BenQ TK700STi delivers stunning 4K visuals with ultra-low input lag (16ms at 4K/60Hz). With HDR support, 3000 lumens brightness, and Android TV integration, it's ideal for movies and high-performance gaming. The short-throw design enables large-screen projection in smaller rooms without compromising quality.",
     specifications: {
@@ -1025,7 +1125,12 @@ const projectors = [
       "https://rukminim2.flixcart.com/image/612/612/kx50gi80/projector/r/9/p/zeb-pixa-play-12-5-6-dobly-audio-led-projector-zebronics-original-imag9z3yujqmzqt4.jpeg?q=70",
     price: 350000,
     offer_price: 289999,
-    category: [],
+    category: [
+      { name: "Electronics", slug: "electronics" },
+      { name: "Display & Media", slug: "display-media" },
+      { name: "Projector", slug: "projector" },
+      { name: "LCD", slug: "lcd" },
+    ],
     description:
       "The LG HU810PW brings true 4K cinematic experience with 2700 ANSI lumens brightness, dual laser light source, HDR10 support, WebOS smart platform, and multiple HDMI/ARC inputs. Ideal for high-end home theaters.",
     specifications: {
@@ -1073,7 +1178,12 @@ const projectors = [
       "https://rukminim2.flixcart.com/image/612/612/kx50gi80/projector/r/9/p/zeb-pixa-play-12-5-6-dobly-audio-led-projector-zebronics-original-imag9z3yujqmzqt4.jpeg?q=70",
     price: 9500,
     offer_price: 7999,
-    category: [],
+    category: [
+      { name: "Electronics", slug: "electronics" },
+      { name: "Display & Media", slug: "display-media" },
+      { name: "Projector", slug: "projector" },
+      { name: "LCD", slug: "lcd" },
+    ],
     description:
       "Egate i9 Pro is a smart LED projector featuring Android OS, 2100 lumens brightness, native 720p resolution with support for 1080p, and wireless casting for easy screen sharing.",
     specifications: {
@@ -1120,7 +1230,12 @@ const projectors = [
       "https://rukminim2.flixcart.com/image/612/612/xif0q/projector/o/c/9/-original-imah8a9uj7vpuvbv.jpeg?q=70",
     price: 13500,
     offer_price: 11249,
-    category: [],
+    category: [
+      { name: "Electronics", slug: "electronics" },
+      { name: "Display & Media", slug: "display-media" },
+      { name: "Projector", slug: "projector" },
+      { name: "Outdoor", slug: "outdoor" },
+    ],
     description:
       "Visitek V6 is a smart projector offering native 720p resolution, inbuilt Android system, 3000 lumens brightness, and support for Full HD 1080p. Ideal for personal or classroom use.",
     specifications: {
@@ -1168,7 +1283,12 @@ const projectors = [
       "https://rukminim2.flixcart.com/image/612/612/xif0q/projector/a/p/n/zeb-pixaplay-pro-500-zeb-mlp-10-1-31-zeb-pixaplay-pro-500-zeb-original-imah8zythxzbqzmg.jpeg?q=70",
     price: 12990,
     offer_price: 10499,
-    category: [],
+    category: [
+      { name: "Electronics", slug: "electronics" },
+      { name: "Display & Media", slug: "display-media" },
+      { name: "Projector", slug: "projector" },
+      { name: "Gaming", slug: "gaming" },
+    ],
     description:
       "The Everycom X9 projector delivers 720p native resolution, supports 1080p input, and comes with multiple connectivity options. Suitable for home cinema and presentations.",
     specifications: {
@@ -1215,7 +1335,12 @@ const projectors = [
       "https://rukminim2.flixcart.com/image/612/612/l3khsi80/projector/z/h/4/-original-imagenqrzfcgwqk7.jpeg?q=70",
     price: 17999,
     offer_price: 14499,
-    category: [],
+    category: [
+      { name: "Electronics", slug: "electronics" },
+      { name: "Display & Media", slug: "display-media" },
+      { name: "Projector", slug: "projector" },
+      { name: "Laser", slug: "laser" },
+    ],
     description:
       "Play projector comes with Android OS, Full HD native resolution, WiFi and dual USB ports. It supports Bluetooth speakers and external devices like FireStick and TV boxes.",
     specifications: {
@@ -1263,7 +1388,12 @@ const projectors = [
       "https://rukminim2.flixcart.com/image/612/612/xif0q/projector/x/a/e/zeb-pixaplay-63-zeb-mlp-7-13-05-zeb-pixaplay-63-zeb-mlp-7-led-original-imah8r9fgjfs27jh.jpeg?q=70",
     price: 29999,
     offer_price: 24999,
-    category: [],
+    category: [
+      { name: "Electronics", slug: "electronics" },
+      { name: "Display & Media", slug: "display-media" },
+      { name: "Projector", slug: "projector" },
+      { name: "DLP", slug: "dlp" },
+    ],
     description:
       "WZATCO M5 is a high-brightness multimedia projector with 720p resolution, 6500 lumens brightness, dual HDMI inputs, and a zoom function. Perfect for home theater setups.",
     specifications: {
