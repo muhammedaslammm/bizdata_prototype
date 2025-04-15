@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./client/App.jsx";
 import { WishlistProvider } from "./client/context/WishlistContext.jsx"; // path may vary
+import { CartProvider } from "./client/context/CartContext";
 import {
   createBrowserRouter,
   RouterProvider,
@@ -38,7 +39,9 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <WishlistProvider>
-      <RouterProvider router={router} />
+      <CartProvider>
+        <RouterProvider router={router} />
+      </CartProvider>
     </WishlistProvider>
   </React.StrictMode>
 );
