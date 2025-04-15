@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const ProductCard = ({ product }) => {
   return (
     <Link to={`/product/${product.id}`}>
-      <div className="border border-neutral-100 p-[1.5rem] bg-white rounded-[.5rem] cursor-pointer hover:shadow-[0_0_.4rem_rgb(210,210,210)]">
+      <div className="border border-neutral-300 hover:border-neutral-500 transition-all duration-200 p-[1.5rem] bg-white rounded-[.5rem] cursor-pointer hover:shadow-[0_0_.4rem_rgb(210,210,210)]">
         <div className="image h-[11rem] flex justify-center">
           <img
             src={product.image}
