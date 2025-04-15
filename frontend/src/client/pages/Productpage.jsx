@@ -4,14 +4,16 @@ import laptops from "../../data/laptops";
 import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useWishlist } from "../context/WishlistContext";
+import { useCart } from "../context/CartContext"; // import cart context
 
 const Productpage = () => {
-  // const { addToWishlist } = useWishlist(); // use the context
   const [product, setProduct] = useState(null);
   const products = [...projectors, ...laptops];
   const urlpath = useParams();
   const navigate = useNavigate();
+
   const { addToWishList } = useWishlist();
+  const { addToCart } = useCart(); // ✅ Call useCart inside the component
 
   const addProductToWishlist = (product) => {
     const response = addToWishList(product);
@@ -19,13 +21,24 @@ const Productpage = () => {
     else window.alert(response.message);
   };
 
+  const handleAddToCart = (product) => {
+    const response = addToCart(product);
+    if (response.success) {
+      navigate("/cart");
+    } else {
+      if (window.confirm(response.message + ". Go to cart?")) {
+        navigate("/cart");
+      }
+    }
+  };
+
   useEffect(() => {
-    const matchingProduct = products.find(function (product) {
+    const matchingProduct = products.find((product) => {
       return product.id === Number(urlpath.productid);
     });
 
     setProduct(matchingProduct);
-  }, []);
+  }, [urlpath.productid]); // ✅ Better dependency
 
   return product ? (
     <div className="w-[90%] mx-auto py-12 text-slate-800 space-y-16">
@@ -71,7 +84,10 @@ const Productpage = () => {
 
           {/* Buttons */}
           <div className="flex gap-4 mt-6">
-            <button className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-lg transition">
+            <button
+              className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-lg transition"
+              onClick={() => handleAddToCart(product)}
+            >
               Add to Cart
             </button>
             <button
@@ -107,9 +123,7 @@ const Productpage = () => {
         ))}
       </div>
     </div>
-  ) : (
-    <></>
-  );
+  ) : null;
 };
 
 export default Productpage;
