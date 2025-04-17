@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import App from "./client/App.jsx";
 import { WishlistProvider } from "./client/context/WishlistContext.jsx"; // path may vary
 import { CartProvider } from "./client/context/CartContext";
+
 import {
   createBrowserRouter,
   RouterProvider,
@@ -15,6 +16,9 @@ import Cart from "./client/pages/Cart.jsx";
 import Profile from "./client/pages/Profile.jsx";
 import Userdata from "./data/userdata.js";
 import ProductList from "./client/pages/ProductList.jsx";
+import Checkout from "./client/pages/Checkout.jsx"; // add this at top
+import PaymentDetails from "./client/pages/PaymentDetails.jsx";
+import OrderSummary from "./client/pages/OrderSummary.jsx";
 
 // router is created, which handles various routes.
 const router = createBrowserRouter([
@@ -35,6 +39,10 @@ const router = createBrowserRouter([
       },
       { path: "cart", element: <Cart /> },
       { path: "profile", element: <Profile /> },
+      { path: "checkout", element: <Checkout /> }, // add inside children of "/"
+      { path: "payment-details", element: <PaymentDetails /> },
+      { path: "order-summary", element: <OrderSummary /> },
+      /* Add home and other routes here */
     ],
   },
 ]);

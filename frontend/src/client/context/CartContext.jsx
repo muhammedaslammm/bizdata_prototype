@@ -7,6 +7,10 @@ const CartContext = createContext();
 export const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
 
+  const clearCart = () => {
+    setCartItems([]);
+  };
+
   // ✅ Add a product to cart
   const addToCart = (product) => {
     const existingItem = cartItems.find((item) => item.id === product.id);
@@ -61,6 +65,7 @@ export const CartProvider = ({ children }) => {
         removeFromCart,
         updateQuantity,
         getCartTotal,
+        clearCart,
       }}
     >
       {children}
@@ -69,4 +74,5 @@ export const CartProvider = ({ children }) => {
 };
 
 // Custom Hook
+
 export const useCart = () => useContext(CartContext);

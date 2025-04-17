@@ -21,9 +21,15 @@ export const WishlistProvider = ({ children }) => {
       return { success: false, message: "product already added to wishlist" };
   };
 
+  // ✅ Add this
+  const removeFromWishlist = (productId) => {
+    setWishlist((prev) => prev.filter((item) => item.id !== productId));
+  };
+
   const value = {
     wishlist,
     addToWishList,
+    removeFromWishlist, // ✅ Make it available
   };
 
   return (
