@@ -1,10 +1,10 @@
 const Footer = () => {
   return (
-    <footer className="bg-neutral-300 text-black py-[6rem] mt-[10rem]">
+    <footer className="bg-neutral-900 text-white py-[6rem] mt-[5rem]">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 w-[90%] mx-auto text-[15px]">
         <div>
-          <h3 className="text-shadow-white font-bold text-xl mb-5">About</h3>
-          <ul className="space-y-2 pl-1 text-xl">
+          <h3 className="text-shadow-white font-medium text-xl mb-5">About</h3>
+          <ul className="space-y-2 pl-1 text-[1.5rem]">
             <li>About Us</li>
             <li>Contact Us</li>
             <li>Career</li>
@@ -13,10 +13,8 @@ const Footer = () => {
         </div>
 
         <div>
-          <h3 className="text-shadow-white font-medium text-[1.5rem] mb-5">
-            Grouped Companies
-          </h3>
-          <ul className="space-y-2 pl-1 text-[1.5rem] text-neutral-700">
+          <h3 className=" font-medium text-[1.5rem] mb-5">Grouped Companies</h3>
+          <ul className="space-y-2 pl-1 text-[1.5rem] ">
             <li>Flipkart</li>
             <li>Myntra</li>
             <li>Amazon</li>
@@ -27,7 +25,7 @@ const Footer = () => {
           <h3 className="text-shadow-white font-medium text-[1.5rem] mb-5">
             Help
           </h3>
-          <ul className="space-y-2 pl-1 text-[1.5rem] text-neutral-700">
+          <ul className="space-y-2 pl-1 text-[1.5rem] ">
             <li>Payment</li>
             <li>Shipping</li>
             <li>Cancellation</li>
@@ -40,7 +38,7 @@ const Footer = () => {
           <h3 className="text-shadow-white font-medium text-[1.5rem] mb-5">
             Consumer Policy
           </h3>
-          <ul className="space-y-2 pl-1 text-[1.5rem] text-neutral-700">
+          <ul className="space-y-2 pl-1 text-[1.5rem] ">
             <li>Cancellation & Return</li>
             <li>Terms of Use</li>
             <li>Privacy</li>
@@ -50,8 +48,10 @@ const Footer = () => {
         </div>
 
         <div>
-          <h3 className="text-shadow-white font-bold text-xl mb-5">Mail Us</h3>
-          <ul className="space-y-2 pl-1 text-xl">
+          <h3 className="text-shadow-white font-medium text-[1.5rem] mb-5">
+            Mail Us
+          </h3>
+          <ul className="space-y-2 pl-1 text-[1.5rem]">
             <li className="flex items-center gap-2">info@gmail.com</li>
             <li className="flex items-center gap-2">@facebook.com</li>
             <li className="flex items-center gap-2">@instagram.com</li>
@@ -63,7 +63,7 @@ const Footer = () => {
             Registered Office Address
           </h3>
           <ul className="pl-1">
-            <li className="text-[1.5rem] text-neutral-700 leading-relaxed">
+            <li className="text-[1.5rem]  leading-relaxed">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque,
               ipsa. Culpa minus optio vero ex asperiores perferendis. Harum ab
               nisi quis ex repellendus, in non sapiente possimus est porro

@@ -4,3 +4,10 @@ html {
   font-family: "Poppins", sans-serif;
   font-size: 10px;
 }
+
+.button--product{
+  @apply px-8 py-3 text-[1.4rem] rounded-[.3rem] transition;
+}
+.button--cart{
+  @apply px-8 py-3 text-[1.4rem] rounded-[.3rem] transition;
+}

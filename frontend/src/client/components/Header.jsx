@@ -35,7 +35,7 @@ const Header = () => {
           {categories.map(function (category) {
             return (
               <div className="relative group">
-                <div className="uppercase text-[1.55rem] py-[.58rem] px-4 cursor-pointer hover:bg-sky-700">
+                <div className="uppercase text-[1.55rem] py-[.58rem] px-4 cursor-pointer hover:bg-cyan-800">
                   {category.name}
                 </div>
                 {category.sub_categories ? (
