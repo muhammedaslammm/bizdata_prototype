@@ -12,7 +12,7 @@ const Cart = () => {
   const subtotal = getCartTotal();
 
   return (
-    <div className="w-[90%] mx-auto text-neutral-900 my-6 p-8">
+    <div className="w-[90%] mx-auto text-neutral-900 my-6 py-8">
       {cartItems.length === 0 ? (
         <div className="bg-white rounded-[.5rem]">
           <div className="py-[10rem] text-center">
@@ -36,11 +36,11 @@ const Cart = () => {
       ) : (
         <div className="flex gap-8">
           {/* Cart Items */}
-          <div className="space-y-6 bg-white w-8/12 rounded-[.5rem]">
+          <div className="space-y-6 w-8/12">
             {cartItems.map((item) => (
               <div
                 key={item.id}
-                className="flex flex-col sm:flex-row items-start sm:items-center justify-between p-8 gap-12"
+                className="bg-white flex flex-col sm:flex-row items-start sm:items-center justify-between rounded-[.5rem] p-8 gap-12"
               >
                 <div className="flex flex-col items-start">
                   {/* title and price */}
@@ -81,7 +81,7 @@ const Cart = () => {
                     Remove item
                   </button> */}
                 </div>
-                <div className="image w-[10rem] h-[10rem]">
+                <div className="image w-[20rem] h-[15rem] rounded-[.5rem] p-4 self-start">
                   <img
                     src={item.image}
                     alt={item.name}
@@ -93,14 +93,14 @@ const Cart = () => {
           </div>
 
           {/* Cart Summary */}
-          <div className="w-4/12 rounded-[.5rem] p-8 bg-gray-50 space-y-6">
-            <h2 className="text-[1.8rem] font-medium">Cart Totals</h2>
-            <div className="flex justify-between text-[1.5rem] text-neutral-700">
+          <div className="w-4/12 self-start rounded-[.5rem] p-8 bg-gray-50 space-y-6">
+            <h2 className="text-[2rem] font-semibold">Cart Totals</h2>
+            <div className="flex justify-between text-[1.7rem] text-neutral-700">
               <span>Subtotal</span>
               <span>{subtotal.toFixed(2)} AED</span>
             </div>
 
-            <details className="text-[1.4rem] text-red-800 cursor-pointer">
+            <details className="text-[1.6rem] text-red-800 cursor-pointer">
               <summary>Add a coupon</summary>
               <div className="flex flex-col gap-[1.5rem]">
                 <input
@@ -114,14 +114,14 @@ const Cart = () => {
               </div>
             </details>
 
-            <div className="flex justify-between text-[1.5rem] font-medium border-t border-neutral-500 pt-4">
+            <div className="flex justify-between text-[1.7rem] font-medium border-t border-neutral-500 pt-4">
               <span>Total</span>
               <span className="font-semibold">{subtotal.toFixed(2)} AED</span>
             </div>
 
             <button
               onClick={() => navigate("/checkout")}
-              className="w-full text-[1.5rem] bg-cyan-800 text-white font-medium py-3 rounded cursor-pointer"
+              className="w-full text-[1.7rem] bg-cyan-800 text-white font-medium py-3 rounded cursor-pointer mt-4"
             >
               Proceed to Checkout
             </button>

@@ -60,184 +60,203 @@ const Checkout = () => {
   };
 
   return (
-    <div className="w-[90%] max-w-[1300px] mx-auto py-12 grid grid-cols-1 lg:grid-cols-3 gap-10 text-slate-800">
-      <div className="lg:col-span-2 space-y-10">
-        <button
-          onClick={() => navigate(-1)}
-          className="mb-4 text-blue-600 underline text-sm hover:text-blue-800"
-        >
-          ← Back
-        </button>
-        <h1 className="text-3xl font-bold border-b pb-4">Checkout</h1>
+    <div className="w-[90%] mx-auto my-4 gap-10 text-neutral-800">
+      <button
+        onClick={() => navigate(-1)}
+        className="text-cyan-800 underline text-[1.6rem] hover:text-blue-800 mb-4 cursor-pointer"
+      >
+        Back
+      </button>
+      <div className="flex gap-8">
+        <div className="w-8/12 space-y-4 flex flex-col">
+          {/* <h1 className="text-[2rem] p-4 font-medium bg-white rounded-[.5rem]">
+            Checkout
+          </h1> */}
 
-        <div className="space-y-4">
-          <h2 className="text-xl font-semibold">Billing address</h2>
-          {addressSaved && !showNewAddressForm ? (
-            <div className="border p-4 rounded bg-white">
-              <p className="mb-2">
-                <strong>John Doe</strong>
-                <br />
-                Dubai, United Arab Emirates
-                <br />
-                Phone: +971 50 123 4567
-              </p>
-              <button
-                className="text-blue-600 underline text-sm"
-                onClick={() => {
-                  setShowNewAddressForm(true);
-                  setAddressSaved(false);
-                }}
-              >
-                Use a different address
-              </button>
+          <div className="space-y-4 bg-white p-8 rounded-[.5rem]">
+            <h2 className="text-[1.9rem] font-medium">Billing address</h2>
+            {addressSaved && !showNewAddressForm ? (
+              <div className="space-y-4 border border-neutral-400 p-6 rounded bg-white">
+                <p className="text-[1.8rem]">
+                  <strong>John Doe</strong>
+                  <br />
+                  Dubai, United Arab Emirates
+                  <br />
+                  Phone: +971 50 123 4567
+                </p>
+                <button
+                  className="text-cyan-800 underline text-[1.8rem] cursor-pointer"
+                  onClick={() => {
+                    setShowNewAddressForm(true);
+                    setAddressSaved(false);
+                  }}
+                >
+                  Use a different address
+                </button>
+              </div>
+            ) : (
+              <form className="border border-neutral-300 gap-4 bg-white p-6 rounded space-y-4">
+                <h3 className="capitalize text-[1.7rem] font-medium">
+                  enter address details
+                </h3>
+                <div className="flex flex-col gap-4">
+                  <div className="names flex gap-4">
+                    <div className="w-full">
+                      <input
+                        type="text"
+                        placeholder="First name"
+                        value={address.firstName}
+                        onChange={(e) =>
+                          setAddress({ ...address, firstName: e.target.value })
+                        }
+                        className="input--form"
+                      />
+                      {errors.firstName && (
+                        <p className="text-red-500 text-sm">
+                          {errors.firstName}
+                        </p>
+                      )}
+                    </div>
+
+                    <div className="w-full">
+                      <input
+                        type="text"
+                        placeholder="Last name"
+                        value={address.lastName}
+                        onChange={(e) =>
+                          setAddress({ ...address, lastName: e.target.value })
+                        }
+                        className="input--form"
+                      />
+                      {errors.lastName && (
+                        <p className="text-red-500 text-sm">
+                          {errors.lastName}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+
+                  <div className="col-span-2">
+                    <input
+                      type="text"
+                      placeholder="Address"
+                      value={address.address}
+                      onChange={(e) =>
+                        setAddress({ ...address, address: e.target.value })
+                      }
+                      className="input--form"
+                    />
+                    {errors.address && (
+                      <p className="text-red-500 text-sm">{errors.address}</p>
+                    )}
+                  </div>
+
+                  <div className="locations flex gap-4">
+                    <div className="w-full">
+                      <input
+                        type="text"
+                        placeholder="City"
+                        value={address.city}
+                        onChange={(e) =>
+                          setAddress({ ...address, city: e.target.value })
+                        }
+                        className="input--form"
+                      />
+                      {errors.city && (
+                        <p className="text-red-500 text-sm">{errors.city}</p>
+                      )}
+                    </div>
+
+                    <div className="w-full">
+                      <input
+                        type="text"
+                        placeholder="State"
+                        value={address.state}
+                        onChange={(e) =>
+                          setAddress({ ...address, state: e.target.value })
+                        }
+                        className="input--form"
+                      />
+                      {errors.state && (
+                        <p className="text-red-500 text-sm">{errors.state}</p>
+                      )}
+                    </div>
+                  </div>
+
+                  <div className="w-[50%]">
+                    <input
+                      type="number"
+                      placeholder="Phone (10 digits)"
+                      value={address.phone}
+                      onChange={(e) =>
+                        setAddress({ ...address, phone: e.target.value })
+                      }
+                      className="input--form"
+                    />
+                    {errors.phone && (
+                      <p className="text-red-500 text-sm">{errors.phone}</p>
+                    )}
+                  </div>
+                </div>
+              </form>
+            )}
+          </div>
+
+          <div className="space-y-4 bg-white p-8 rounded-[.5rem]">
+            <h2 className="text-[1.8rem] font-medium">Payment options</h2>
+            <div className="space-y-4">
+              <label className="flex items-center gap-4 text-[1.75rem]">
+                <input
+                  type="radio"
+                  checked={payment === "bank"}
+                  onChange={() => setPayment("bank")}
+                />
+                Direct bank transfer
+              </label>
+              <label className="flex items-center gap-4 text-[1.75rem]">
+                <input
+                  type="radio"
+                  checked={payment === "online"}
+                  onChange={() => setPayment("online")}
+                />
+                Online payment
+              </label>
+              <label className="flex items-center gap-4 text-[1.75rem]">
+                <input
+                  type="radio"
+                  checked={payment === "cod"}
+                  onChange={() => setPayment("cod")}
+                />
+                Cash on delivery
+              </label>
             </div>
-          ) : (
-            <form className="grid grid-cols-1 sm:grid-cols-2 gap-4 bg-white p-4 rounded border">
-              <div>
-                <input
-                  type="text"
-                  placeholder="First name"
-                  value={address.firstName}
-                  onChange={(e) =>
-                    setAddress({ ...address, firstName: e.target.value })
-                  }
-                  className="border p-2 rounded w-full"
-                />
-                {errors.firstName && (
-                  <p className="text-red-500 text-sm">{errors.firstName}</p>
-                )}
-              </div>
+          </div>
 
-              <div>
-                <input
-                  type="text"
-                  placeholder="Last name"
-                  value={address.lastName}
-                  onChange={(e) =>
-                    setAddress({ ...address, lastName: e.target.value })
-                  }
-                  className="border p-2 rounded w-full"
-                />
-                {errors.lastName && (
-                  <p className="text-red-500 text-sm">{errors.lastName}</p>
-                )}
-              </div>
-
-              <div className="col-span-2">
-                <input
-                  type="text"
-                  placeholder="Address"
-                  value={address.address}
-                  onChange={(e) =>
-                    setAddress({ ...address, address: e.target.value })
-                  }
-                  className="border p-2 rounded w-full"
-                />
-                {errors.address && (
-                  <p className="text-red-500 text-sm">{errors.address}</p>
-                )}
-              </div>
-
-              <div>
-                <input
-                  type="text"
-                  placeholder="City"
-                  value={address.city}
-                  onChange={(e) =>
-                    setAddress({ ...address, city: e.target.value })
-                  }
-                  className="border p-2 rounded w-full"
-                />
-                {errors.city && (
-                  <p className="text-red-500 text-sm">{errors.city}</p>
-                )}
-              </div>
-
-              <div>
-                <input
-                  type="text"
-                  placeholder="State"
-                  value={address.state}
-                  onChange={(e) =>
-                    setAddress({ ...address, state: e.target.value })
-                  }
-                  className="border p-2 rounded w-full"
-                />
-                {errors.state && (
-                  <p className="text-red-500 text-sm">{errors.state}</p>
-                )}
-              </div>
-
-              <div className="col-span-2">
-                <input
-                  type="text"
-                  placeholder="Phone (10 digits)"
-                  value={address.phone}
-                  onChange={(e) =>
-                    setAddress({ ...address, phone: e.target.value })
-                  }
-                  className="border p-2 rounded w-full"
-                />
-                {errors.phone && (
-                  <p className="text-red-500 text-sm">{errors.phone}</p>
-                )}
-              </div>
-            </form>
-          )}
+          <button
+            onClick={handlePlaceOrder}
+            className="text-[1.6rem] self-end text-white font-medium bg-cyan-800 py-3.5 px-6 mt-6 hover:bg-cyan-700 cursor-pointer transition duration-200 "
+          >
+            {payment === "cod" ? "Place Order" : "Proceed to Payment"}
+          </button>
         </div>
 
-        <div className="space-y-4">
-          <h2 className="text-xl font-semibold">Payment options</h2>
-          <div className="space-y-2">
-            <label className="flex items-center gap-2">
-              <input
-                type="radio"
-                checked={payment === "bank"}
-                onChange={() => setPayment("bank")}
-              />
-              Direct bank transfer
-            </label>
-            <label className="flex items-center gap-2">
-              <input
-                type="radio"
-                checked={payment === "online"}
-                onChange={() => setPayment("online")}
-              />
-              Online payment
-            </label>
-            <label className="flex items-center gap-2">
-              <input
-                type="radio"
-                checked={payment === "cod"}
-                onChange={() => setPayment("cod")}
-              />
-              Cash on delivery
-            </label>
+        <div className="w-4/12 self-start border border-neutral-300 p-8 bg-white rounded-[.5rem] space-y-4">
+          <h2 className="text-[1.8rem] font-medium ">Order Summary</h2>
+          {cartItems.map((item) => (
+            <div
+              key={item.id}
+              className="text-[1.65rem] border-b border-gray-500 py-3 space-y-2"
+            >
+              <p className="font-medium">
+                {item.title} ({item.quantity}x)
+              </p>
+              <p className="text-blue-600">Rs {item.offer_price}</p>
+            </div>
+          ))}
+          <div className="flex justify-between font-medium text-[1.8rem]">
+            <span>Total</span>
+            <span className="font-semibold">Rs {subtotal.toFixed(2)}</span>
           </div>
-        </div>
-
-        <button
-          onClick={handlePlaceOrder}
-          className="mt-6 w-full bg-blue-600 text-white py-3 rounded hover:bg-blue-700 text-lg"
-        >
-          {payment === "cod" ? "Place Order" : "Proceed to Payment"}
-        </button>
-      </div>
-
-      <div className="border p-6 rounded bg-white shadow-md space-y-4">
-        <h2 className="text-xl font-semibold border-b pb-2">Order Summary</h2>
-        {cartItems.map((item) => (
-          <div key={item.id} className="text-sm border-b pb-3">
-            <p className="font-medium">
-              {item.title} ({item.quantity}x)
-            </p>
-            <p className="text-slate-600">{item.name}</p>
-            <p className="text-blue-600">{item.offer_price} AED</p>
-          </div>
-        ))}
-        <div className="flex justify-between font-semibold pt-4 border-t">
-          <span>Total</span>
-          <span>{subtotal.toFixed(2)} AED</span>
         </div>
       </div>
     </div>

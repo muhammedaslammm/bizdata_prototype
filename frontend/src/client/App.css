@@ -11,3 +11,7 @@ html {
 .button--cart{
   @apply px-8 py-3 text-[1.4rem] rounded-[.3rem] transition;
 }
+
+.input--form{
+  @apply border border-neutral-400 text-[1.6rem] py-[.7rem] px-[1rem] rounded-[.5rem] outline-0 w-full;
+}

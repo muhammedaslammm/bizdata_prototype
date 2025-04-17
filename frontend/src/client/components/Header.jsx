@@ -30,12 +30,12 @@ const Header = () => {
         </nav>
       </header>
       <nav className="bg-neutral-700">
-        <ul className="flex text-[1.3rem] w-[90%] mx-auto text-white">
+        <ul className="flex w-[90%] mx-auto text-white">
           {/*category is looped using an array method, map()*/}
           {categories.map(function (category) {
             return (
               <div className="relative group">
-                <div className="uppercase text-[1.55rem] py-[.58rem] px-4 cursor-pointer hover:bg-cyan-800">
+                <div className="uppercase text-[1.7rem] py-[.58rem] px-4 cursor-pointer hover:bg-cyan-800">
                   {category.name}
                 </div>
                 {category.sub_categories ? (
