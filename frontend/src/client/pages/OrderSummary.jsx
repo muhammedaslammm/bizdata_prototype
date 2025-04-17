@@ -76,12 +76,6 @@ const OrderSummary = () => {
         {/* Navigation Buttons */}
         <div className="flex gap-4 mt-8">
           <button
-            onClick={() => navigate(-1)}
-            className="px-6 py-3 bg-gray-300 text-black rounded hover:bg-gray-400"
-          >
-            Back
-          </button>
-          <button
             onClick={() => navigate("/home")}
             className="px-6 py-3 bg-blue-600 text-white rounded hover:bg-blue-700"
           >

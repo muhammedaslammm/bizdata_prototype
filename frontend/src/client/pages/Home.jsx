@@ -4,14 +4,13 @@ import projectors from "../../data/projectors";
 import laptops from "../../data/laptops";
 import { useEffect, useState } from "react";
 
-
 const Home = () => {
   const [dealProjectors, setDealProjectors] = useState([]);
   const [dealLaptops, setDealLaptops] = useState([]);
 
   // the products are filtered and stored in the above state variables.
   // these variable products are send to various components representing various sections.
-  
+
   useEffect(() => {
     const filteredProjectors = projectors
       .filter((projector) => projector.offer_price < 30000)

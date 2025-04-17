@@ -19,6 +19,8 @@ import ProductList from "./client/pages/ProductList.jsx";
 import Checkout from "./client/pages/Checkout.jsx"; // add this at top
 import PaymentDetails from "./client/pages/PaymentDetails.jsx";
 import OrderSummary from "./client/pages/OrderSummary.jsx";
+import Contact from "./client/pages/Contact.jsx";
+import About from "./client/pages/About.jsx";
 
 // router is created, which handles various routes.
 const router = createBrowserRouter([
@@ -42,7 +44,12 @@ const router = createBrowserRouter([
       { path: "checkout", element: <Checkout /> }, // add inside children of "/"
       { path: "payment-details", element: <PaymentDetails /> },
       { path: "order-summary", element: <OrderSummary /> },
+      { path: "contact", element: <Contact /> },
+      { path: "about", element: <About /> },
+
       /* Add home and other routes here */
+
+      ,
     ],
   },
 ]);
