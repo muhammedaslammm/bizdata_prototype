@@ -34,6 +34,7 @@ const Trust = () => {
             Prototype, here you can expect much more faster delivery
           </p>
         </div>
+
       </div>
     </div>
   );

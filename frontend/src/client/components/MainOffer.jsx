@@ -9,6 +9,7 @@ const MainOffers = () => {
   }, []);
   return mainOffer ? (
     <div className="w-[90%] mx-auto flex gap-8 my-[7rem]">
+
       <div className="relative h-[20rem] w-full">
         <img
           src={mainOffer.image}
