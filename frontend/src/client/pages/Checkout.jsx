@@ -1,18 +1,19 @@
 import React, { useState } from "react";
 import { useCart } from "../context/CartContext";
 import { useNavigate } from "react-router-dom";
+import images from "../assets/images";
 
 const Checkout = () => {
   const { cartItems, getCartTotal, clearCart } = useCart();
   const [addressSaved, setAddressSaved] = useState(true);
   const [showNewAddressForm, setShowNewAddressForm] = useState(false);
   const [address, setAddress] = useState({
-    firstName: "",
-    lastName: "",
-    address: "",
-    city: "",
-    state: "",
-    phone: "",
+    firstName: "John",
+    lastName: "Philip",
+    address: "St Mardianl Local Villa Street, 4509 Upstreet Road, Washinglon",
+    city: "Palmaria",
+    state: "Selesca",
+    phone: "919087887898",
   });
   const [errors, setErrors] = useState({});
   const [payment, setPayment] = useState("bank");
@@ -69,11 +70,7 @@ const Checkout = () => {
       </button>
       <div className="flex gap-8">
         <div className="w-8/12 space-y-4 flex flex-col">
-          {/* <h1 className="text-[2rem] p-4 font-medium bg-white rounded-[.5rem]">
-            Checkout
-          </h1> */}
-
-          <div className="space-y-4 bg-white p-8 rounded-[.5rem]">
+          <div className="space-y-4 border border-neutral-300 bg-white p-8 rounded-[.5rem]">
             <h2 className="text-[1.9rem] font-medium">Billing address</h2>
             {addressSaved && !showNewAddressForm ? (
               <div className="space-y-4 border border-neutral-400 p-6 rounded bg-white">
@@ -202,9 +199,9 @@ const Checkout = () => {
             )}
           </div>
 
-          <div className="space-y-4 bg-white p-8 rounded-[.5rem]">
+          <div className="space-y-4 bg-white border border-neutral-300 p-8 rounded-[.5rem]">
             <h2 className="text-[1.8rem] font-medium">Payment options</h2>
-            <div className="space-y-4">
+            <div className="space-y-8">
               <label className="flex items-center gap-4 text-[1.75rem]">
                 <input
                   type="radio"
@@ -213,14 +210,39 @@ const Checkout = () => {
                 />
                 Direct bank transfer
               </label>
-              <label className="flex items-center gap-4 text-[1.75rem]">
-                <input
-                  type="radio"
-                  checked={payment === "online"}
-                  onChange={() => setPayment("online")}
-                />
-                Online payment
-              </label>
+              <div className="space-y-4">
+                <label className="flex items-center gap-4 text-[1.75rem]">
+                  <input
+                    type="radio"
+                    checked={payment === "online"}
+                    onChange={() => setPayment("online")}
+                  />
+                  Online payment
+                </label>
+                <div className="flex gap-8 px-8">
+                  <img
+                    src={images.visa}
+                    alt="visa"
+                    className="w-[3.5rem] h-[2rem] object-fill"
+                  />
+                  <img
+                    src={images.master_card}
+                    alt="master card"
+                    className="w-[3.5rem] h-[2rem] object-fill"
+                  />
+                  <img
+                    src={images.rupay}
+                    alt="rupay"
+                    className="w-[3.5rem] h-[2rem] object-fill"
+                  />
+                  <img
+                    src={images.maestro}
+                    alt="maestro"
+                    className="w-[3.5rem] h-[2rem] object-fill"
+                  />
+                </div>
+              </div>
+
               <label className="flex items-center gap-4 text-[1.75rem]">
                 <input
                   type="radio"
@@ -253,7 +275,7 @@ const Checkout = () => {
               <p className="text-blue-600">Rs {item.offer_price}</p>
             </div>
           ))}
-          <div className="flex justify-between font-medium text-[1.8rem]">
+          <div className="flex justify-between font-medium text-[1.8rem] mt-12">
             <span>Total</span>
             <span className="font-semibold">Rs {subtotal.toFixed(2)}</span>
           </div>

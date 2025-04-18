@@ -81,7 +81,7 @@ const Cart = () => {
                     Remove item
                   </button> */}
                 </div>
-                <div className="image w-[20rem] h-[15rem] rounded-[.5rem] p-4 self-start">
+                <div className="image w-[17rem] h-[15rem] rounded-[.5rem] p-4 self-start">
                   <img
                     src={item.image}
                     alt={item.name}
