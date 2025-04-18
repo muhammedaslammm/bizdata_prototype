@@ -1,3 +1,4 @@
+import EmptyPage from "../components/EmptyPage";
 import { useCart } from "../context/CartContext";
 import { useNavigate } from "react-router-dom";
 
@@ -12,27 +13,9 @@ const Cart = () => {
   const subtotal = getCartTotal();
 
   return (
-    <div className="w-[90%] mx-auto text-neutral-900 my-6 py-8">
+    <div className="w-[90%] mx-auto text-neutral-900 my-8">
       {cartItems.length === 0 ? (
-        <div className="bg-white rounded-[.5rem]">
-          <div className="py-[10rem] text-center">
-            <div className="leading-[3.5rem]">
-              <h2 className="text-[3.3rem] font-semibold">
-                Your cart is empty
-              </h2>
-              <p className="text-[1.8rem] text-neutral-700">
-                Looks like you haven't added anything yet.
-              </p>
-            </div>
-
-            <button
-              onClick={() => navigate("/home")}
-              className="button--cart bg-cyan-800 text-white font-medium mt-8 cursor-pointer"
-            >
-              Back to Home
-            </button>
-          </div>
-        </div>
+        <EmptyPage title="cart" />
       ) : (
         <div className="flex gap-8">
           {/* Cart Items */}
@@ -46,7 +29,7 @@ const Cart = () => {
                   {/* title and price */}
                   <div>
                     <h2 className="text-[1.8rem] font-medium">{item.title}</h2>
-                    <p className="text-nuetral-600  font-semibold text-[2.2rem] my-[1.5rem] flex gap-[1rem] items-baseline">
+                    <p className="text-nuetral-600  font-medium text-[2.2rem] my-[1.5rem] flex gap-[1rem] items-baseline">
                       Rs. {item.offer_price.toFixed(2)}{" "}
                       <span className="text-green-700  font-medium text-[1.5rem]">{`x ${
                         item.quantity
