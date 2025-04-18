@@ -57,12 +57,12 @@ const Header = () => {
                 {category.sub_categories ? (
                   <div className="absolute border border-neutral-200 flex flex-col flex-wrap bg-white w-[70rem] h-[30rem] py-4 px-6 opacity-0 pointer-events-none translate-y-[1.5rem] group-hover:opacity-100 group-hover:translate-y-0 duration-200 ease-out group-hover:pointer-events-auto z-100">
                     {category.sub_categories.map((sub_category) => (
-                      <div className="text-[1.5rem] mb-[1rem] flex flex-col gap-[.8rem]">
-                        <div className="text-black font-medium capitalize cursor-pointer">
+                      <div className="text-[1.7rem] mb-[1rem]  flex flex-col gap-[.8rem]">
+                        <div className="text-black font-medium  capitalize cursor-pointer">
                           {sub_category.name}
                         </div>
                         {sub_category.sub_categories ? (
-                          <ul className="flex flex-col gap-[.2rem]">
+                          <ul className="flex flex-col gap-[.5rem]">
                             {sub_category.sub_categories.map(
                               (sub_category_2) => (
                                 <Link
