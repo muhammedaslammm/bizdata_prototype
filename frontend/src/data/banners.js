@@ -13,7 +13,7 @@ const banners = [
   },
   {
     name: "laptop",
-    iamge:
+    image:
       "https://t3.ftcdn.net/jpg/08/76/40/84/360_F_876408456_dnUJyNXyPNLxqVbSc53aH4c6d2FYS6eq.jpg",
   },
   {
