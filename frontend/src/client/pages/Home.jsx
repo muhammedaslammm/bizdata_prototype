@@ -4,6 +4,9 @@ import projectors from "../../data/projectors";
 import laptops from "../../data/laptops";
 import { useEffect, useState } from "react";
 
+import MainOffers from "../components/MainOffer";
+import Trust from "../components/Trust";
+
 const Home = () => {
   const [dealProjectors, setDealProjectors] = useState([]);
   const [dealLaptops, setDealLaptops] = useState([]);
@@ -28,8 +31,8 @@ const Home = () => {
       <Banner /> {/*banner section */}
       <Deal products={dealProjectors} title={"projector deals"} />
       <Deal products={dealLaptops} title={"laptop deals"} />
-      <Deal products={dealProjectors} title={"projector deals"} />
-      <Deal products={dealLaptops} title={"laptop deals"} />
+      <MainOffers />
+      <Trust />
     </div>
   );
 };

@@ -8,16 +8,17 @@ const Banner = () => {
     const homeBanner = banners.find((ban) => ban.name === "home-banner");
     setBanner(homeBanner);
   }, []);
+
   return banner ? (
     <div className="banner w-[90%] mx-auto flex gap-[2rem] z-0">
-      <div className="first w-[80%] h-[45rem] relative">
+      <div className="first w-[80%] h-[47rem] relative">
         <img
           src={banner.image}
           alt=""
           className="w-full h-full object-cover rounded-[.5rem] z-0"
         />
-        <div className="heads  absolute bottom-[9rem] left-[2.8rem] leading-[3.5rem]">
-          <h1 className="text-gray-200 text-[3.5rem] font-medium capitalize">
+        <div className="heads  absolute bottom-[9rem] left-[2.8rem] leading-[3.7rem]">
+          <h1 className="text-gray-200 text-[4rem] font-bold capitalize">
             {banner.heading}
           </h1>
           <p className="text-gray-400 text-[2rem]">{banner.banner_note}</p>
@@ -35,7 +36,7 @@ const Banner = () => {
                   <div className="image w-[9.5rem] h-[9.5rem]">
                     <img src={link.image} alt="" className="w-full h-full" />
                   </div>
-                  <p className="text-[1.3rem] font-medium capitalize">
+                  <p className="text-[1.8rem] font-medium capitalize">
                     {link.title}
                   </p>
                 </div>

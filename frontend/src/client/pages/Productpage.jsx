@@ -42,85 +42,88 @@ const Productpage = () => {
 
   return product ? (
     <div className="w-[90%] mx-auto py-12 text-slate-800 space-y-16">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         {/* Image Section - Sticky */}
-        <div className="sticky top-24 h-fit bg-white shadow-md p-4 rounded-xl">
+        <div className="sticky top-24 h-[40rem] bg-white p-12 rounded-[.5rem]">
           <img
             src={product.image}
             alt={product.name}
-            className="w-[400px] h-[300px] object-contain rounded-lg mx-auto"
+            className="w-[400px] h-full object-contain rounded-lg mx-auto"
           />
         </div>
 
         {/* Product Details */}
         <div className="space-y-6">
-          <h1 className="text-3xl font-bold">{product.title}</h1>
-          <p className="text-xl text-slate-600">{product.name}</p>
+          <div className="bg-white p-8 rounded-[.5rem]">
+            <h1 className="text-[2.3rem] font-semibold leading-[3rem]">
+              {product.title}
+            </h1>
 
-          {/* Rating */}
-          <div className="mt-4 text-yellow-700 font-semibold text-[15px]">
-            ⭐ 4.6/5 (2,300 reviews)
-          </div>
+            {/* Rating */}
+            <div className="text-neutral-500 font-semibold text-[1.4rem] my-4">
+              4.6 ⭐ (2,300 reviews)
+            </div>
 
-          {/* Price */}
-          <div className="flex gap-4 items-baseline">
-            <p className="text-[25px] text-blue-600 font-semibold">
-              ₹{product.offer_price}
-            </p>
-            <p className="text-[15px] line-through text-slate-400">
-              ₹{product.price}
-            </p>
-          </div>
+            {/* Price */}
+            <div className="flex gap-6 items-baseline my-8">
+              <p className="text-[3rem] text-neutral-700 font-semibold ">
+                ₹{product.offer_price}
+              </p>
+              <p className="text-[1.9rem] line-through text-gray-400">
+                ₹{product.price}
+              </p>
+            </div>
 
-          {/* Description Section */}
-          <div className="space-y-2">
-            <h2 className="text-[15px] font-semibold text-slate-700">
-              Description
-            </h2>
-            <p className="text-[13px] leading-relaxed text-slate-700">
-              {product.description}
-            </p>
-          </div>
+            {/* Description Section */}
+            <div className="space-y-[.5rem]">
+              <h2 className="text-[1.7rem] font-semibold text-neutral-700">
+                Description
+              </h2>
+              <p className="text-[1.5rem] leading-[2.3rem] text-justify text-neutral-700">
+                {product.description}
+              </p>
+            </div>
 
-          {/* Buttons */}
-          <div className="flex gap-4 mt-6">
-            <button
-              className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-lg transition"
-              onClick={() => handleAddToCart(product)}
-            >
-              Add to Cart
-            </button>
-            <button
-              className="px-6 py-3 border border-blue-600 text-blue-600 hover:bg-blue-50 rounded-xl text-lg flex items-center gap-2 transition"
-              onClick={() => addProductToWishlist(product)}
-            >
-              <Heart size={20} /> Wishlist
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Specifications */}
-      <div className="space-y-10">
-        {Object.values(product.specifications).map((section, idx) => (
-          <div key={idx}>
-            <h2 className="text-xl font-semibold border-b border-slate-300 pb-2 mb-4 capitalize">
-              {section.head}
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {section.details.map((item, index) => (
-                <div key={index} className="flex flex-col">
-                  <span className="text-slate-600 font-medium capitalize text-[16px]">
-                    {item.label}
-                  </span>
-                  <span className="text-slate-800 text-[15px]">
-                    {item.value}
-                  </span>
-                </div>
-              ))}
+            {/* Buttons */}
+            <div className="flex gap-4 mt-12">
+              <button
+                className="button--product bg-neutral-900 text-white cursor-pointer"
+                onClick={() => handleAddToCart(product)}
+              >
+                Add to Cart
+              </button>
+              <button
+                className="button--product bg-blue-800 text-white cursor-pointer"
+                onClick={() => addProductToWishlist(product)}
+              >
+                Add to Wishlist
+              </button>
             </div>
           </div>
-        ))}
+
+          {/* Specifications */}
+          <div className="space-y-10 ">
+            {Object.values(product.specifications).map((section, idx) => (
+              <div key={idx} className="bg-white p-8 rounded-[.5rem]">
+                <h2 className="text-[1.7rem] font-semibold border-b border-slate-300 pb-2 mb-4 capitalize">
+                  {section.head}
+                </h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  {section.details.map((item, index) => (
+                    <div key={index} className="flex flex-col">
+                      <span className="text-neutral-800 font-medium capitalize text-[1.5rem]">
+                        {item.label}
+                      </span>
+                      <span className="text-neutral-600 text-[1.5rem]">
+                        {item.value}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   ) : null;
