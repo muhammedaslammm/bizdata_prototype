@@ -17,8 +17,16 @@ const Footer = () => {
                 Contact Us
               </Link>
             </li>
-            <li>Career</li>
-            <li>Store</li>
+            <li>
+              <Link to="/career" className="hover:underline">
+                Careers
+              </Link>
+            </li>
+            <li>
+              <Link to="/store" className="hover:underline">
+                Store
+              </Link>
+            </li>
           </ul>
         </div>
 
@@ -38,11 +46,26 @@ const Footer = () => {
             Help
           </h3>
           <ul className="space-y-2 pl-1 text-[1.5rem] text-neutral-700">
-            <li>Payment</li>
-            <li>Shipping</li>
+            <li>
+              <Link to="/payment-policy" className="hover:underline transition">
+                Payment
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/shipping-policy"
+                className="hover:underline text-[1.5rem] text-neutral-700"
+              >
+                Shipping
+              </Link>
+            </li>
             <li>Cancellation</li>
             <li>Return</li>
-            <li>FAQ</li>
+            <li>
+              <Link to="/faq" className="hover:underline">
+                FAQ
+              </Link>
+            </li>
           </ul>
         </div>
 
@@ -51,11 +74,32 @@ const Footer = () => {
             Consumer Policy
           </h3>
           <ul className="space-y-2 pl-1 text-[1.5rem] text-neutral-700">
-            <li>Cancellation & Return</li>
-            <li>Terms of Use</li>
-            <li>Privacy</li>
-            <li>Security</li>
-            <li>Sitemap</li>
+            <li>
+              {" "}
+              <Link to="/cancellation-return" className="hover:underline">
+                Cancellation & Return
+              </Link>
+            </li>
+            <li>
+              <Link to="/terms-of-use" className="hover:underline">
+                Terms of Use
+              </Link>
+            </li>
+            <li>
+              <Link to="/privacy-policy" className="hover:underline">
+                Privacy Policy
+              </Link>
+            </li>
+            <li>
+              <Link to="/security-policy" className="hover:underline">
+                Security
+              </Link>
+            </li>
+            <li>
+              <Link to="/sitemap" className="hover:underline">
+                Site Map
+              </Link>
+            </li>
           </ul>
         </div>
 
