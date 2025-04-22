@@ -3,6 +3,7 @@ import Deal from "../components/Deal";
 import projectors from "../../data/projectors";
 import laptops from "../../data/laptops";
 import { useEffect, useState } from "react";
+
 import MainOffers from "../components/MainOffer";
 import Trust from "../components/Trust";
 
