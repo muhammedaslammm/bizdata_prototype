@@ -27,7 +27,6 @@ const Footer = () => {
                 Store
               </Link>
             </li>
-
           </ul>
         </div>
 
@@ -53,7 +52,7 @@ const Footer = () => {
             <li>
               <Link
                 to="/shipping-policy"
-                className="hover:underline text-[1.5rem] text-neutral-700"
+                className="hover:underline text-[1.5rem] text-shadow-white"
               >
                 Shipping
               </Link>
@@ -100,7 +99,6 @@ const Footer = () => {
                 Site Map
               </Link>
             </li>
-
           </ul>
         </div>
 
