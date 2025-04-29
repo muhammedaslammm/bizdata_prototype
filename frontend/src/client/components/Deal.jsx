@@ -5,8 +5,8 @@ const Deal = ({ products, title }) => {
     <div className="deal w-[90%] flex flex-col gap-[1rem] mx-auto my-[3rem]">
       <div className="head text-[2rem] capitalize font-medium">{title}</div>
       <div className="projectors grid grid-cols-6 gap-[1rem]">
-        {products.map((deal) => (
-          <ProductCard key={deal.id} product={deal} />
+        {products.map((deal, index) => (
+          <ProductCard key={index} product={deal} />
         ))}
       </div>
     </div>
