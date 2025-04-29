@@ -29,6 +29,10 @@ import SecurityPolicy from "./client/pages/SecurityPolicy.jsx";
 import Career from "./client/pages/Career.jsx";
 import Store from "./client/pages/Store.jsx";
 import SiteMap from "./client/pages/SiteMap.jsx";
+import AdminApp from "./admin/AdminApp.jsx";
+import AdminDashboard from "./admin/pages/Dashboard.jsx";
+import Users from "./admin/pages/Users.jsx";
+import Products from "./admin/pages/Products.jsx";
 // router is created, which handles various routes.
 const router = createBrowserRouter([
   {
@@ -71,6 +75,16 @@ const router = createBrowserRouter([
           <h1 className="text-center text-2xl mt-10">404 - Page Not Found</h1>
         ),
       },
+    ],
+  },
+  {
+    path: "/admin",
+    element: <AdminApp />,
+    children: [
+      { index: true, element: <Navigate to="dashboard" replace /> },
+      { path: "dashboard", element: <AdminDashboard /> },
+      { path: "product-management", element: <Products /> },
+      { path: "user-management", element: <Users /> },
     ],
   },
 ]);
