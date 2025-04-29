@@ -1,4 +1,5 @@
 const categories = [
+  { name: "Home", slug: "home" },
   { name: "Appliances", slug: "appliances" },
   {
     name: "Electronics",
