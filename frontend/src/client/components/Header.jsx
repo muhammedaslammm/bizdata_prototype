@@ -2,7 +2,7 @@ import categories from "../../data/categories";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
-const Header = () => {
+const Header = ({ state }) => {
   const { pathname } = useLocation();
   const [page] = pathname.split("/").filter(Boolean);
 
@@ -41,7 +41,9 @@ const Header = () => {
               profile
             </Link>
 
-            <li className="capitalize cursor-pointer">sign up</li>
+            <li className="capitalize cursor-pointer">
+              {state ? "sign out" : "sign in"}
+            </li>
           </ul>
         </nav>
       </header>
