@@ -26,9 +26,30 @@ const Header = ({ state }) => {
             prototype
           </div>
         </Link>
-        <search>
-          <input type="search" name="" id="" />
+        <search className="flex items-center space-x-3">
+          <input
+            type="search"
+            placeholder="Search for products..."
+            className="w-[38rem] h-[3.6rem] px-4 py-2 text-[1.5rem] border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-600"
+          />
+          <button className="h-[3.6rem] w-[3.6rem] bg-cyan-600 text-white rounded-md hover:bg-cyan-700 transition-colors duration-300 flex items-center justify-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-[1.8rem] w-[1.8rem]"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z"
+              />
+            </svg>
+          </button>
         </search>
+
         <nav>
           <ul className="options flex gap-[2.8rem] text-[1.85rem] font-medium text-neutral-800">
             <Link to={`/cart`} className="capitalize cursor-pointer">
@@ -54,7 +75,11 @@ const Header = ({ state }) => {
             return (
               <div className="relative group">
                 <div className="uppercase text-[1.7rem] py-[.9rem] px-4 cursor-pointer hover:bg-cyan-800">
-                  {category.name}
+                  {category.slug === "home" ? (
+                    <Link>{category.name}</Link>
+                  ) : (
+                    <>{category.name}</>
+                  )}
                 </div>
                 {category.sub_categories ? (
                   <div className="absolute border border-neutral-200 flex flex-col flex-wrap bg-white w-[70rem] h-[30rem] py-4 px-6 opacity-0 pointer-events-none translate-y-[1.5rem] group-hover:opacity-100 group-hover:translate-y-0 duration-200 ease-out group-hover:pointer-events-auto z-100">
