@@ -5,6 +5,11 @@ const sidebarContent = [
     title: "Product Management",
     slug: "product-management",
   },
+  {
+    sub_title: "Categories",
+    title: "Category Management",
+    slug: "category-management",
+  },
   { sub_title: "Users", title: "User Management", slug: "user-management" },
   {
     sub_title: "Coupons",

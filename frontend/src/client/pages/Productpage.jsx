@@ -87,13 +87,13 @@ const Productpage = () => {
             {/* Buttons */}
             <div className="flex gap-4 mt-12">
               <button
-                className="button--product bg-neutral-900 text-white cursor-pointer"
+                className="button bg-neutral-900 text-white cursor-pointer"
                 onClick={() => handleAddToCart(product)}
               >
                 Add to Cart
               </button>
               <button
-                className="button--product bg-blue-800 text-white cursor-pointer"
+                className="button bg-blue-800 text-white cursor-pointer"
                 onClick={() => addProductToWishlist(product)}
               >
                 Add to Wishlist

@@ -33,8 +33,15 @@ import AdminApp from "./admin/AdminApp.jsx";
 import AdminDashboard from "./admin/pages/Dashboard.jsx";
 import Users from "./admin/pages/Users.jsx";
 import Products from "./admin/pages/Products.jsx";
+import Register from "./client/pages/Register.jsx";
+import SignUp from "./client/components/form/SignUp.jsx";
+import SignIn from "./client/components/form/SignIn.jsx";
+import UI from "./admin/pages/UI.jsx";
+import Categories from "./admin/pages/Categories.jsx";
+import CategoriesForm from "./admin/pages/CategoriesForm.jsx";
 // router is created, which handles various routes.
 const router = createBrowserRouter([
+  // client
   {
     path: "/",
     element: <App />,
@@ -43,6 +50,8 @@ const router = createBrowserRouter([
         index: true,
         element: <Navigate to="home" />,
       },
+
+      // client pages
       { path: "home", element: <Home /> },
       { path: "wishlist", element: <Wishlist /> },
       { path: "product/:productid", element: <Productpage /> },
@@ -77,6 +86,16 @@ const router = createBrowserRouter([
       },
     ],
   },
+  // register
+  {
+    path: "/register",
+    element: <Register />,
+    children: [
+      { path: "sign-up", element: <SignUp /> },
+      { path: "log-in", element: <SignIn /> },
+    ],
+  },
+  // admin
   {
     path: "/admin",
     element: <AdminApp />,
@@ -84,7 +103,10 @@ const router = createBrowserRouter([
       { index: true, element: <Navigate to="dashboard" replace /> },
       { path: "dashboard", element: <AdminDashboard /> },
       { path: "product-management", element: <Products /> },
+      { path: "category-management", element: <Categories /> },
+      { path: "category-management/form", element: <CategoriesForm /> },
       { path: "user-management", element: <Users /> },
+      { path: "ui-management", element: <UI /> },
     ],
   },
 ]);
