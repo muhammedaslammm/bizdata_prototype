@@ -7,7 +7,7 @@ const CategoryProvider = ({ children }) => {
     const fetchcategories = async () => {
       console.log("url:", process.env.REACT_APP_BACKEND_URL);
       const response = await fetch(
-        `${process.env.REACT_APP_BACKEND_URL}/api/categories`,
+        `https://bizdata-prototype.onrender.com/api/categories`,
         {
           method: "GET",
           credentials: "include",
@@ -23,7 +23,7 @@ const CategoryProvider = ({ children }) => {
   const addCategory = async (category) => {
     try {
       const response = await fetch(
-        `${process.env.REACT_APP_BACKEND_URL}/api/categories`,
+        `https://bizdata-prototype.onrender.com/api/categories`,
         {
           method: "POST",
           headers: {
