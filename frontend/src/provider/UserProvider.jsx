@@ -6,10 +6,13 @@ const UserProvider = ({ children }) => {
   useEffect(() => {
     const fetchRequest = async () => {
       try {
-        const response = await fetch("http://localhost:4000/api/auth/verify", {
-          method: "GET",
-          credentials: "include",
-        });
+        const response = await fetch(
+          `${process.env.REACT_APP_BACKEND_URL}/api/auth/verify`,
+          {
+            method: "GET",
+            credentials: "include",
+          }
+        );
         const data = await response.json();
         if (!response.ok) throw new Error(data.message);
         else {
@@ -26,10 +29,13 @@ const UserProvider = ({ children }) => {
 
   const logoutUser = async () => {
     try {
-      const response = await fetch("http://localhost:4000/api/auth/logout", {
-        method: "POST",
-        credentials: "include",
-      });
+      const response = await fetch(
+        `${process.env.REACT_APP_BACKEND_URL}/api/auth/logout`,
+        {
+          method: "POST",
+          credentials: "include",
+        }
+      );
       const data = await response.json();
       if (!response.ok) {
         throw new Error(data);
@@ -46,14 +52,17 @@ const UserProvider = ({ children }) => {
   const registerUser = async (userData) => {
     delete userData.confirm_password;
     try {
-      const response = await fetch("http://localhost:4000/api/auth/register", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        credentials: "include",
-        body: JSON.stringify(userData),
-      });
+      const response = await fetch(
+        `${process.env.REACT_APP_BACKEND_URL}/api/auth/register`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          credentials: "include",
+          body: JSON.stringify(userData),
+        }
+      );
       const data = await response.json();
       if (!response.ok) {
         throw new Error(data.message);
@@ -70,14 +79,17 @@ const UserProvider = ({ children }) => {
 
   const loginUser = async (userData) => {
     try {
-      const response = await fetch("http://localhost:4000/api/auth/sign-in", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        credentials: "include",
-        body: JSON.stringify(userData),
-      });
+      const response = await fetch(
+        `${process.env.REACT_APP_BACKEND_URL}/api/auth/sign-in`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          credentials: "include",
+          body: JSON.stringify(userData),
+        }
+      );
       const data = await response.json();
       if (!response.ok) {
         console.log("error:", data.message);
