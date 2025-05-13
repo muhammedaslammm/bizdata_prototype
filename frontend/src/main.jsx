@@ -95,7 +95,7 @@ const router = createBrowserRouter([
       { path: "log-in", element: <SignIn /> },
     ],
   },
-  // admin
+  // admin routes
   {
     path: "/admin",
     element: <AdminApp />,
