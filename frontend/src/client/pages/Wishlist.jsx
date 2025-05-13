@@ -1,9 +1,10 @@
+import { useContext } from "react";
 import EmptyPage from "../components/EmptyPage";
-import { useWishlist } from "../context/WishlistContext"; // adjust path
 import { Link } from "react-router-dom";
+import { WishlistContext } from "../../contexts";
 
 const Wishlist = () => {
-  const { wishlist, removeFromWishlist } = useWishlist();
+  const { wishlist, removeFromWishlist } = useContext(WishlistContext);
 
   return (
     <div className="w-[90%] mx-auto my-8">

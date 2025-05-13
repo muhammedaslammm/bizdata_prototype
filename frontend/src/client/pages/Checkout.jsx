@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import { useCart } from "../context/CartContext";
+import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import images from "../assets/images";
+import { CartContext } from "../../contexts";
 
 const Checkout = () => {
-  const { cartItems, getCartTotal, clearCart } = useCart();
+  const { cartItems, getCartTotal, clearCart } = useContext(CartContext);
   const [addressSaved, setAddressSaved] = useState(true);
   const [showNewAddressForm, setShowNewAddressForm] = useState(false);
   const [address, setAddress] = useState({

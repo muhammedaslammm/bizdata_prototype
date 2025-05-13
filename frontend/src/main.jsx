@@ -6,7 +6,7 @@ import {
   RouterProvider,
   Navigate,
 } from "react-router-dom";
-import ContextProvider from "./client/context/contextProvider.jsx";
+import ContextProvider from "./provider/ContextProvider.jsx";
 import Home from "./client/pages/Home.jsx";
 import Wishlist from "./client/pages/Wishlist.jsx";
 import Productpage from "./client/pages/Productpage.jsx";
@@ -29,8 +29,19 @@ import SecurityPolicy from "./client/pages/SecurityPolicy.jsx";
 import Career from "./client/pages/Career.jsx";
 import Store from "./client/pages/Store.jsx";
 import SiteMap from "./client/pages/SiteMap.jsx";
+import AdminApp from "./admin/AdminApp.jsx";
+import AdminDashboard from "./admin/pages/Dashboard.jsx";
+import Users from "./admin/pages/Users.jsx";
+import Products from "./admin/pages/Products.jsx";
+import Register from "./client/pages/Register.jsx";
+import SignUp from "./client/components/form/SignUp.jsx";
+import SignIn from "./client/components/form/SignIn.jsx";
+import UI from "./admin/pages/UI.jsx";
+import Categories from "./admin/pages/Categories.jsx";
+import CategoriesForm from "./admin/pages/CategoriesForm.jsx";
 // router is created, which handles various routes.
 const router = createBrowserRouter([
+  // client
   {
     path: "/",
     element: <App />,
@@ -39,6 +50,8 @@ const router = createBrowserRouter([
         index: true,
         element: <Navigate to="home" />,
       },
+
+      // client pages
       { path: "home", element: <Home /> },
       { path: "wishlist", element: <Wishlist /> },
       { path: "product/:productid", element: <Productpage /> },
@@ -71,6 +84,29 @@ const router = createBrowserRouter([
           <h1 className="text-center text-2xl mt-10">404 - Page Not Found</h1>
         ),
       },
+    ],
+  },
+  // register
+  {
+    path: "/register",
+    element: <Register />,
+    children: [
+      { path: "sign-up", element: <SignUp /> },
+      { path: "log-in", element: <SignIn /> },
+    ],
+  },
+  // admin
+  {
+    path: "/admin",
+    element: <AdminApp />,
+    children: [
+      { index: true, element: <Navigate to="dashboard" replace /> },
+      { path: "dashboard", element: <AdminDashboard /> },
+      { path: "product-management", element: <Products /> },
+      { path: "category-management", element: <Categories /> },
+      { path: "category-management/form", element: <CategoriesForm /> },
+      { path: "user-management", element: <Users /> },
+      { path: "ui-management", element: <UI /> },
     ],
   },
 ]);

@@ -1,10 +1,24 @@
+import { useContext } from "react";
 import categories from "../../data/categories";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
+import { UserContext } from "../../contexts";
+import { toast } from "sonner";
 
 const Header = ({ state }) => {
   const { pathname } = useLocation();
   const [page] = pathname.split("/").filter(Boolean);
+  const navigate = useNavigate();
+  const { logoutUser } = useContext(UserContext);
+
+  const handleUser = async () => {
+    if (!state) navigate("/register/sign-up");
+    else {
+      const response = await logoutUser();
+      if (response) toast.success("user logged out");
+      else toast.error("user logging out failed");
+    }
+  };
 
   return (
     <header className="bg-neutral-50">
@@ -16,11 +30,11 @@ const Header = ({ state }) => {
         <></>
       )}
 
-      <header className=" flex justify-between items-center w-[90%] mx-auto py-[.8rem]">
+      <header className="header">
         <Link to={`/home`}>
           {" "}
           <div
-            className="logo text-cyan-700 font-semibold text-[2.4rem] uppercase"
+            className="logo--header"
             style={{ fontFamily: "Special Gothic Expanded One,sans-serif" }}
           >
             prototype
@@ -62,8 +76,11 @@ const Header = ({ state }) => {
               profile
             </Link>
 
-            <li className="capitalize cursor-pointer">
-              {state ? "sign out" : "sign in"}
+            <li
+              className="capitalize cursor-pointer"
+              onClick={() => handleUser()}
+            >
+              {state ? "logout" : "sign in"}
             </li>
           </ul>
         </nav>

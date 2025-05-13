@@ -5,13 +5,24 @@ html {
   font-size: 10px;
 }
 
-.button--product{
-  @apply px-8 py-3 text-[1.4rem] rounded-[.3rem] transition;
+.header {
+  @apply flex justify-between items-center w-[90%] mx-auto py-[.8rem];
 }
-.button--cart{
+.logo--header {
+  @apply text-cyan-700 font-semibold text-[2.4rem] uppercase;
+}
+
+.button {
   @apply px-8 py-3 text-[1.4rem] rounded-[.3rem] transition;
 }
 
-.input--form{
-  @apply border border-neutral-400 text-[1.6rem] py-[.7rem] px-[1rem] rounded-[.5rem] outline-0 w-full;
+.box--form {
+  @apply w-full max-w-[50rem] flex flex-col translate-y-[6rem] rounded-[1rem] py-8 px-12;
+}
+
+.input--form {
+  @apply w-full border border-neutral-400 py-4 px-4 text-[1.6rem] rounded-[.5rem];
+}
+.error--input {
+  @apply text-[1.55rem] text-red-800 mt-1 ml-2;
 }

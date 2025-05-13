@@ -1,12 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { useCart } from "../context/CartContext";
 import Address from "../components/Address";
+import { CartContext } from "../../contexts";
 
 const PaymentDetails = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const { clearCart } = useCart();
+  const { clearCart } = useContext(CartContext);
 
   const { address, paymentMethod, items, total } = location.state;
 
