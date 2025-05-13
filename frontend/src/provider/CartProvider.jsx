@@ -1,10 +1,8 @@
-import React, { createContext, useContext, useState } from "react";
-
-// Create a context
-const CartContext = createContext();
+import React, { useContext, useState } from "react";
+import { CartContext } from "../contexts";
 
 // Provider Component
-export const CartProvider = ({ children }) => {
+const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
 
   const clearCart = () => {
@@ -73,6 +71,4 @@ export const CartProvider = ({ children }) => {
   );
 };
 
-// Custom Hook
-
-export const useCart = () => useContext(CartContext);
+export default CartProvider;

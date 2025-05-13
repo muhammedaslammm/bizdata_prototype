@@ -3,7 +3,7 @@ import loginSchema from "../formSchema/loginSchema";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useContext } from "react";
-import { UserContext } from "../../context/Contexts";
+import { UserContext } from "../../../contexts";
 import { toast } from "sonner";
 
 const SignInForm = () => {

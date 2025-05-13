@@ -4,7 +4,7 @@ import { Toaster } from "sonner";
 import "./App.css";
 import Footer from "./components/Footer";
 import { useContext, useEffect, useState } from "react";
-import { UserContext } from "./context/Contexts";
+import { UserContext } from "../contexts";
 
 function App() {
   const [state, setState] = useState(null);

@@ -2,7 +2,7 @@ import { useContext } from "react";
 import categories from "../../data/categories";
 import { Link, useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-import { UserContext } from "../context/Contexts";
+import { UserContext } from "../../contexts";
 import { toast } from "sonner";
 
 const Header = ({ state }) => {

@@ -1,5 +1,7 @@
-import { useRef, useState } from "react";
+import { useContext, useRef, useState } from "react";
+import { CategoryContext } from "../../contexts";
 import { toast } from "sonner";
+import { useNavigate } from "react-router-dom";
 
 const CategoriesForm = () => {
   const [categoryName, setCategoryName] = useState("");
@@ -12,7 +14,21 @@ const CategoriesForm = () => {
   });
   const [attributes, setAttributes] = useState([]);
   const [form, setForm] = useState(false);
+  const { addCategory } = useContext(CategoryContext);
   const optionsRef = useRef();
+  const navigate = useNavigate();
+
+  const submitCategory = async () => {
+    if (!categoryName.trim().length)
+      return toast.warning("Category name must be added.");
+    if (!attributes.length)
+      return toast.warning("Category must have atleast one attribute");
+    const response = await addCategory({ categoryName, attributes });
+    if (response.success) {
+      toast.success(response.message);
+      navigate("/admin/category-management");
+    } else toast.error(response.message);
+  };
 
   const handleAttributes = (field_type, value) => {
     const attributeObject = { ...attribute };
@@ -55,7 +71,7 @@ const CategoriesForm = () => {
   };
 
   return (
-    <div className="categories__form my-2">
+    <div className="categories__form my-2 ">
       <div className="w-full lg:max-w-[900px] flex flex-col gap-4 md:gap-8 lg:gap-6 ">
         <div className="category__name border border-neutral-300 p-4 rounded-[.5rem] text-[1.4rem] sm:text-[1.5rem] lg:text-[1.7rem] flex items-center flex-wrap sm:flex-col sm:items-start gap-4 sm:gap-1">
           <label htmlFor="" className="capitalize">
@@ -160,7 +176,7 @@ const CategoriesForm = () => {
               respective category
             </p>
             <button
-              className="text-[1rem] sm:text-[1.3rem] lg:text-[1.4rem] font-medium bg-neutral-700 text-white py-2 px-3 rounded-[.4rem] self-end capitalize"
+              className="text-[1rem] sm:text-[1.3rem] lg:text-[1.4rem] font-medium bg-neutral-700 text-white py-2 px-3 rounded-[.4rem] self-end capitalize cursor-pointer"
               onClick={() => setForm(true)}
             >
               + add attribute
@@ -215,7 +231,10 @@ const CategoriesForm = () => {
           <></>
         )}
 
-        <button className="self-end bg-green-700 text-white text-[1.15rem] lg:text-[1.25rem] mt-[2rem] py-3 px-3 font-medium rounded-[.2rem] capitalize cursor-pointer">
+        <button
+          className="self-end bg-green-700 text-white text-[1.15rem] lg:text-[1.25rem] mt-[2rem] py-3 px-3 font-medium rounded-[.2rem] capitalize cursor-pointer"
+          onClick={submitCategory}
+        >
           create category
         </button>
       </div>

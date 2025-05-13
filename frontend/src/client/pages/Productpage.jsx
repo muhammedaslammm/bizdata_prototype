@@ -1,10 +1,8 @@
-import { Heart } from "lucide-react";
 import projectors from "../../data/projectors";
 import laptops from "../../data/laptops";
 import { useParams, useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
-import { useWishlist } from "../context/WishlistContext";
-import { useCart } from "../context/CartContext"; // import cart context
+import { useContext, useEffect, useState } from "react";
+import { CartContext, WishlistContext } from "../../contexts";
 
 const Productpage = () => {
   const [product, setProduct] = useState(null);
@@ -12,8 +10,8 @@ const Productpage = () => {
   const urlpath = useParams();
   const navigate = useNavigate();
 
-  const { addToWishList } = useWishlist();
-  const { addToCart } = useCart(); // ✅ Call useCart inside the component
+  const { addToWishList } = useContext(WishlistContext);
+  const { addToCart } = useContext(CartContext); // ✅ Call useCart inside the component
 
   const addProductToWishlist = (product) => {
     const response = addToWishList(product);

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Sidebar = ({ content }) => {
   return (
-    <div className="admin__sidebar fixed bottom-0 w-full sm:static sm:border-t sm:border-neutral-600 bg-neutral-900">
+    <div className="admin__sidebar fixed bottom-0 w-full sm:sticky sm:border-t sm:border-neutral-600 bg-neutral-900">
       <ul className="flex gap-8 w-[90%] mx-auto">
         {content.map((c) => (
           <Link

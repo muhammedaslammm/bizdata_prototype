@@ -17,10 +17,10 @@ const AdminApp = () => {
   }, [pathname]);
 
   return (
-    <div className="application relative">
+    <div className="application relative ">
       <Toaster position="top-center" richColors />
       <Header />
-      <div className="relative">
+      <div className="relative bg-white">
         <Sidebar content={sidebarContent} />
         <PageContent title={title} />
       </div>

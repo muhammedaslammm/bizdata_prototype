@@ -6,7 +6,7 @@ import {
   RouterProvider,
   Navigate,
 } from "react-router-dom";
-import ContextProvider from "./client/context/contextProvider.jsx";
+import ContextProvider from "./provider/ContextProvider.jsx";
 import Home from "./client/pages/Home.jsx";
 import Wishlist from "./client/pages/Wishlist.jsx";
 import Productpage from "./client/pages/Productpage.jsx";

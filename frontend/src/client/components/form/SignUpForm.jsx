@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import signupSchema from "../formSchema/signupSchema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useContext } from "react";
-import { UserContext } from "../../context/Contexts";
+import { UserContext } from "../../../contexts";
 import { toast } from "sonner";
 
 const SignUpForm = () => {
