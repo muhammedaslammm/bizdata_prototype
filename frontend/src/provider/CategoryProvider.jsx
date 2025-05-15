@@ -5,7 +5,6 @@ const CategoryProvider = ({ children }) => {
   const [categories, setCategories] = useState([]);
   useEffect(() => {
     const fetchcategories = async () => {
-      console.log("url:", process.env.REACT_APP_BACKEND_URL);
       const response = await fetch(
         `https://bizdata-prototype.onrender.com/api/categories`,
         {

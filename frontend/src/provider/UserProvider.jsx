@@ -7,7 +7,7 @@ const UserProvider = ({ children }) => {
     const fetchRequest = async () => {
       try {
         const response = await fetch(
-          `${process.env.REACT_APP_BACKEND_URL}/api/auth/verify`,
+          `https://bizdata-prototype.onrender.com/api/auth/verify`,
           {
             method: "GET",
             credentials: "include",
