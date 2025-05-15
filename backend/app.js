@@ -5,9 +5,22 @@ import userRouter from "./routers/userRouter.js";
 import categoryRouter from "./routers/categoryRouter.js";
 
 const app = express();
+const allowedURLs = [
+  "https://bizdata-prototype.vercel.app",
+  "http://localhost:5173",
+];
 
 app.use(
-  cors({ origin: "https://bizdata-prototype.vercel.app", credentials: true })
+  cors({
+    origin: (origin, callback) => {
+      if (!origin || allowedURLs.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("request not allowed"));
+      }
+    },
+    credentials: true,
+  })
 );
 app.use(cookieParser());
 app.use(express.json());
