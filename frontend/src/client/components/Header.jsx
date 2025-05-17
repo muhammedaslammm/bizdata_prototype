@@ -23,7 +23,7 @@ const Header = ({ state }) => {
   return (
     <header className="bg-neutral-50">
       {page === "home" ? (
-        <div className="bg-cyan-600 text-white text-center text-[1.6rem] font-medium py-3">
+        <div className="bg-[#283ea8] text-white text-center text-[1.6rem] font-medium py-3">
           All new projectors and laptops are out here in the store. grab now !
         </div>
       ) : (
@@ -46,7 +46,7 @@ const Header = ({ state }) => {
             placeholder="Search for products..."
             className="w-[38rem] h-[3.6rem] px-4 py-2 text-[1.5rem] border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-600"
           />
-          <button className="h-[3.6rem] w-[3.6rem] bg-cyan-600 text-white rounded-md hover:bg-cyan-700 transition-colors duration-300 flex items-center justify-center">
+          <button className="h-[3.6rem] w-[3.6rem] bg-[#283ea8] text-white rounded-md hover:bg-cyan-700 transition-colors duration-300 flex items-center justify-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-[1.8rem] w-[1.8rem]"

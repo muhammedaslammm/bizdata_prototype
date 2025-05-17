@@ -27,7 +27,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="home my-[1.5rem]">
+    <div className="home">
       <Banner /> {/*banner section */}
       <Deal products={dealProjectors} title={"projector deals"} />
       <Deal products={dealLaptops} title={"laptop deals"} />

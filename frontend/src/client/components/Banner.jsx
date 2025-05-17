@@ -1,55 +1,27 @@
-import banners from "../../data/banners.js";
-import bannerlinks from "../../data/bannerlinks.js";
-import { useEffect, useState } from "react";
+import bannerimage from "../assets/samsung1.jpg";
 
 const Banner = () => {
-  const [banner, setBanner] = useState(null);
-  useEffect(() => {
-    const homeBanner = banners.find((ban) => ban.name === "home-banner");
-    setBanner(homeBanner);
-  }, []);
-
-  return banner ? (
-    <div className="banner w-[90%] mx-auto flex gap-[2rem] z-0">
-      <div className="first w-[80%] h-[47rem] relative">
-        <img
-          src={banner.image}
-          alt=""
-          className="w-full h-full object-cover rounded-[.5rem] z-0"
-        />
-        <div className="heads  absolute bottom-[9rem] left-[2.8rem] leading-[3.7rem]">
-          <h1 className="text-gray-200 text-[4rem] font-bold capitalize">
-            {banner.heading}
-          </h1>
-          <p className="text-gray-400 text-[2rem]">{banner.banner_note}</p>
-          <button className="text-[1.35rem] capitalize px-[1rem] text-gray-300 border border-gray-500 rounded-[.4rem] mt-[1rem] cursor-pointer transition-all duration-300 hover:text-white hover:bg-gray-950 hover:border-gray-400">
-            shop latest arrivals
-          </button>
-        </div>
+  return (
+    <div className="relative banner w-full h-[500px] flex z-0 ">
+      <img src={bannerimage} alt="" className="w-full object-cover" />
+      <div className="timer absolute text-white flex flex-col">
+        <span className="uppercase text-[1.5rem] font-medium">
+          offer ends in
+        </span>
+        <span className="text-[3rem]">05 : 48 : 59</span>
       </div>
-      {bannerlinks.length ? (
-        <div className="w-[20%] bg-white flex flex-col border border-neutral-300 rounded-[.5rem]">
-          {bannerlinks.map((link) => {
-            if (link.active) {
-              return (
-                <div className="flex flex-col grow-[1] items-center py-[1.5rem] border-b border-gray-200 last:border-0 ">
-                  <div className="image w-[9.5rem] h-[9.5rem]">
-                    <img src={link.image} alt="" className="w-full h-full" />
-                  </div>
-                  <p className="text-[1.8rem] font-medium capitalize">
-                    {link.title}
-                  </p>
-                </div>
-              );
-            }
-          })}
-        </div>
-      ) : (
-        <></>
-      )}
+
+      <div className="top__left absolute top-[5%] left-[2.5%] text-white text-[1.9rem] uppercase ">
+        prototype
+      </div>
+      <div className="absolute bottom-[15%] left-[2.5%]">
+        <h1 className="w-[55rem] text-[5.5rem] text-white font-medium uppercase leading-[5.5rem]">
+          grab the all new samsung
+        </h1>
+      </div>
+
+      <div className="absolute right__bottom"></div>
     </div>
-  ) : (
-    <></>
   );
 };
 
