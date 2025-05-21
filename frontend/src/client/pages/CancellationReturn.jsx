@@ -3,17 +3,17 @@ import { HelpCircle, Truck, RefreshCcw, AlertTriangle } from "lucide-react";
 
 const CancellationReturn = () => {
   return (
-    <div className="px-6 py-12 max-w-7xl mx-auto bg-white text-gray-800">
+    <div className="px-6 py-12 max-w-7xl mx-auto bg-[#e9edff] text-gray-800">
       {/* Header */}
-      <h1 className="text-4xl md:text-5xl font-bold mb-12 text-center text-black">
+      <h1 className="text-5xl font-bold mb-14 text-center text-[#283ea8]">
         Cancellation & Return Policy
       </h1>
 
       {/* Overview */}
-      <section className="mb-16">
+      <section className="mb-16 bg-white p-6 rounded-2xl shadow-md border border-gray-200">
         <div className="flex items-center gap-3 mb-4">
-          <Truck className="text-black" size={28} />
-          <h2 className="text-2xl font-semibold text-black">Overview</h2>
+          <Truck className="text-[#283ea8]" size={28} />
+          <h2 className="text-2xl font-semibold text-[#283ea8]">Overview</h2>
         </div>
         <p className="text-lg text-gray-700 leading-7">
           We understand that sometimes plans change. Our Cancellation & Return
@@ -24,10 +24,10 @@ const CancellationReturn = () => {
       </section>
 
       {/* Cancellation Policy */}
-      <section className="mb-16 bg-neutral-100 p-6 rounded-2xl shadow-md">
+      <section className="mb-16 bg-white p-6 rounded-2xl shadow-md border border-gray-200">
         <div className="flex items-center gap-3 mb-4">
-          <RefreshCcw className="text-black" size={26} />
-          <h2 className="text-2xl font-semibold text-black">
+          <RefreshCcw className="text-[#283ea8]" size={26} />
+          <h2 className="text-2xl font-semibold text-[#283ea8]">
             Cancellation Policy
           </h2>
         </div>
@@ -47,10 +47,12 @@ const CancellationReturn = () => {
       </section>
 
       {/* Return Policy */}
-      <section className="mb-16">
+      <section className="mb-16 bg-white p-6 rounded-2xl shadow-md border border-gray-200">
         <div className="flex items-center gap-3 mb-4">
-          <RefreshCcw className="text-black" size={26} />
-          <h2 className="text-2xl font-semibold text-black">Return Policy</h2>
+          <RefreshCcw className="text-[#283ea8]" size={26} />
+          <h2 className="text-2xl font-semibold text-[#283ea8]">
+            Return Policy
+          </h2>
         </div>
         <p className="text-lg leading-7 text-gray-700 mb-4">
           Most new, unopened items are eligible for return within{" "}
@@ -68,10 +70,10 @@ const CancellationReturn = () => {
       </section>
 
       {/* Common Reasons */}
-      <section className="mb-16 bg-gray-100 p-6 rounded-2xl shadow-inner">
+      <section className="mb-16 bg-[#f0f4ff] p-6 rounded-2xl shadow-inner">
         <div className="flex items-center gap-3 mb-4">
-          <AlertTriangle className="text-black" size={26} />
-          <h2 className="text-2xl font-semibold text-black">
+          <AlertTriangle className="text-[#283ea8]" size={26} />
+          <h2 className="text-2xl font-semibold text-[#283ea8]">
             Common Reasons for Return
           </h2>
         </div>
@@ -84,10 +86,10 @@ const CancellationReturn = () => {
       </section>
 
       {/* FAQs */}
-      <section className="mb-16">
+      <section className="mb-16 bg-white p-6 rounded-2xl shadow-md border border-gray-200">
         <div className="flex items-center gap-3 mb-6">
-          <HelpCircle className="text-black" size={26} />
-          <h2 className="text-2xl font-semibold text-black">
+          <HelpCircle className="text-[#283ea8]" size={26} />
+          <h2 className="text-2xl font-semibold text-[#283ea8]">
             Frequently Asked Questions
           </h2>
         </div>
@@ -125,14 +127,16 @@ const CancellationReturn = () => {
 
       {/* Contact Support */}
       <section className="mb-24 text-center">
-        <h2 className="text-2xl font-semibold mb-4 text-black">Need Help?</h2>
+        <h2 className="text-2xl font-semibold mb-4 text-[#283ea8]">
+          Need Help?
+        </h2>
         <p className="text-lg text-gray-700 mb-6">
           Our support team is available 24/7 to assist with cancellations,
           returns, and any other queries.
         </p>
         <a
           href="/contact"
-          className="inline-block bg-black hover:bg-gray-800 text-white px-6 py-3 rounded-full transition-all"
+          className="inline-block bg-[#283ea8] hover:bg-blue-900 text-white px-6 py-3 rounded-full transition-all"
         >
           Contact Support
         </a>

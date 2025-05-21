@@ -1,12 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom"; // ✅ Add this line
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
-    <footer className="bg-neutral-900 text-white py-[6rem] mt-[5rem]">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 w-[90%] mx-auto text-[15px]">
+    <footer className="bg-gray-500 text-white py-16 mt-30">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 w-[90%] mx-auto text-[1.3rem] text-center sm:text-left">
         <div>
-          <h3 className="font-medium text-xl mb-5">About</h3>
-          <ul className="space-y-2 pl-1 text-[1.5rem]">
+          <h3 className="font-medium text-[1.5rem] mb-4">About</h3>
+          <ul className="space-y-1">
             <li>
               <Link to="/about" className="hover:underline">
                 About Us
@@ -31,8 +32,8 @@ const Footer = () => {
         </div>
 
         <div>
-          <h3 className="font-medium text-[1.5rem] mb-5">Grouped Companies</h3>
-          <ul className="space-y-2 pl-1 text-[1.5rem] ">
+          <h3 className="font-medium text-[1.5rem] mb-4">Grouped Companies</h3>
+          <ul className="space-y-1">
             <li>Flipkart</li>
             <li>Myntra</li>
             <li>Amazon</li>
@@ -40,20 +41,15 @@ const Footer = () => {
         </div>
 
         <div>
-          <h3 className="text-shadow-white font-medium text-[1.5rem] mb-5">
-            Help
-          </h3>
-          <ul className="space-y-2 pl-1 text-[1.5rem]">
+          <h3 className="font-medium text-[1.5rem] mb-4">Help</h3>
+          <ul className="space-y-1">
             <li>
-              <Link to="/payment-policy" className="hover:underline transition">
+              <Link to="/payment-policy" className="hover:underline">
                 Payment
               </Link>
             </li>
             <li>
-              <Link
-                to="/shipping-policy"
-                className="hover:underline text-[1.5rem] text-shadow-white"
-              >
+              <Link to="/shipping-policy" className="hover:underline">
                 Shipping
               </Link>
             </li>
@@ -69,12 +65,9 @@ const Footer = () => {
         </div>
 
         <div>
-          <h3 className="text-shadow-white font-medium text-[1.5rem] mb-5">
-            Consumer Policy
-          </h3>
-          <ul className="space-y-2 pl-1 text-[1.5rem]">
+          <h3 className="font-medium text-[1.5rem] mb-4">Consumer Policy</h3>
+          <ul className="space-y-1">
             <li>
-              {" "}
               <Link to="/cancellation-return" className="hover:underline">
                 Cancellation & Return
               </Link>
@@ -103,26 +96,27 @@ const Footer = () => {
         </div>
 
         <div>
-          <h3 className="text-shadow-white font-medium text-[1.5rem] mb-5">
-            Mail Us
-          </h3>
-          <ul className="space-y-2 pl-1 text-[1.5rem]">
-            <li className="flex items-center gap-2">info@gmail.com</li>
-            <li className="flex items-center gap-2">@facebook.com</li>
-            <li className="flex items-center gap-2">@instagram.com</li>
+          <h3 className="font-medium text-[1.5rem] mb-4">Mail Us</h3>
+          <ul className="space-y-1">
+            <li className="flex justify-center sm:justify-start gap-2">
+              info@gmail.com
+            </li>
+            <li className="flex justify-center sm:justify-start gap-2">
+              @facebook.com
+            </li>
+            <li className="flex justify-center sm:justify-start gap-2">
+              @instagram.com
+            </li>
           </ul>
         </div>
 
         <div>
-          <h3 className="text-shadow-white font-medium text-[1.5rem] mb-5">
+          <h3 className="font-medium text-[1.5rem] mb-4">
             Registered Office Address
           </h3>
-          <ul className="pl-1">
-            <li className="text-[1.5rem]  leading-relaxed">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque,
-              ipsa. Culpa minus optio vero ex asperiores perferendis. Harum ab
-              nisi quis ex repellendus, in non sapiente possimus est porro
-              recusandae?
+          <ul>
+            <li className="text-lg leading-relaxed">
+              Prototype Ashtamudi Towers TechnoPark Kollam 691501{" "}
             </li>
           </ul>
         </div>

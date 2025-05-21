@@ -3,12 +3,12 @@ import React from "react";
 const Store = () => {
   return (
     <div className="px-6 py-10 max-w-6xl mx-auto text-gray-800">
-      <h1 className="text-4xl font-bold mb-10 text-center text-blue-900">
+      <h1 className="text-4xl font-bold mb-10 text-center text-[#283ea8]">
         Our Store
       </h1>
 
       <section className="mb-10">
-        <h2 className="text-2xl font-semibold mb-4 text-blue-800">
+        <h2 className="text-2xl font-semibold mb-4 text-[#283ea8]">
           🛍 One-Stop Shopping Destination
         </h2>
         <p className="text-lg text-gray-700 leading-7">
@@ -21,63 +21,46 @@ const Store = () => {
       </section>
 
       <section className="mb-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div className="bg-white shadow-md rounded-xl p-6">
-          <h3 className="text-xl font-semibold mb-2 text-blue-700">
-            📱 Electronics & Gadgets
-          </h3>
-          <p className="text-gray-700">
-            Latest smartphones, smartwatches, audio gear, and more—direct from
-            top brands.
-          </p>
-        </div>
-        <div className="bg-white shadow-md rounded-xl p-6">
-          <h3 className="text-xl font-semibold mb-2 text-blue-700">
-            👚 Fashion & Lifestyle
-          </h3>
-          <p className="text-gray-700">
-            Trendy clothing, shoes, and accessories for men, women, and kids.
-          </p>
-        </div>
-        <div className="bg-white shadow-md rounded-xl p-6">
-          <h3 className="text-xl font-semibold mb-2 text-blue-700">
-            🏠 Home Essentials
-          </h3>
-          <p className="text-gray-700">
-            Furniture, kitchenware, appliances, and everything you need to make
-            your house a home.
-          </p>
-        </div>
-        <div className="bg-white shadow-md rounded-xl p-6">
-          <h3 className="text-xl font-semibold mb-2 text-blue-700">
-            🥫 Grocery & Daily Needs
-          </h3>
-          <p className="text-gray-700">
-            Fresh groceries, pantry staples, snacks, and more delivered to your
-            doorstep.
-          </p>
-        </div>
-        <div className="bg-white shadow-md rounded-xl p-6">
-          <h3 className="text-xl font-semibold mb-2 text-blue-700">
-            💻 Laptops & Accessories
-          </h3>
-          <p className="text-gray-700">
-            High-performance laptops, gaming gear, and accessories from leading
-            tech brands.
-          </p>
-        </div>
-        <div className="bg-white shadow-md rounded-xl p-6">
-          <h3 className="text-xl font-semibold mb-2 text-blue-700">
-            🎁 Gifts & Offers
-          </h3>
-          <p className="text-gray-700">
-            Exclusive offers, seasonal deals, and curated gift ideas for all
-            occasions.
-          </p>
-        </div>
+        {[
+          {
+            title: "📱 Electronics & Gadgets",
+            desc: "Latest smartphones, smartwatches, audio gear, and more—direct from top brands.",
+          },
+          {
+            title: "👚 Fashion & Lifestyle",
+            desc: "Trendy clothing, shoes, and accessories for men, women, and kids.",
+          },
+          {
+            title: "🏠 Home Essentials",
+            desc: "Furniture, kitchenware, appliances, and everything you need to make your house a home.",
+          },
+          {
+            title: "🥫 Grocery & Daily Needs",
+            desc: "Fresh groceries, pantry staples, snacks, and more delivered to your doorstep.",
+          },
+          {
+            title: "💻 Laptops & Accessories",
+            desc: "High-performance laptops, gaming gear, and accessories from leading tech brands.",
+          },
+          {
+            title: "🎁 Gifts & Offers",
+            desc: "Exclusive offers, seasonal deals, and curated gift ideas for all occasions.",
+          },
+        ].map((item, index) => (
+          <div
+            key={index}
+            className="bg-white shadow-md rounded-xl p-6 hover:shadow-lg transition"
+          >
+            <h3 className="text-xl font-semibold mb-2 text-[#283ea8]">
+              {item.title}
+            </h3>
+            <p className="text-gray-700">{item.desc}</p>
+          </div>
+        ))}
       </section>
 
       <section className="mb-10">
-        <h2 className="text-2xl font-semibold mb-4 text-blue-800">
+        <h2 className="text-2xl font-semibold mb-4 text-[#283ea8]">
           🚚 Fast & Reliable Delivery
         </h2>
         <p className="text-lg text-gray-700 leading-7">
@@ -88,7 +71,7 @@ const Store = () => {
       </section>
 
       <section className="mb-10">
-        <h2 className="text-2xl font-semibold mb-4 text-blue-800">
+        <h2 className="text-2xl font-semibold mb-4 text-[#283ea8]">
           🏢 Physical Store Experience (Coming Soon)
         </h2>
         <p className="text-lg text-gray-700 leading-7">
@@ -99,7 +82,7 @@ const Store = () => {
       </section>
 
       <section>
-        <h2 className="text-2xl font-semibold mb-4 text-blue-800">
+        <h2 className="text-2xl font-semibold mb-4 text-[#283ea8]">
           🛒 Your Store, Your Way
         </h2>
         <p className="text-lg text-gray-700 leading-7">

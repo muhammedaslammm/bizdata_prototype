@@ -8,6 +8,7 @@ import { toast } from "sonner";
 const Header = ({ state }) => {
   const { pathname } = useLocation();
   const [page] = pathname.split("/").filter(Boolean);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const navigate = useNavigate();
   const { logoutUser } = useContext(UserContext);
 
@@ -26,10 +27,7 @@ const Header = ({ state }) => {
         <div className=" text-white bg-gradient-to-r from-[#bc46c2] to-[#cfb97c] text-center text-[1.6rem] font-medium py-3">
           All new projectors and laptops are out here in the store. grab now !
         </div>
-      ) : (
-        <></>
       )}
-
       <header className="header w-full flex justify-between">
         <div className="left flex items-center gap-6">
           <Link to={`/home`}>
@@ -61,7 +59,6 @@ const Header = ({ state }) => {
             <Link to={`/profile`} className="capitalize cursor-pointer">
               profile
             </Link>
-
             <li
               className="capitalize cursor-pointer"
               onClick={() => handleUser()}
@@ -111,11 +108,39 @@ const Header = ({ state }) => {
                     ))}
                   </div>
                 ) : (
-                  <></>
+                  <>{category.name}</>
                 )}
               </div>
-            );
-          })}
+
+              {category.sub_categories && (
+                <div className="absolute border border-neutral-200 flex flex-col flex-wrap bg-white w-[70rem] h-[30rem] py-4 px-6 opacity-0 pointer-events-none translate-y-[1.5rem] group-hover:opacity-100 group-hover:translate-y-0 duration-200 ease-out group-hover:pointer-events-auto z-50">
+                  {category.sub_categories.map((sub_category) => (
+                    <div
+                      key={sub_category.slug}
+                      className="text-[1.5rem] mb-4 flex flex-col gap-2"
+                    >
+                      <div className="text-black font-medium capitalize cursor-pointer">
+                        {sub_category.name}
+                      </div>
+                      {sub_category.sub_categories && (
+                        <ul className="flex flex-col gap-1">
+                          {sub_category.sub_categories.map((sub_category_2) => (
+                            <Link
+                              key={sub_category_2.slug}
+                              to={`/${category.slug}/${sub_category.slug}/${sub_category_2.slug}`}
+                              className="text-gray-500 hover:text-gray-800 capitalize cursor-pointer"
+                            >
+                              {sub_category_2.name}
+                            </Link>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
         </ul>
       </nav>
     </header>
