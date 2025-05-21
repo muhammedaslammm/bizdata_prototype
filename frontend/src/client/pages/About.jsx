@@ -3,44 +3,40 @@ import React from "react";
 const About = () => {
   return (
     <div className="px-6 py-10 max-w-7xl mx-auto text-gray-800">
-      <h1 className="text-4xl font-bold mb-8 text-center">About Us</h1>
+      <h1 className="text-4xl font-bold mb-8 text-center text-[#283ea8]">
+        About Us
+      </h1>
 
       {/* Intro */}
       <section className="mb-12 text-center">
-        <p className="text-lg leading-7 max-w-3xl mx-auto">
-          We're a top-tier e-commerce platform dedicated to providing quality
-          products and a seamless shopping experience. From electronics to
-          fashion, our platform connects customers with trusted brands and
-          unbeatable deals.
+        <p className="text-lg leading-7 max-w-3xl mx-auto text-gray-700">
+          We're a premium e-commerce platform delivering quality and elegance.
+          From tech to fashion, we connect you with trusted brands and
+          irresistible deals—all in one beautiful experience.
         </p>
       </section>
 
       {/* Stats Banner */}
-      <section className="mb-16 grid grid-cols-2 sm:grid-cols-4 gap-6 text-center bg-neutral-100 p-6 rounded-xl shadow-inner">
-        <div>
-          <h3 className="text-3xl font-bold text-indigo-600">10M+</h3>
-          <p className="text-sm mt-1">Happy Customers</p>
-        </div>
-        <div>
-          <h3 className="text-3xl font-bold text-indigo-600">100K+</h3>
-          <p className="text-sm mt-1">Products Available</p>
-        </div>
-        <div>
-          <h3 className="text-3xl font-bold text-indigo-600">24/7</h3>
-          <p className="text-sm mt-1">Customer Support</p>
-        </div>
-        <div>
-          <h3 className="text-3xl font-bold text-indigo-600">15+</h3>
-          <p className="text-sm mt-1">Years of Service</p>
-        </div>
+      <section className="mb-16 grid grid-cols-2 sm:grid-cols-4 gap-6 text-center bg-[#f0f2ff] p-6 rounded-xl shadow-inner">
+        {[
+          { stat: "10M+", label: "Happy Customers" },
+          { stat: "100K+", label: "Products Available" },
+          { stat: "24/7", label: "Customer Support" },
+          { stat: "15+", label: "Years of Service" },
+        ].map((item, idx) => (
+          <div key={idx}>
+            <h3 className="text-3xl font-bold text-[#283ea8]">{item.stat}</h3>
+            <p className="text-sm mt-1 text-gray-600">{item.label}</p>
+          </div>
+        ))}
       </section>
 
       {/* Categories */}
       <section className="mb-16">
-        <h2 className="text-2xl font-semibold mb-6 text-center">
+        <h2 className="text-2xl font-semibold mb-6 text-center text-[#283ea8]">
           Top Categories
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
             {
               title: "Electronics",
@@ -69,9 +65,11 @@ const About = () => {
           ].map((item, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition"
+              className="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition border-t-4 border-[#283ea8]"
             >
-              <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+              <h3 className="text-xl font-semibold mb-2 text-[#283ea8]">
+                {item.title}
+              </h3>
               <p className="text-gray-600">{item.desc}</p>
             </div>
           ))}
@@ -79,15 +77,15 @@ const About = () => {
       </section>
 
       {/* Mission & Values */}
-      <section className="mb-16 bg-indigo-50 p-6 rounded-xl shadow-sm">
-        <h2 className="text-2xl font-semibold mb-4">
+      <section className="mb-16 bg-[#e9edff] p-6 rounded-xl shadow-sm">
+        <h2 className="text-2xl font-semibold mb-4 text-[#283ea8]">
           Our Mission & Core Values
         </h2>
-        <p className="text-lg mb-4">
+        <p className="text-lg mb-4 text-gray-700">
           Our mission is to democratize online shopping by making it fast,
           affordable, and reliable for everyone.
         </p>
-        <ul className="list-disc pl-6 text-lg space-y-2">
+        <ul className="list-disc pl-6 text-lg space-y-2 text-gray-700">
           <li>Customer-first approach</li>
           <li>Innovation through technology</li>
           <li>Transparency and trust</li>
@@ -97,7 +95,7 @@ const About = () => {
 
       {/* Testimonials */}
       <section className="mb-16">
-        <h2 className="text-2xl font-semibold mb-6 text-center">
+        <h2 className="text-2xl font-semibold mb-6 text-center text-[#283ea8]">
           What Our Customers Say
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -118,9 +116,12 @@ const About = () => {
                 "Amazing variety and smooth returns. Shopping made fun and safe!",
             },
           ].map((item, index) => (
-            <div key={index} className="bg-white p-5 rounded-lg shadow-md">
+            <div
+              key={index}
+              className="bg-white p-5 rounded-lg shadow-md border-l-4 border-[#283ea8]"
+            >
               <p className="text-gray-700 mb-3 italic">"{item.feedback}"</p>
-              <h4 className="text-indigo-600 font-semibold">— {item.name}</h4>
+              <h4 className="text-[#283ea8] font-semibold">— {item.name}</h4>
             </div>
           ))}
         </div>

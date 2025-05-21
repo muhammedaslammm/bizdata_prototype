@@ -2,76 +2,90 @@ import React from "react";
 
 const SecurityPolicy = () => {
   return (
-    <div className="px-6 py-12 max-w-6xl mx-auto text-gray-800 bg-white shadow-md rounded-2xl">
-      <h1 className="text-5xl font-bold mb-12 text-center text-black underline decoration-black decoration-4">
-        Security Policy
-      </h1>
+    <div className="bg-gradient-to-br from-[#e9edff] to-white min-h-screen py-12 px-6">
+      <div className="max-w-6xl mx-auto text-gray-800">
+        <h1 className="text-5xl font-bold mb-14 text-center text-[#283ea8]">
+          Security Policy
+        </h1>
 
-      <section className="mb-10">
-        <h2 className="text-3xl font-semibold mb-4 text-black">
-          Your Security Matters
-        </h2>
-        <p className="text-lg leading-relaxed text-gray-700">
-          We take your online security very seriously. Our platform uses
-          advanced security technologies and protocols to ensure that your data
-          and transactions are safe and secure at all times.
-        </p>
-      </section>
+        {/* Section: Overview */}
+        <section className="bg-white border border-gray-100 shadow-md rounded-2xl p-6 mb-10">
+          <h2 className="text-3xl font-semibold mb-4 text-[#283ea8]">
+            Your Security Matters
+          </h2>
+          <p className="text-lg leading-relaxed text-gray-700">
+            We take your online security seriously. Our platform is built on
+            secure architecture and uses modern technologies to protect your
+            data, privacy, and financial transactions.
+          </p>
+        </section>
 
-      <section className="mb-8">
-        <h3 className="text-2xl font-semibold mb-3 text-black">
-          🔒 Secure Transactions
-        </h3>
-        <p className="text-gray-700 text-lg leading-relaxed">
-          All payments are processed through encrypted and secure payment
-          gateways that comply with PCI DSS standards. Your card, UPI, and
-          banking credentials are never stored on our servers.
-        </p>
-      </section>
+        {/* Secure Transactions */}
+        <section className="bg-white border border-gray-100 shadow-md rounded-2xl p-6 mb-8">
+          <h3 className="text-2xl font-semibold mb-3 text-[#283ea8]">
+            🔒 Secure Transactions
+          </h3>
+          <p className="text-gray-700 text-lg leading-relaxed">
+            Payments are processed through encrypted gateways compliant with PCI
+            DSS standards. We never store your card, UPI, or banking
+            credentials.
+          </p>
+        </section>
 
-      <section className="mb-8">
-        <h3 className="text-2xl font-semibold mb-3 text-black">
-          🛡️ Data Protection
-        </h3>
-        <p className="text-gray-700 text-lg leading-relaxed">
-          We protect your personal data using SSL encryption, advanced
-          firewalls, and role-based access controls to prevent unauthorized
-          access.
-        </p>
-      </section>
+        {/* Data Protection */}
+        <section className="bg-white border border-gray-100 shadow-md rounded-2xl p-6 mb-8">
+          <h3 className="text-2xl font-semibold mb-3 text-[#283ea8]">
+            🛡️ Data Protection
+          </h3>
+          <p className="text-gray-700 text-lg leading-relaxed">
+            Personal data is secured using SSL encryption, advanced firewalls,
+            and strict access controls to prevent unauthorized intrusion.
+          </p>
+        </section>
 
-      <section className="mb-8">
-        <h3 className="text-2xl font-semibold mb-3 text-black">
-          👤 Account Security
-        </h3>
-        <p className="text-gray-700 text-lg leading-relaxed">
-          For your safety, we advise using strong, unique passwords and enabling
-          two-factor authentication wherever possible. Avoid sharing your login
-          credentials with anyone.
-        </p>
-      </section>
+        {/* Account Security */}
+        <section className="bg-white border border-gray-100 shadow-md rounded-2xl p-6 mb-8">
+          <h3 className="text-2xl font-semibold mb-3 text-[#283ea8]">
+            👤 Account Security
+          </h3>
+          <p className="text-gray-700 text-lg leading-relaxed">
+            Always use a strong, unique password and enable two-factor
+            authentication (2FA). Never share your credentials with others.
+          </p>
+        </section>
 
-      <section className="mb-8">
-        <h3 className="text-2xl font-semibold mb-3 text-black">
-          ⚠️ Fraud Monitoring
-        </h3>
-        <p className="text-gray-700 text-lg leading-relaxed">
-          Our system continuously monitors for suspicious behavior. If we detect
-          unusual activity, we may temporarily lock your account or reach out to
-          verify your identity.
-        </p>
-      </section>
+        {/* Fraud Monitoring */}
+        <section className="bg-white border border-gray-100 shadow-md rounded-2xl p-6 mb-8">
+          <h3 className="text-2xl font-semibold mb-3 text-[#283ea8]">
+            ⚠️ Fraud Monitoring
+          </h3>
+          <p className="text-gray-700 text-lg leading-relaxed">
+            Our system monitors for unusual activity. We may temporarily lock
+            accounts or reach out to confirm your identity if needed.
+          </p>
+        </section>
 
-      <section className="mb-8">
-        <h3 className="text-2xl font-semibold mb-3 text-black">
-          📧 Contact & Support
-        </h3>
-        <p className="text-gray-700 text-lg leading-relaxed">
-          If you suspect unauthorized access or encounter security concerns,
-          please contact our support team immediately at:{" "}
-          <span className="text-black font-medium">security@example.com</span>
-        </p>
-      </section>
+        {/* Contact & Support */}
+        <section className="bg-white border border-gray-100 shadow-md rounded-2xl p-6 mb-16">
+          <h3 className="text-2xl font-semibold mb-3 text-[#283ea8]">
+            📧 Contact & Support
+          </h3>
+          <p className="text-gray-700 text-lg leading-relaxed">
+            For security concerns or if you suspect unauthorized access, contact
+            our support team at{" "}
+            <span className="text-[#283ea8] font-medium">
+              security@example.com
+            </span>
+            .
+          </p>
+        </section>
+
+        {/* Footer */}
+        <footer className="text-center text-sm text-gray-500">
+          &copy; {new Date().getFullYear()} ShopKart Pvt. Ltd. All rights
+          reserved.
+        </footer>
+      </div>
     </div>
   );
 };
