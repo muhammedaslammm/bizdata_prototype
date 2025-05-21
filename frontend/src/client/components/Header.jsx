@@ -22,74 +22,43 @@ const Header = ({ state }) => {
   };
 
   return (
-    <header className="bg-neutral-50 overflow-hidden">
-      {/* Top announcement banner */}
-      {page === "home" && (
-        <div className="bg-cyan-600 text-white text-center text-[1.4rem] sm:text-[1.6rem] font-medium py-2 sm:py-3">
-          All new projectors and laptops are out here in the store. Grab now!
+    <header className="bg-neutral-50">
+      {page === "home" ? (
+        <div className=" text-white bg-gradient-to-r from-[#bc46c2] to-[#cfb97c] text-center text-[1.6rem] font-medium py-3">
+          All new projectors and laptops are out here in the store. grab now !
         </div>
       )}
-
-      <header className="header">
-        <Link to={`/home`}>
-          {" "}
-          <div
-            className="logo--header"
-            style={{ fontFamily: "Special Gothic Expanded One,sans-serif" }}
-          >
-            prototype
-          </div>
-
-          {/* Mobile menu links */}
-          {mobileMenuOpen && (
-            <nav className="mt-4">
-              <ul className="flex flex-col gap-3 text-[1.5rem] font-medium text-neutral-800">
-                <Link to="/cart">cart</Link>
-                <Link to="/wishlist">wishlist</Link>
-                <Link to="/profile">profile</Link>
-                <li>{state ? "sign out" : "sign in"}</li>
-              </ul>
-            </nav>
-          )}
+      <header className="header w-full flex justify-between">
+        <div className="left flex items-center gap-6">
+          <Link to={`/home`}>
+            {" "}
+            <div className="logo--header">prototype</div>
+          </Link>
+          <search className="flex items-center space-x-3">
+            <div className="relative">
+              <input
+                type="search"
+                placeholder="Search for products..."
+                className="w-[38rem] px-4 py-4 bg-neutral-200 text-[1.5rem] placeholder:text-neutral-600 placeholder:font-medium rounded-md focus:outline-none focus:ring-2 outline-none "
+              />
+              <button className="absolute h-full right-4">
+                <i className="fa-solid fa-magnifying-glass text-[1.8rem] text-neutral-600 cursor-pointer"></i>
+              </button>
+            </div>
+          </search>
         </div>
 
-        {/* DESKTOP VIEW */}
-        <div className="hidden sm:flex flex-wrap justify-between items-center gap-4">
-          {/* Logo */}
-          <Link to="/home">
-            <div
-              className="text-cyan-700 font-semibold text-[2.4rem] uppercase"
-              style={{ fontFamily: "Special Gothic Expanded One,sans-serif" }}
-            >
-              prototype
-            </div>
-          </Link>
-
-          {/* Search bar */}
-          <div className="hidden sm:flex items-center space-x-3 flex-grow max-w-[40rem]">
-            <input
-              type="search"
-              placeholder="Search for products..."
-              className="w-full h-[3.6rem] px-4 py-2 text-[1.4rem] border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-600"
-            />
-            <button className="h-[3.6rem] w-[3.6rem] bg-cyan-600 text-white rounded-md hover:bg-cyan-700 transition-colors duration-300 flex items-center justify-center">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-[1.8rem] w-[1.8rem]"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z"
-                />
-              </svg>
-            </button>
-          </div>
-
+        <nav>
+          <ul className="options flex gap-[2.8rem] text-[1.5rem] font-semibold text-neutral-800">
+            <Link to={`/cart`} className="capitalize cursor-pointer">
+              cart
+            </Link>
+            <Link to={`/wishlist`} className="capitalize cursor-pointer">
+              wishlist
+            </Link>
+            <Link to={`/profile`} className="capitalize cursor-pointer">
+              profile
+            </Link>
             <li
               className="capitalize cursor-pointer"
               onClick={() => handleUser()}
@@ -99,13 +68,13 @@ const Header = ({ state }) => {
           </ul>
         </nav>
       </header>
-      <nav className="bg-neutral-800">
-        <ul className="flex w-[90%] mx-auto text-white">
+      <nav className="bg-white border-t shadow-[0_12px_rgba(0,0,0)] border-neutral-200">
+        <ul className="flex w-[90%] mx-auto text-black">
           {/*category is looped using an array method, map()*/}
           {categories.map(function (category) {
             return (
               <div className="relative group">
-                <div className="uppercase text-[1.7rem] py-[.9rem] px-4 cursor-pointer hover:bg-cyan-800">
+                <div className="capitalize text-[1.5rem] py-[1.2rem] px-4 cursor-pointer hover:bg-[#e3e3e3] transition">
                   {category.slug === "home" ? (
                     <Link>{category.name}</Link>
                   ) : (

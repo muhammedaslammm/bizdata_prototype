@@ -23,23 +23,25 @@ const Categories = () => {
       </div>
 
       <table className="">
-        <tr className="text-[1.6rem]">
-          <th className="font-medium capitalize text-start p-2.5 border border-neutral-300">
-            sl no
-          </th>
-          <th className="font-medium capitalize text-start p-2.5 border border-neutral-300">
-            category name
-          </th>
-          <th className="font-medium capitalize text-start p-2.5 border border-neutral-300">
-            created
-          </th>
-          <th className="font-medium capitalize text-start p-2.5 border border-neutral-300">
-            updated
-          </th>
-          <th className="font-medium capitalize text-start p-2.5 border border-neutral-300">
-            control
-          </th>
-        </tr>
+        <thead>
+          <tr className="text-[1.6rem]">
+            <th className="font-medium capitalize text-start p-2.5 border border-neutral-300">
+              sl no
+            </th>
+            <th className="font-medium capitalize text-start p-2.5 border border-neutral-300">
+              category name
+            </th>
+            <th className="font-medium capitalize text-start p-2.5 border border-neutral-300">
+              created
+            </th>
+            <th className="font-medium capitalize text-start p-2.5 border border-neutral-300">
+              updated
+            </th>
+            <th className="font-medium capitalize text-start p-2.5 border border-neutral-300">
+              control
+            </th>
+          </tr>
+        </thead>
         <tbody>
           {categories.map((category, index) => (
             <tr className="text-[1.6rem]">

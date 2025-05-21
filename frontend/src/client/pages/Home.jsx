@@ -6,6 +6,8 @@ import { useEffect, useState } from "react";
 
 import MainOffers from "../components/MainOffer";
 import Trust from "../components/Trust";
+import BrandCategory from "../components/BrandCategory";
+import HomeCoupon from "../components/HomeCoupon";
 
 const Home = () => {
   const [dealProjectors, setDealProjectors] = useState([]);
@@ -27,9 +29,10 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="home my-[1.5rem]">
+    <div className="home">
       <Banner /> {/*banner section */}
-      <Deal products={dealProjectors} title={"projector deals"} />
+      <HomeCoupon />
+      <BrandCategory />
       <Deal products={dealLaptops} title={"laptop deals"} />
       <MainOffers />
       <Trust />

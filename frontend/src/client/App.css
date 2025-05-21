@@ -6,10 +6,10 @@ html {
 }
 
 .header {
-  @apply flex justify-between items-center w-[90%] mx-auto py-[.8rem];
+  @apply flex  items-center gap-12 w-[90%] mx-auto py-[1.2rem];
 }
 .logo--header {
-  @apply text-cyan-700 font-semibold text-[2.4rem] uppercase;
+  @apply text-[#65096a] font-bold text-[2.4rem] uppercase;
 }
 
 .button {

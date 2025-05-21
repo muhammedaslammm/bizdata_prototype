@@ -8,7 +8,6 @@ const EmptyPage = ({ title }) => {
             Looks like you haven't added anything yet here.
           </p>
         </div>
-
         <button
           onClick={() => navigate("/home")}
           className="button--cart bg-cyan-800 text-white font-medium mt-8 cursor-pointer"
