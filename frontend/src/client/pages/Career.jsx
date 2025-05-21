@@ -3,14 +3,14 @@ import React from "react";
 const Career = () => {
   return (
     <div className="px-6 py-12 max-w-6xl mx-auto text-black bg-white">
-      <h1 className="text-4xl font-bold mb-12 text-center text-black">
-        Careers at <span className="text-indigo-700">Prototype</span>
+      <h1 className="text-4xl font-bold mb-12 text-center text-[#283ea8]">
+        Careers at <span className="text-[#283ea8]">Prototype</span>
       </h1>
 
       {/* Intro */}
       <section className="mb-14">
         <div className="bg-neutral-100 p-6 rounded-xl shadow-sm">
-          <h2 className="text-2xl font-semibold mb-4 text-black">
+          <h2 className="text-2xl font-semibold mb-4 text-[#283ea8]">
             🚀 Join Our Journey
           </h2>
           <p className="text-lg leading-7 text-gray-800">
@@ -25,7 +25,7 @@ const Career = () => {
 
       {/* Roles */}
       <section className="mb-16">
-        <h2 className="text-2xl font-semibold mb-8 text-center text-black">
+        <h2 className="text-2xl font-semibold mb-8 text-center text-[#283ea8]">
           🌟 Open Roles
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -59,7 +59,7 @@ const Career = () => {
               key={index}
               className="bg-neutral-100 rounded-xl p-6 shadow-md hover:shadow-xl transition"
             >
-              <h3 className="text-xl font-semibold mb-2 text-black">
+              <h3 className="text-xl font-semibold mb-2 text-[#283ea8]">
                 {item.title}
               </h3>
               <p className="text-gray-800">{item.desc}</p>
@@ -69,8 +69,8 @@ const Career = () => {
       </section>
 
       {/* Perks */}
-      <section className="mb-16 bg-indigo-50 p-6 rounded-xl shadow-sm">
-        <h2 className="text-2xl font-semibold mb-4 text-black">
+      <section className="mb-16 bg-[#e9edff] p-6 rounded-xl shadow-sm">
+        <h2 className="text-2xl font-semibold mb-4 text-[#283ea8]">
           ✨ Perks & Benefits
         </h2>
         <ul className="list-disc pl-6 text-lg space-y-2 text-gray-800">
@@ -86,10 +86,12 @@ const Career = () => {
 
       {/* Call to Action */}
       <section className="mb-10 text-center">
-        <h2 className="text-2xl font-semibold mb-4 text-black">📬 Apply Now</h2>
+        <h2 className="text-2xl font-semibold mb-4 text-[#283ea8]">
+          📬 Apply Now
+        </h2>
         <p className="text-gray-800 text-lg mb-2">
           Send your resume and portfolio to{" "}
-          <span className="text-indigo-600 font-semibold">
+          <span className="text-[#283ea8] font-semibold">
             careers@example.com
           </span>
         </p>

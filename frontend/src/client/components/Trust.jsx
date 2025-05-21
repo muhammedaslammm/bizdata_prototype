@@ -1,6 +1,10 @@
 const Trust = () => {
   return (
-    <div className="w-[90%] mx-auto py-[8rem] px-12 bg-neutral-300 text-neutral-500 grid grid-cols-4 gap-[5rem] ">
+    <div
+      className="w-[90%] mx-auto py-16 px-4 sm:px-6 md:px-10 
+    lg:px-12 bg-neutral-300 text-neutral-500 grid grid-cols-1 sm:grid-cols-2 
+    lg:grid-cols-4 gap-14 sm:gap-10 lg:gap-[5rem]"
+    >
       <div className="flex flex-col justify-center items-center gap-4">
         <i className="fa-solid fa-box-open text-[4.5rem]"></i>
         <div className="text-center">
@@ -34,9 +38,9 @@ const Trust = () => {
             Prototype, here you can expect much more faster delivery
           </p>
         </div>
-
       </div>
     </div>
   );
 };
+
 export default Trust;
