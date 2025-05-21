@@ -5,6 +5,8 @@ const ProductContext = createContext();
 const UserContext = createContext();
 const WishlistContext = createContext();
 const CartContext = createContext();
+const OfferContext = createContext();
+const CouponContext = createContext();
 
 export {
   CategoryContext,
@@ -12,4 +14,6 @@ export {
   UserContext,
   WishlistContext,
   CartContext,
+  OfferContext,
+  CouponContext,
 };

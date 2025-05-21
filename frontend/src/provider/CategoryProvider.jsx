@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { CategoryContext } from "../contexts";
+import brandCategories from "../data/brandCategories";
 
 const CategoryProvider = ({ children }) => {
   const [categories, setCategories] = useState([]);
@@ -44,7 +45,21 @@ const CategoryProvider = ({ children }) => {
     }
   };
 
-  const values = { categories, addCategory };
+  const getBrandCategories = () => {
+    try {
+      const value = true;
+      if (value) return { success: true, categories: brandCategories };
+      else {
+        throw new Error("failed to get branded categories");
+      }
+    } catch (error) {
+      return { success: false, message: "fetch failed" };
+    }
+  };
+
+  
+
+  const values = { categories, addCategory, getBrandCategories };
 
   return (
     <CategoryContext.Provider value={values}>
