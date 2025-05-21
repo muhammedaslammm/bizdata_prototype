@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 
 const SiteMap = () => {
   return (
-    <div className="bg-gradient-to-br from-[#e9edff] to-white min-h-screen py-14 px-6">
+    <div className="bg-gradient-to-br from-[#f3e8ff] to-white min-h-screen py-14 px-6">
       <div className="max-w-7xl mx-auto text-gray-800">
-        <h1 className="text-5xl font-bold text-center text-[#283ea8] mb-14">
+        <h1 className="text-5xl font-bold text-center text-[#6b21a8] mb-14">
           Site Map
         </h1>
 
         <section className="mb-16">
-          <h2 className="text-3xl font-semibold text-[#283ea8] mb-4">
+          <h2 className="text-3xl font-semibold text-[#6b21a8] mb-4">
             🧭 Quick Navigation
           </h2>
           <p className="text-xl text-gray-700 mb-8 leading-relaxed">
@@ -20,11 +20,11 @@ const SiteMap = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
             {/* Column 1: Main Pages */}
-            <div className="bg-white border border-gray-100 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-              <h3 className="text-2xl font-bold mb-4 text-[#283ea8]">
+            <div className="bg-white border border-purple-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="text-2xl font-bold mb-4 text-[#6b21a8]">
                 Main Pages
               </h3>
-              <ul className="space-y-3 text-lg text-gray-700">
+              <ul className="space-y-3 text-xl text-gray-700">
                 <li>
                   <Link to="/home" className="hover:underline text-[#1a1a1a]">
                     🏠 Home
@@ -60,11 +60,11 @@ const SiteMap = () => {
             </div>
 
             {/* Column 2: Shopping */}
-            <div className="bg-white border border-gray-100 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-              <h3 className="text-2xl font-bold mb-4 text-[#283ea8]">
+            <div className="bg-white border border-purple-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="text-2xl font-bold mb-4 text-[#6b21a8]">
                 Shopping
               </h3>
-              <ul className="space-y-3 text-lg text-gray-700">
+              <ul className="space-y-3 text-xl text-gray-700">
                 <li>
                   <Link to="/cart" className="hover:underline text-[#1a1a1a]">
                     🛒 Cart
@@ -98,11 +98,11 @@ const SiteMap = () => {
             </div>
 
             {/* Column 3: Policies & Help */}
-            <div className="bg-white border border-gray-100 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-              <h3 className="text-2xl font-bold mb-4 text-[#283ea8]">
+            <div className="bg-white border border-purple-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="text-2xl font-bold mb-4 text-[#6b21a8]">
                 Policies & Help
               </h3>
-              <ul className="space-y-3 text-lg text-gray-700">
+              <ul className="space-y-3 text-xl text-gray-700">
                 <li>
                   <Link to="/faq" className="hover:underline text-[#1a1a1a]">
                     ❓ FAQs
@@ -174,7 +174,50 @@ const SiteMap = () => {
           </div>
         </section>
 
-        <section className="mt-10 text-center">
+        {/* 🆕 New Section: External Resources */}
+        <section className="mt-20 bg-white border border-purple-100 rounded-2xl p-8 shadow-sm text-center">
+          <h2 className="text-3xl font-semibold text-[#6b21a8] mb-4">
+            🔗 External Resources
+          </h2>
+          <p className="text-xl text-gray-700 mb-4">
+            Here are helpful links to stay connected and updated:
+          </p>
+          <ul className="space-y-2 text-xl text-[#6b21a8] font-medium">
+            <li>
+              <a
+                href="https://blog.example.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline"
+              >
+                📝 ShopKart Blog
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://support.example.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline"
+              >
+                🛠 Support Center
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://play.google.com/store/apps/details?id=com.shopkart"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline"
+              >
+                📱 Download Our App
+              </a>
+            </li>
+          </ul>
+        </section>
+
+        {/* Footer Message */}
+        <section className="mt-14 text-center">
           <p className="text-lg text-gray-700">
             We’re continuously improving to serve you better. Thank you for
             visiting!

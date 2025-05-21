@@ -21,25 +21,27 @@ const Contact = () => {
   };
 
   return (
-    <div className="w-[90%] max-w-5xl mx-auto py-12 text-slate-800">
+    <div className="px-4 sm:px-6 py-12 max-w-6xl mx-auto text-black bg-white">
       <motion.h1
-        className="text-4xl font-bold text-center mb-10 text-[#283ea8]"
+        className="text-3xl sm:text-5xl font-extrabold mb-12 text-center text-[#bc46c2]"
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.6 }}
       >
-        Contact Us
+        Contact <span className="text-[#cfb97c]">Us</span>
+        <div className="w-24 h-1 bg-[#cfb97c] mx-auto mt-3 rounded"></div>
       </motion.h1>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-10">
+        {/* Contact Form */}
         <motion.div
-          className="bg-white shadow-lg rounded-2xl p-8 space-y-6 border-t-4 border-[#283ea8]"
-          initial={{ opacity: 0, x: -30 }}
+          className="bg-neutral-100 rounded-2xl p-6 sm:p-8 shadow-md hover:shadow-lg border-l-4 border-[#bc46c2] space-y-6"
+          initial={{ opacity: 0, x: -40 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.6 }}
         >
-          <h2 className="text-2xl font-semibold text-[#283ea8]">
-            Send a Message
+          <h2 className="text-xl sm:text-2xl font-semibold text-[#bc46c2]">
+            📝 Send a Message
           </h2>
           {submitted && (
             <p className="text-green-600 font-medium">
@@ -54,7 +56,7 @@ const Contact = () => {
               value={formData.name}
               onChange={handleChange}
               required
-              className="w-full p-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-[#283ea8]"
+              className="w-full p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#bc46c2] text-sm sm:text-base"
             />
             <input
               type="email"
@@ -63,7 +65,7 @@ const Contact = () => {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full p-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-[#283ea8]"
+              className="w-full p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#bc46c2] text-sm sm:text-base"
             />
             <textarea
               name="message"
@@ -72,35 +74,41 @@ const Contact = () => {
               onChange={handleChange}
               required
               rows="5"
-              className="w-full p-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-[#283ea8]"
+              className="w-full p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#bc46c2] text-sm sm:text-base"
             ></textarea>
             <button
               type="submit"
-              className="w-full bg-[#283ea8] text-white py-3 rounded-xl hover:bg-[#1f2f85] transition"
+              className="w-full bg-[#bc46c2] text-white py-3 rounded-xl hover:bg-[#a33eb1] transition font-semibold text-sm sm:text-base"
             >
               Send Message
             </button>
           </form>
         </motion.div>
 
+        {/* Contact Info */}
         <motion.div
-          className="bg-[#e9edff] rounded-2xl p-8 shadow-lg space-y-6 border-t-4 border-[#283ea8]"
-          initial={{ opacity: 0, x: 30 }}
+          className="bg-[#fef9ff] rounded-2xl p-6 sm:p-8 shadow-md border-l-4 border-[#cfb97c] space-y-6"
+          initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.6 }}
         >
-          <h2 className="text-2xl font-semibold text-[#283ea8]">
-            Contact Information
+          <h2 className="text-xl sm:text-2xl font-semibold text-[#cfb97c]">
+            📬 Contact Information
           </h2>
-          <div className="space-y-4 text-slate-700">
+          <div className="space-y-4 text-slate-700 text-sm sm:text-base">
             <p>
-              📧 <strong>Email:</strong> support@example.com
+              📧 <strong>Email:</strong>{" "}
+              <span className="text-[#bc46c2]">support@example.com</span>
             </p>
             <p>
-              📞 <strong>Phone:</strong> +971 50 123 4567
+              📞 <strong>Phone:</strong>{" "}
+              <span className="text-[#bc46c2]">+971 50 123 4567</span>
             </p>
             <p>
-              📍 <strong>Location:</strong> Dubai, United Arab Emirates
+              📍 <strong>Location:</strong>{" "}
+              <span className="text-[#bc46c2]">
+                Dubai, United Arab Emirates
+              </span>
             </p>
           </div>
         </motion.div>
