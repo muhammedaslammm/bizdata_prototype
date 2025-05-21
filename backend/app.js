@@ -2,13 +2,30 @@ import express from "express";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import userRouter from "./routers/userRouter.js";
+import categoryRouter from "./routers/categoryRouter.js";
 
 const app = express();
+const allowedURLs = [
+  "https://bizdata-prototype.vercel.app",
+  "http://localhost:5173",
+];
 
-app.use(cors({ origin: "http://localhost:127.0.0.1:4000", credentials: true }));
+app.use(
+  cors({
+    origin: (origin, callback) => {
+      if (!origin || allowedURLs.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("request not allowed"));
+      }
+    },
+    credentials: true,
+  })
+);
 app.use(cookieParser());
 app.use(express.json());
 
 app.use("/api", userRouter);
+app.use("/api", categoryRouter);
 
 export default app;

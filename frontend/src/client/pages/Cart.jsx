@@ -1,9 +1,11 @@
 import EmptyPage from "../components/EmptyPage";
-import { useCart } from "../context/CartContext";
 import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { CartContext } from "../../contexts";
 
 const Cart = () => {
-  const { cartItems, removeFromCart, updateQuantity, getCartTotal } = useCart();
+  const { cartItems, removeFromCart, updateQuantity, getCartTotal } =
+    useContext(CartContext);
   const navigate = useNavigate();
 
   const handleQuantityChange = (id, delta) => {
