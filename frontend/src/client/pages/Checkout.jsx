@@ -56,24 +56,28 @@ const Checkout = () => {
       clearCart();
       navigate("/order-summary", { state: orderData });
     } else {
-      navigate("/payment-details", { state: orderData }); // ✅ Pass items here too
+      navigate("/payment-details", { state: orderData });
     }
   };
 
   return (
-    <div className="w-[90%] mx-auto my-4 gap-10 text-neutral-800">
+    <div className="w-[95%] max-w-[1600px] mx-auto my-4 gap-10 text-neutral-800">
       <button
         onClick={() => navigate(-1)}
-        className="text-cyan-800 underline text-[1.6rem] hover:text-blue-800 mb-4 cursor-pointer"
+        className="text-[#bc46c2] underline text-[1.6rem] hover:text-[#a23aa9] mb-4 cursor-pointer"
       >
         Back
       </button>
-      <div className="flex gap-8">
-        <div className="w-8/12 space-y-4 flex flex-col">
-          <div className="space-y-4 border border-neutral-300 bg-white p-8 rounded-[.5rem]">
-            <h2 className="text-[1.9rem] font-medium">Billing address</h2>
+      <div className="flex flex-col lg:flex-row gap-8">
+        {/* LEFT */}
+        <div className="w-full lg:w-8/12 space-y-6 flex flex-col">
+          {/* Billing address */}
+          <div className="space-y-4 border border-neutral-300 bg-white p-6 md:p-8 rounded-[.5rem]">
+            <h2 className="text-[1.9rem] font-semibold text-[#bc46c2]">
+              Billing address
+            </h2>
             {addressSaved && !showNewAddressForm ? (
-              <div className="space-y-4 border border-neutral-400 p-6 rounded bg-white">
+              <div className="space-y-4 border border-[#bc46c2]/40 p-6 rounded bg-white">
                 <p className="text-[1.8rem]">
                   <strong>John Doe</strong>
                   <br />
@@ -82,7 +86,7 @@ const Checkout = () => {
                   Phone: +971 50 123 4567
                 </p>
                 <button
-                  className="text-cyan-800 underline text-[1.8rem] cursor-pointer"
+                  className="text-[#bc46c2] underline text-[1.8rem] cursor-pointer"
                   onClick={() => {
                     setShowNewAddressForm(true);
                     setAddressSaved(false);
@@ -93,11 +97,11 @@ const Checkout = () => {
               </div>
             ) : (
               <form className="border border-neutral-300 gap-4 bg-white p-6 rounded space-y-4">
-                <h3 className="capitalize text-[1.7rem] font-medium">
+                <h3 className="capitalize text-[1.7rem] font-medium text-[#bc46c2]">
                   enter address details
                 </h3>
                 <div className="flex flex-col gap-4">
-                  <div className="names flex gap-4">
+                  <div className="flex flex-col md:flex-row gap-4">
                     <div className="w-full">
                       <input
                         type="text"
@@ -133,22 +137,20 @@ const Checkout = () => {
                     </div>
                   </div>
 
-                  <div className="col-span-2">
-                    <input
-                      type="text"
-                      placeholder="Address"
-                      value={address.address}
-                      onChange={(e) =>
-                        setAddress({ ...address, address: e.target.value })
-                      }
-                      className="input--form"
-                    />
-                    {errors.address && (
-                      <p className="text-red-500 text-sm">{errors.address}</p>
-                    )}
-                  </div>
+                  <input
+                    type="text"
+                    placeholder="Address"
+                    value={address.address}
+                    onChange={(e) =>
+                      setAddress({ ...address, address: e.target.value })
+                    }
+                    className="input--form"
+                  />
+                  {errors.address && (
+                    <p className="text-red-500 text-sm">{errors.address}</p>
+                  )}
 
-                  <div className="locations flex gap-4">
+                  <div className="flex flex-col md:flex-row gap-4">
                     <div className="w-full">
                       <input
                         type="text"
@@ -180,7 +182,7 @@ const Checkout = () => {
                     </div>
                   </div>
 
-                  <div className="w-[50%]">
+                  <div className="w-full md:w-1/2">
                     <input
                       type="number"
                       placeholder="Phone (10 digits)"
@@ -199,8 +201,11 @@ const Checkout = () => {
             )}
           </div>
 
-          <div className="space-y-4 bg-white border border-neutral-300 p-8 rounded-[.5rem]">
-            <h2 className="text-[1.8rem] font-medium">Payment options</h2>
+          {/* Payment */}
+          <div className="space-y-4 bg-white border border-neutral-300 p-6 md:p-8 rounded-[.5rem]">
+            <h2 className="text-[1.8rem] font-medium text-[#bc46c2]">
+              Payment options
+            </h2>
             <div className="space-y-8">
               <label className="flex items-center gap-4 text-[1.75rem]">
                 <input
@@ -210,6 +215,7 @@ const Checkout = () => {
                 />
                 Direct bank transfer
               </label>
+
               <div className="space-y-4">
                 <label className="flex items-center gap-4 text-[1.75rem]">
                   <input
@@ -219,27 +225,20 @@ const Checkout = () => {
                   />
                   Online payment
                 </label>
-                <div className="flex gap-8 px-8">
-                  <img
-                    src={images.visa}
-                    alt="visa"
-                    className="w-[3.5rem] h-[2rem] object-fill"
-                  />
-                  <img
-                    src={images.master_card}
-                    alt="master card"
-                    className="w-[3.5rem] h-[2rem] object-fill"
-                  />
-                  <img
-                    src={images.rupay}
-                    alt="rupay"
-                    className="w-[3.5rem] h-[2rem] object-fill"
-                  />
-                  <img
-                    src={images.maestro}
-                    alt="maestro"
-                    className="w-[3.5rem] h-[2rem] object-fill"
-                  />
+                <div className="flex flex-wrap gap-6 px-4">
+                  {[
+                    images.visa,
+                    images.master_card,
+                    images.rupay,
+                    images.maestro,
+                  ].map((img, idx) => (
+                    <img
+                      key={idx}
+                      src={img}
+                      alt="card"
+                      className="w-[3.5rem] h-[2rem] object-fill"
+                    />
+                  ))}
                 </div>
               </div>
 
@@ -256,28 +255,33 @@ const Checkout = () => {
 
           <button
             onClick={handlePlaceOrder}
-            className="text-[1.6rem] self-end text-white font-medium bg-cyan-800 py-3.5 px-6 mt-6 hover:bg-cyan-700 cursor-pointer transition duration-200 "
+            className="text-[1.6rem] self-end text-white font-medium bg-[#bc46c2] py-3.5 px-6 mt-6 hover:bg-[#a23aa9] cursor-pointer transition duration-200"
           >
             {payment === "cod" ? "Place Order" : "Proceed to Payment"}
           </button>
         </div>
 
-        <div className="w-4/12 self-start border border-neutral-300 p-8 bg-white rounded-[.5rem] space-y-4">
-          <h2 className="text-[1.8rem] font-medium ">Order Summary</h2>
+        {/* RIGHT */}
+        <div className="w-full lg:w-4/12 self-start border border-neutral-300 p-6 md:p-8 bg-white rounded-[.5rem] space-y-4">
+          <h2 className="text-[1.8rem] font-semibold text-[#bc46c2]">
+            Order Summary
+          </h2>
           {cartItems.map((item) => (
             <div
               key={item.id}
-              className="text-[1.65rem] border-b border-gray-500 py-3 space-y-2"
+              className="text-[1.65rem] border-b border-gray-300 py-3 space-y-1"
             >
               <p className="font-medium">
                 {item.title} ({item.quantity}x)
               </p>
-              <p className="text-blue-600">Rs {item.offer_price}</p>
+              <p className="text-[#bc46c2]">Rs {item.offer_price}</p>
             </div>
           ))}
-          <div className="flex justify-between font-medium text-[1.8rem] mt-12">
+          <div className="flex justify-between font-medium text-[1.8rem] mt-6">
             <span>Total</span>
-            <span className="font-semibold">Rs {subtotal.toFixed(2)}</span>
+            <span className="font-semibold text-[#bc46c2]">
+              Rs {subtotal.toFixed(2)}
+            </span>
           </div>
         </div>
       </div>

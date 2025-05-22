@@ -35,17 +35,21 @@ const PaymentDetails = () => {
     <div className="w-[90%] mx-auto my-4 gap-10 text-neutral-800">
       <button
         onClick={() => navigate(-1)}
-        className="text-cyan-800 underline text-[1.6rem] hover:text-blue-800 mb-4 cursor-pointer"
+        className="text-[#bc46c2] underline text-[1.6rem] hover:text-[#a63aad] mb-4 cursor-pointer"
       >
         Back
       </button>
-      <div className="flex gap-8">
-        <div className="w-9/12 space-y-4">
-          {/* products */}
-          <div className="items grid grid-cols-[30%_30%_30%] gap-4">
+
+      <div className="flex flex-col lg:flex-row gap-8">
+        <div className="w-full lg:w-9/12 space-y-4">
+          {/* Products */}
+          <div className="items grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {items.map((item) => (
-              <div className="border border-neutral-300 p-6 rounded-[.5rem] bg-white flex gap-8">
-                <div className="left min-w-0  font-medium space-y-4">
+              <div
+                key={item.id}
+                className="border border-neutral-300 p-6 rounded-[.5rem] bg-white flex gap-8"
+              >
+                <div className="left min-w-0 font-medium space-y-4">
                   <p className="truncate text-[1.5rem] text-neutral-600">
                     {item.title}
                   </p>
@@ -53,44 +57,47 @@ const PaymentDetails = () => {
                 </div>
                 <div className="right">
                   <div className="image w-[7rem]">
-                    <img src={item.image} alt="" />
+                    <img src={item.image} alt={item.title} />
                   </div>
                 </div>
               </div>
             ))}
           </div>
-          {/* address */}
+
+          {/* Address */}
           <Address address={address} />
-          {/* payment method */}
-          <div className="bg-green-100 border border-neutral-300 rounded-[.5rem] p-6 text-[1.7rem]">
+
+          {/* Payment method */}
+          <div className="bg-purple-50 border border-neutral-300 rounded-[.5rem] p-6 text-[1.7rem]">
             <p className="font-semibold">Payment Method:</p>
             <p>{getPaymentMethodName(paymentMethod)}</p>
           </div>
-          {/* payment details */}
-          <div className="bg-white border border-neutral-300 p-6 rounded-[.5rem]  space-y-4">
+
+          {/* Bank Details */}
+          <div className="bg-white border border-neutral-300 p-6 rounded-[.5rem] space-y-4">
             <h3 className="font-medium text-[1.7rem]">Bank Account Details:</h3>
-            <div className="details leading-[2.5rem] text-[1.7rem] ">
-              <p clasname="text-neutral-600">
+            <div className="details leading-[2.5rem] text-[1.7rem]">
+              <p className="text-neutral-600">
                 Bank Name:{" "}
                 <span className="font-medium text-neutral-900">
                   National Bank
-                </span>{" "}
+                </span>
               </p>
-              <p clasname="text-neutral-600">
+              <p className="text-neutral-600">
                 Account Holder:{" "}
                 <span className="font-medium text-neutral-900">John Doe</span>
               </p>
-              <p clasname="text-neutral-600">
+              <p className="text-neutral-600">
                 Account Number:{" "}
                 <span className="font-medium text-neutral-900">9876543210</span>
               </p>
-              <p clasname="text-neutral-600">
+              <p className="text-neutral-600">
                 IFSC Code:{" "}
                 <span className="font-medium text-neutral-900">
                   NBIN0001234
                 </span>
               </p>
-              <p clasname="text-neutral-600">
+              <p className="text-neutral-600">
                 Branch:{" "}
                 <span className="font-medium text-neutral-900">
                   Dubai Main Branch
@@ -100,7 +107,8 @@ const PaymentDetails = () => {
           </div>
         </div>
 
-        <div className="flex flex-col gap-4 w-3/12 bg-white p-6 border border-gray-300 self-start">
+        {/* Payment Summary */}
+        <div className="flex flex-col gap-4 w-full lg:w-3/12 bg-white p-6 border border-gray-300 self-start">
           <h3 className="capitalize text-[1.5rem] font-medium">
             payment total
           </h3>
@@ -119,7 +127,7 @@ const PaymentDetails = () => {
             </div>
             <button
               onClick={handlePayment}
-              className="bg-green-600 mt-16 text-white text-[1.7rem] font-medium py-[.85rem] rounded-[.3rem] cursor-pointer hover:bg-green-700 "
+              className="bg-[#bc46c2] mt-16 text-white text-[1.7rem] font-medium py-[.85rem] rounded-[.3rem] cursor-pointer hover:bg-[#a63aad]"
             >
               Confirm Payment
             </button>

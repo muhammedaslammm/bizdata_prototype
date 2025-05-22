@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useState } from "react";
 import { WishlistContext } from "../contexts";
 
 const WishlistProvider = ({ children }) => {
@@ -17,10 +17,9 @@ const WishlistProvider = ({ children }) => {
 
     if (addedToWishlist) return { success: true };
     else
-      return { success: false, message: "product already added to wishlist" };
+      return { success: false, message: "Product already added to wishlist" };
   };
 
-  // ✅ Add this
   const removeFromWishlist = (productId) => {
     setWishlist((prev) => prev.filter((item) => item.id !== productId));
   };
@@ -28,7 +27,7 @@ const WishlistProvider = ({ children }) => {
   const value = {
     wishlist,
     addToWishList,
-    removeFromWishlist, // ✅ Make it available
+    removeFromWishlist,
   };
 
   return (

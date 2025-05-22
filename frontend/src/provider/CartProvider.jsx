@@ -12,16 +12,13 @@ const CartProvider = ({ children }) => {
   // ✅ Add a product to cart
   const addToCart = (product) => {
     const existingItem = cartItems.find((item) => item.id === product.id);
-
     if (existingItem) {
       return {
         success: false,
         message: "Item already in cart",
       };
     }
-
     setCartItems((prevItems) => [...prevItems, { ...product, quantity: 1 }]);
-
     return {
       success: true,
       message: "Item added to cart",
@@ -40,7 +37,7 @@ const CartProvider = ({ children }) => {
         item.id === id
           ? {
               ...item,
-              quantity: Math.max(1, item.quantity + delta), // Prevent 0 or negative
+              quantity: Math.max(1, item.quantity + delta),
             }
           : item
       )
