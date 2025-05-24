@@ -1,5 +1,4 @@
 import Banner from "../components/Banner";
-import Deal from "../components/Deal";
 import projectors from "../../data/projectors";
 import laptops from "../../data/laptops";
 import { useEffect, useState } from "react";
@@ -8,10 +7,13 @@ import MainOffers from "../components/MainOffer";
 import Trust from "../components/Trust";
 import BrandCategory from "../components/BrandCategory";
 import HomeCoupon from "../components/HomeCoupon";
+import category_offer from "../../data/category_offer.js";
+import DayDeal from "../components/DayDeal.jsx";
 
 const Home = () => {
   const [dealProjectors, setDealProjectors] = useState([]);
   const [dealLaptops, setDealLaptops] = useState([]);
+  const [categoryOffer, setCategoryOffer] = useState(null);
 
   // the products are filtered and stored in the above state variables.
   // these variable products are send to various components representing various sections.
@@ -28,12 +30,16 @@ const Home = () => {
     setDealProjectors(filteredProjectors);
   }, []);
 
+  useEffect(() => {
+    setCategoryOffer(category_offer);
+  }, []);
+
   return (
     <div className="home">
       <Banner /> {/*banner section */}
       <HomeCoupon />
+      <DayDeal />
       <BrandCategory />
-      <Deal products={dealLaptops} title={"laptop deals"} />
       <MainOffers />
       <Trust />
     </div>
